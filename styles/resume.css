@@ -4,6 +4,8 @@
   --color-lightgrey: #b3b3b3;
 }
 
+/* Typography */
+
 html {
   /* 62.5% of 16px = 10px */
   font-size: 62.5%;
@@ -35,9 +37,24 @@ h2 {
   margin-top: 0.5rem;
 }
 
-hr {
-  display: block;
-  margin: 1rem;
+h3 {
+  color: rgb(48, 48, 48);
+  font-style: italic;
+  text-align: right;
+  padding-right: 15rem;
+}
+
+p {
+  margin: 0 27rem;
+  margin-bottom: 3rem;
+}
+
+/* .child for secondary paragraph */
+
+.child:nth-child(2),
+.experience--date {
+  text-align: right;
+  font-style: italic;
 }
 
 @media screen and (min-width: 1024px) {
@@ -54,6 +71,17 @@ hr {
   }
 }
 
+@media screen and (max-width: 768px) {
+  h3 {
+    margin-left: 3rem;
+  }
+
+  p {
+    margin: 0 7rem;
+    margin-bottom: 3rem;
+  }
+}
+
 /* Lists */
 
 .list {
@@ -61,7 +89,6 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
   list-style: none;
   margin: 0;
   padding: 0 1rem;
@@ -69,7 +96,25 @@ hr {
 }
 
 .list--display {
-  padding: 1rem 2rem;
+  padding: 1rem;
+}
+
+.listBullets {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .list--display {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  p {
+    margin: 1rem;
+  }
 }
 
 /* Links */
@@ -93,7 +138,7 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-/* Grid */
+/* Grids */
 
 .grid {
   display: grid;
@@ -105,8 +150,35 @@ a:hover {
   margin: 0 1rem;
 }
 
-/* Divs */
+.wrapper {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "a b b";
+}
+
+.gridBullets,
+.gridText {
+  grid-area: b;
+  margin-right: 3rem;
+}
+
+/* Padding between div/hr bar */
 
 .bottomPadding {
   padding-bottom: 2rem;
+}
+
+/* Misc */
+
+hr {
+  display: block;
+  margin: 1rem;
+}
+
+.main {
+  display: inline;
+}
+
+.company {
+  text-align: center;
+  margin-left: 15rem;
 }
