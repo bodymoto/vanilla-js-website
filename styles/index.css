@@ -1,8 +1,16 @@
 @import "./normalize.css";
 
+:root {
+  --font-name: "Croissant One", cursive;
+  --font-nav: "PT Sans Narrow", sans-serif, "Croissant One", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: "Ubuntu Mono", monospace, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-size: 50px;
 }
@@ -11,29 +19,130 @@ p {
   display: inline;
 }
 
-/* Links */
+/* NAME TITLE */
 
-a {
+.letter--e {
+  color: rgb(63, 151, 223);
+}
+
+.letter--v {
+  color: rgb(230, 34, 34);
+}
+
+.letter--a {
+  color: rgb(255, 44, 237);
+}
+
+.letter--n {
+  color: rgb(150, 247, 39);
+}
+
+.evan {
+  font-family: var(--font-name);
+  font-size: 5rem;
+}
+
+/* NAV LINKS */
+
+nav {
+  justify-items: center;
+  align-content: center;
+}
+
+nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(43, 38, 38);
+  font-weight: bold;
+  font-family: var(--font-nav);
+}
+
+.about,
+.goals,
+.resume,
+.contact {
+  font-size: 2.5rem;
+  padding: 0 1rem;
+}
+
+.about a {
+  color: rgb(150, 247, 39);
+}
+
+.goals a {
+  color: rgb(63, 151, 223);
+}
+
+.resume a {
+  color: rgb(230, 34, 34);
+}
+
+.contact a {
+  color: rgb(255, 44, 237);
 }
 
 .about a:hover {
-  color: rgb(63, 151, 223);
+  color: rgb(163, 101, 111);
   transition: color 0.3s;
 }
 
 .goals a:hover {
-  color: rgb(230, 34, 34);
+  color: rgb(197, 31, 19);
   transition: color 0.3s;
 }
 
 .resume a:hover {
-  color: rgb(150, 247, 39);
+  color: rgb(164, 39, 247);
   transition: color 0.3s;
 }
 
-.contact a:hover {
-  color: rgb(216, 150, 161);
+.contact {
+  color: rgb(255, 44, 237);
+}
+
+.contact:hover {
+  color: rgb(63, 151, 223);
   transition: color 0.3s;
+}
+
+/* NAV BUTTONS */
+
+.contact--btn {
+  font-size: 2.5rem;
+  padding: 0.7rem 3.8rem;
+  background-color: rgb(63, 151, 223);
+  border: 0.6rem solid rgb(255, 44, 237);
+  border-radius: 5em;
+}
+
+.contact--btn:hover {
+  background-color: rgb(255, 44, 237);
+  transition: 0.4s;
+}
+
+/* NAV BACKGROUND */
+
+.nav--color {
+  border-bottom: 0.2rem solid black;
+}
+
+/* GRIDS */
+
+.grid {
+  display: grid;
+}
+
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a b";
+}
+
+.grid--name {
+  grid-area: a;
+  margin: 3rem 16rem;
+}
+
+.grid--nav {
+  grid-area: b;
+  text-align: right;
+  margin: 2rem 16rem;
 }
