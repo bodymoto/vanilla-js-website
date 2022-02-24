@@ -62,9 +62,12 @@ p {
   margin-bottom: 3rem;
 }
 
-/* .child for secondary paragraph */
+.showdown,
+.portfolio {
+  padding-bottom: 0.5rem;
+}
 
-.child:nth-child(2),
+p:nth-child(2),
 .experience--date {
   text-align: right;
   font-style: italic;
@@ -126,6 +129,10 @@ p {
   margin: 0;
   padding: 0 1rem;
   text-align: center;
+}
+
+li {
+  line-height: 1.6;
 }
 
 .list--display {
