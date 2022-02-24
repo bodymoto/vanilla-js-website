@@ -27,9 +27,21 @@ h2 {
 
 h1 {
   font-size: 7rem;
-  display: flex;
+  display: inline;
   justify-content: center;
   align-items: center;
+}
+
+.h1--firstWord {
+  padding-right: 1.5rem;
+  letter-spacing: 8px;
+  text-align: end;
+}
+
+.h1--secondWord {
+  padding-left: 0;
+  text-align: start;
+  font-weight: 300;
 }
 
 h2 {
@@ -63,7 +75,7 @@ p {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 7rem;
   }
 
   h2 {
@@ -72,6 +84,10 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
   h3 {
     margin-left: 3rem;
   }
@@ -178,7 +194,7 @@ hr {
   display: inline;
 }
 
-.company {
+.title {
   text-align: center;
   margin-left: 15rem;
 }
