@@ -15,21 +15,26 @@
         </span>
       </div>
       <main>
-        <ul class="list">
-          <li class="list--display">
-            <a href="https://github.com/boshimoto/">Github</a>
+        <ul class="grid grid--1x2 list">
+          <li class="spriteLinkedin">
+            <a href="https://www.linkedin.com/in/evanlanese/">
+              <svg class="icon">
+                <use href="/images/resume_sprite.svg#LI-Logo_1"></use>
+              </svg>
+            </a>
           </li>
-          <li class="list--display">
-            <p class="main">Pennsylvania, USA</p>
-          </li>
-          <li class="list--display">
-            <a href="https://www.linkedin.com/in/evanlanese/">Linkedin</a>
+          <li class="spriteGitHub">
+            <a href="https://github.com/boshimoto/">
+            <svg class="icon">
+              <use href="/images/resume_sprite.svg#GitHub_Logo"></use>
+            </svg>
+            </a>
           </li>
         </ul>
       </main>
       <hr />
     </header>
-    <section class="bottomPadding">
+    <section class="bottomPadding block">
       <div class="grid grid--1x2">
         <h2>Technical Skills</h2>
       </div>
@@ -52,7 +57,7 @@
       </article>
     </section>
     <hr />
-    <section class="bottomPadding">
+    <section class="bottomPadding block">
       <div class="grid grid--1x2 bottomPadding">
         <h2>Projects</h2>
       </div>
@@ -77,7 +82,7 @@
       </article>
     </section>
     <hr />
-    <section class="bottomPadding">
+    <section class="bottomPadding block">
       <div class="grid grid--1x2">
         <h2 class="bottomPadding">Education</h2>
       </div>
@@ -103,7 +108,7 @@
       </summary>
     </section>
     <hr />
-    <section class="bottomPadding">
+    <section class="bottomPadding block">
       <div class="grid grid--1x2 bottomPadding">
         <h2>Experience</h2>
       </div>
@@ -114,11 +119,16 @@
         <span>
           <p class="experience--date newMargin">September 2020 - Present</p>
           <div class="grid grid--1x2">
-            <h4 class="title">IT Support Associate II</h4>
+            <h4 class="jobTitle">IT Support Associate II</h4>
           </div>
-            <p>A tool to automate local network health checks on Cisco iOS devices.
-              Enter your credentials and device host name into Showdown&apos;s prompt. A new folder will be created on your Windows desktop called, &quot;Network Checks&quot;. Showdown then SSH&apos;s into the device, runs a set of commands, and saves the command output within a text file named after the device. This file is saved inside the desktop folder. Showdown will then prompt for another host name and repeat the SSH process, or stop running when &quot;q&quot; is entered.
-              </p>
+            <div class="grid wrapper">
+              <ul class="listBullets gridBullets">
+                <li>Deployed Cisco C9500/9300 switches to existing network infrastructure; racked, cabled, updated iOS, tested/verified</li>
+                <li>Installed Windows media server; racked, cabled, re-imaged, configured network info, Q/A testing</li>
+                <li>Insufficient power supply required power be shutdown to live cabinet equipment and upgraded; physical install, configured UPS, configured exterior heat sensor, calibrated batteries</li>
+                <li>Aided in new FC site deployments - setup of network equipment</li>
+              </ul>
+            </div>
           </span>
           <div class="grid grid--1x2">
             <h3 class="subject">Kinetix Technology Services</h3>
@@ -126,9 +136,16 @@
           <span>
             <p class="experience--date newMargin">July 2018 - September 2019</p>
             <div class="grid grid--1x2">
-              <h4 class="title">IT Account Manager</h4>
+              <h4 class="jobTitle">IT Account Manager</h4>
             </div>
-            <p>A single page website to demonstrate design mark-up techniques; grids, sprites, image optimization, mobile and tablet ready, well formatted code, and built using component-first object-oriented CSS.</p>
+            <div class="grid wrapper">
+              <ul class="listBullets gridBullets">
+                <li>Oversaw 15 clientele and ran weekly customer meetings</li>
+                <li>Discussed the technical demands of their company</li>
+                <li>Provided feedback on weekly tickets</li>
+                <li>Addressed IT questions or related project work</li>
+              </ul>
+            </div>
           </span>
         </div>
       </article>

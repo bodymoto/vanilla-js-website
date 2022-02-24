@@ -85,7 +85,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 4rem;
   }
@@ -93,11 +93,25 @@ p {
   h3,
   h4 {
     margin-left: 3rem;
+    padding-right: 0;
   }
 
   p {
-    margin: 0 7rem;
+    margin: 0 4rem;
     margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 423px) {
+  h3,
+  h4 {
+    margin-left: 3rem;
+    padding-right: 0;
+    text-align: justify;
+  }
+
+  p {
+    margin: 0 6rem;
   }
 }
 
@@ -120,11 +134,11 @@ p {
 
 .listBullets {
   list-style: circle;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .list--display {
     padding: 0.5rem;
   }
@@ -154,7 +168,6 @@ a:hover {
   color: darkmagenta;
   transition: color 0.5s;
   font-weight: bold;
-  border-bottom: 1px solid;
 }
 
 /* Grids */
@@ -180,6 +193,39 @@ a:hover {
   margin-right: 3rem;
 }
 
+/* Images */
+
+.icon {
+  width: 65px;
+  height: 65px;
+  padding: 0;
+}
+
+.icon:hover {
+  transition: 0.5s;
+  transform: scale(1.5, 1.5);
+}
+
+.spriteLinkedin {
+  text-align: right;
+  margin-right: 8rem;
+}
+
+.spriteGitHub {
+  text-align: left;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .spriteLinkedin {
+    margin-right: 3rem;
+  }
+
+  .spriteGitHub {
+    margin-left: 1rem;
+  }
+}
+
 /* Misc */
 
 .bottomPadding {
@@ -194,10 +240,8 @@ a:hover {
 hr {
   display: block;
   margin: 1rem;
-}
-
-.main {
-  display: inline;
+  margin-right: 15rem;
+  margin-left: 15rem;
 }
 
 .subject {
@@ -206,14 +250,48 @@ hr {
 }
 
 div .subject {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
-.title {
+.jobTitle {
   text-align: center;
   margin-left: 20rem;
 }
 
+.block {
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
 footer {
   margin: 40rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .block {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jobTitle {
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .experience--date {
+    margin: 0 27;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .jobTitle {
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .experience--date {
+    margin-top: 2rem;
+  }
 }
