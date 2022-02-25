@@ -1,10 +1,9 @@
 @import "./normalize.css";
 
 :root {
-  --font-name: "Croissant One", cursive;
-  --font-nav: "PT Sans Narrow", sans-serif, "Croissant One", cursive;
 }
 
+/* TYPOGRAPHY */
 html {
   font-size: 62.5%;
 }
@@ -12,137 +11,82 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
     sans-serif;
-  font-size: 50px;
+  font-size: 1.8rem;
 }
 
-p {
-  display: inline;
+h1 {
+  margin: 6rem 22rem;
+  font-size: 7rem;
 }
 
-/* NAME TITLE */
-
-.letter--e {
-  color: rgb(63, 151, 223);
+/* PAGE HEADER */
+.header--page {
+  background-color: lightgreen;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 80rem;
 }
 
-.letter--v {
-  color: rgb(230, 34, 34);
+/* NAVIGATION MENU */
+.nav--list {
+  list-style: none;
+  display: flex;
+  margin-right: 1rem;
 }
 
-.letter--a {
-  color: rgb(255, 44, 237);
+.nav--title {
+  margin-left: 5rem;
 }
 
-.letter--n {
-  color: rgb(150, 247, 39);
+.nav--category {
+  padding: 0 4rem;
 }
 
-.evan {
-  font-family: var(--font-name);
-  font-size: 5rem;
+/* MAIN */
+.main--list-icons {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  margin-top: 5rem;
+  margin-right: 5rem;
 }
 
-/* NAV LINKS */
-
-nav {
-  justify-items: center;
-  align-content: center;
+.main--image {
+  display: flex;
+  justify-content: right;
+  margin-right: 15rem;
 }
 
-nav a {
-  text-decoration: none;
-  color: rgb(43, 38, 38);
-  font-weight: bold;
-  font-family: var(--font-nav);
+.main--image-portrait {
+  background-image: url(../images/mainportrait.jpg);
+  background-size: cover;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 100%;
 }
 
-.about,
-.goals,
-.resume,
-.contact {
-  font-size: 2.5rem;
-  padding: 0 1rem;
-}
-
-.about a {
-  color: rgb(150, 247, 39);
-}
-
-.goals a {
-  color: rgb(63, 151, 223);
-}
-
-.resume a {
-  color: rgb(230, 34, 34);
-}
-
-.contact a {
-  color: rgb(255, 44, 237);
-}
-
-.about a:hover {
-  color: rgb(163, 101, 111);
-  transition: color 0.3s;
-}
-
-.goals a:hover {
-  color: rgb(197, 31, 19);
-  transition: color 0.3s;
-}
-
-.resume a:hover {
-  color: rgb(164, 39, 247);
-  transition: color 0.3s;
-}
-
-.contact {
-  color: rgb(255, 44, 237);
-}
-
-.contact:hover {
-  color: rgb(63, 151, 223);
-  transition: color 0.3s;
-}
-
-/* NAV BUTTONS */
-
-.contact--btn {
-  font-size: 2.5rem;
-  padding: 0.7rem 3.8rem;
-  background-color: rgb(63, 151, 223);
-  border: 0.6rem solid rgb(255, 44, 237);
-  border-radius: 5em;
-}
-
-.contact--btn:hover {
-  background-color: rgb(255, 44, 237);
-  transition: 0.4s;
-}
-
-/* NAV BACKGROUND */
-
-.nav--color {
-  border-bottom: 0.2rem solid black;
+.main--icon-GitHub,
+.main--icon-Linkedin {
+  padding: 0 10rem;
 }
 
 /* GRIDS */
-
-.grid {
+.wrapper {
   display: grid;
 }
 
 .grid--1x2 {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "a b";
 }
 
-.grid--name {
-  grid-area: a;
-  margin: 3rem 16rem;
+.title-cell {
+  background-color: lime;
+  margin: 1rem 3rem;
 }
 
-.grid--nav {
-  grid-area: b;
-  text-align: right;
-  margin: 2rem 16rem;
+.icon-cell {
+  background-color: yellow;
+  margin: 1rem 3rem;
 }
