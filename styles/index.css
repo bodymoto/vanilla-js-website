@@ -1,8 +1,5 @@
 @import "./normalize.css";
 
-:root {
-}
-
 /* TYPOGRAPHY */
 html {
   font-size: 62.5%;
@@ -14,51 +11,28 @@ body {
   font-size: 1.8rem;
 }
 
-h1 {
-  margin: 6rem 22rem;
-  font-size: 7rem;
-}
-
-/* PAGE HEADER */
+/* HEADER */
 .header--page {
   background-color: lightgreen;
   position: relative;
-  top: 0;
-  bottom: 0;
-  height: 80rem;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
-/* NAVIGATION MENU */
-.nav--list {
-  list-style: none;
+.position--portrait {
   display: flex;
-  margin-right: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav--title {
-  margin-left: 5rem;
+.position--git,
+.position--linkedin {
+  display: inline-flex;
+  justify-content: center;
 }
 
-.nav--category {
-  padding: 0 4rem;
-}
-
-/* MAIN */
-.main--list-icons {
-  list-style: none;
-  display: flex;
-  justify-content: left;
-  margin-top: 5rem;
-  margin-right: 5rem;
-}
-
-.main--image {
-  display: flex;
-  justify-content: right;
-  margin-right: 15rem;
-}
-
-.main--image-portrait {
+/* IMAGES */
+.img--self-portrait {
   background-image: url(../images/mainportrait.jpg);
   background-size: cover;
   width: 40rem;
@@ -66,27 +40,65 @@ h1 {
   border-radius: 100%;
 }
 
-.main--icon-GitHub,
-.main--icon-Linkedin {
-  padding: 0 10rem;
+/* NAVIGATION MENU */
+.nav--menu-title {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.nav--list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.nav--menu-category {
+  padding: 0 4rem;
 }
 
 /* GRIDS */
-.wrapper {
+
+.grid--header-wrapper {
   display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: auto;
+  gap: 10px;
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto);
 }
 
-.grid--1x2 {
+.grid--nav-1x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.title-cell {
-  background-color: lime;
-  margin: 1rem 3rem;
+.grid--img-portrait {
+  grid-column: 4 / 8;
+  grid-row: 2/ 6;
+  background-color: yellow;
 }
 
-.icon-cell {
-  background-color: yellow;
-  margin: 1rem 3rem;
+.grid--icon-git {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  background-color: tomato;
+}
+
+.grid--icon-linkedin {
+  grid-column: 3 / 5;
+  grid-row: 4 / 6;
+  background-color: lightblue;
+}
+
+.four {
+  grid-column: 6 / 8;
+  grid-row: 5 / 7;
+  background-color: pink;
+}
+.five {
+  grid-column: 8 / 10;
+  grid-row: 3 / 5;
+  background-color: lime;
 }
