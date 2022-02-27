@@ -4,45 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Josefin+Sans:wght@400;700&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
     <header class="header--page">
       <nav class="grid--nav-1x2">
-        <p class="nav--menu-title">Evan</p>
-        <ul class="nav--list">
-          <li class="nav--menu-category">about</li>
-          <li class="nav--menu-category">portfolio</li>
-          <li class="nav--menu-category">skills</li>
-          <li class="nav--menu-category">contact</li>
+        <ul class="nav--menu">
+          <span class="material-icons nav--icon"> desktop_windows </span>
+          <li class="nav--category">home</li>
+          <span class="material-icons nav--icon"> local_cafe </span>
+          <li class="nav--category">about</li>
+          <span class="material-icons nav--icon"> local_florist </span>
+          <li class="nav--category">portfolio</li>
+          <span class="material-icons nav--icon"> layers </span>
+          <li class="nav--category">resume</li>
+          <span class="material-icons nav--icon"> router </span>
+          <li class="nav--category">contact</li>
         </ul>
       </nav>
-      <main class="grid--header-wrapper">
-        <div class="grid--img-portrait">
-          <div class="position--portrait">
-            <div class="img--self-portrait"></div>
-          </div>
+      <main>
+        <div class="main--greeting">
+          <h1 class="main--welcome-to">welcome to</h1>
+          <p class="main--word-hello">HELLO</p>
+          <p class="main--word-evan">evan</p>
         </div>
-        <div class="grid--icon-git position--git">
-          <div class="position--git">
-            <svg class="icon">
-              <use
-                href="images/git-link-sprite.svg#GitHub-Mark-120px-plus"
-              ></use>
-            </svg>
-          </div>
+        <article class="main--article">
+          <section class="grid--main-3x1">
+            <div class="main--1st-heading">
+              <h2>Front End Developer</h2>
+            </div>
+            <div class="main--1st-description">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque eligendi libero quas voluptas expedita aperiam maxime similique necessitatibus sed autem voluptatum veniam ad error aliquam ea ullam unde perferendis, sunt quisquam hic molestiae velit debitis!
+              </p>
+            </div>
+            <div class="main--2nd-heading">
+              <h2>Tech Heavy Nerd</h2>
+            </div>
+            <div class="main--2nd-description">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque eligendi libero quas voluptas expedita aperiam maxime similique necessitatibus sed autem voluptatum veniam ad error aliquam ea ullam unde perferendis, sunt quisquam hic molestiae velit debitis!
+              </p>
+            </div>
+          </section>
+        </article>
+        <article>
+          <p>python html5 css3 javascript git</p>
+        </article>
         </div>
-        <div class="grid--icon-linkedin position--linkedin">
-          <div class="position--linkedin">
-            <svg class="icon">
-              <use href="images/git-link-sprite.svg#In-Blue-48_2x"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="four">RESUME</div>
-        <div class="five">CONTACT</div>
       </main>
     </header>
+    <article class="grid--header-wrapper">
+      <div class="grid--img-portrait">
+        <div class="position--portrait">
+          <div class="img--self-portrait"></div>
+        </div>
+      </div>
+      <div class="grid--icon-git position--git">
+        <div class="position--git">
+          <svg class="icon">
+            <use href="images/git-link-sprite.svg#GitHub-Mark-120px-plus"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="grid--icon-linkedin position--linkedin">
+        <div class="position--linkedin">
+          <svg class="icon">
+            <use href="images/git-link-sprite.svg#In-Blue-48_2x"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="four">RESUME</div>
+      <div class="five">CONTACT</div>
+    </article>
     <div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quis

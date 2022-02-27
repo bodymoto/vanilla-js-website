@@ -203,9 +203,9 @@ a:hover {
 /* Images */
 
 .icon {
-  width: 65px;
-  height: 65px;
-  padding: 0;
+  width: 25px;
+  height: 25px;
+  padding: 1.5rem 2rem;
 }
 
 .icon:hover {
@@ -215,12 +215,12 @@ a:hover {
 
 .spriteLinkedin {
   text-align: right;
-  margin-right: 8rem;
+  margin-right: 2rem;
 }
 
 .spriteGitHub {
   text-align: left;
-  margin-left: 5rem;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 768px) {
