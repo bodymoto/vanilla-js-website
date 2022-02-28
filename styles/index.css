@@ -1,5 +1,9 @@
 @import "./normalize.css";
 
+:root {
+  --header--background-color: rgb(76, 121, 136);
+}
+
 /* TYPOGRAPHY */
 html {
   font-size: 62.5%;
@@ -13,7 +17,7 @@ body {
 
 /* NAVIGATION BAR */
 .nav {
-  background-color: rgb(76, 121, 136);
+  background-color: var(--header--background-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -124,8 +128,8 @@ body {
 
   .nav--category {
     font-size: 1.2rem;
-    padding-top: 1.2rem;
     padding-right: 3rem;
+    padding-top: 1.2rem;
   }
 
   .material-icons {
@@ -136,19 +140,19 @@ body {
 /* MAIN GREETING */
 
 .main--greeting {
-  background-color: rgb(76, 121, 136);
-  position: relative;
+  background-color: var(--header--background-color);
   min-height: 22rem;
+  position: relative;
 }
 
 .main--heading-hello {
   color: pink;
   font-family: "Shizuru", cursive;
   font-size: 8rem;
-  text-transform: uppercase;
-  position: absolute;
-  top: -7rem;
   left: 2.5rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: -7rem;
   transform: rotate(-15deg);
 }
 
@@ -156,9 +160,9 @@ body {
   color: lightblue;
   font-family: "Josefin Sans", sans-serif;
   font-size: 10rem;
+  left: 9.5rem;
   position: absolute;
   top: -2rem;
-  left: 9.5rem;
   transform: rotate(-5deg);
 }
 
@@ -166,9 +170,9 @@ body {
   color: lightblue;
   font-family: "Josefin Sans", sans-serif;
   font-size: 4rem;
+  left: 31.5rem;
   position: absolute;
   top: 3rem;
-  left: 31.5rem;
   transform: rotate(7deg);
 }
 
@@ -176,38 +180,38 @@ body {
   color: lightblue;
   font-family: "EB Garamond", serif;
   font-size: 1.2rem;
+  left: 19.5rem;
   position: absolute;
   text-transform: uppercase;
   top: 13rem;
-  left: 19.5rem;
 }
 
 .main--subheading-portfolio {
   color: lightblue;
   font-family: "EB Garamond", serif;
   font-size: 1.4rem;
-  text-transform: uppercase;
-  position: absolute;
-  top: 14rem;
   left: 23.5rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 14rem;
 }
 
 /* GALAXY FOLD */
 @media screen and (max-width: 280px) {
   .main--greeting {
     background-color: rgb(76, 121, 136);
-    position: relative;
     min-height: 15rem;
+    position: relative;
   }
 
   .main--heading-hello {
     color: pink;
     font-family: "Shizuru", cursive;
     font-size: 6rem;
-    text-transform: uppercase;
-    position: absolute;
-    top: -5rem;
     left: 2.5rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: -5rem;
     transform: rotate(-15deg);
   }
 
@@ -215,9 +219,9 @@ body {
     color: lightblue;
     font-family: "Josefin Sans", sans-serif;
     font-size: 7rem;
+    left: 9.5rem;
     position: absolute;
     top: -1rem;
-    left: 9.5rem;
     transform: rotate(-5deg);
   }
 
@@ -225,9 +229,9 @@ body {
     color: lightblue;
     font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
+    left: 25rem;
     position: absolute;
     top: 2rem;
-    left: 25rem;
     transform: rotate(7deg);
   }
 
@@ -235,24 +239,24 @@ body {
     color: lightblue;
     font-family: "EB Garamond", serif;
     font-size: 1.2rem;
+    left: 16.5rem;
     position: absolute;
     text-transform: uppercase;
     top: 9rem;
-    left: 16.5rem;
   }
 
   .main--subheading-portfolio {
     color: lightblue;
     font-family: "EB Garamond", serif;
     font-size: 1.4rem;
-    text-transform: uppercase;
-    position: absolute;
-    top: 10rem;
     left: 18.5rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 10rem;
   }
 }
 
-/* MAIN NONMOBILE */
+/* MAIN GREETING NONMOBILE */
 @media screen and (min-width: 650px) {
   .main--greeting {
     padding: 5rem 10rem;
@@ -260,97 +264,116 @@ body {
 
   .main--heading-hello {
     font-size: 13rem;
-    top: -10rem;
     left: 10rem;
+    top: -10rem;
   }
 
   .main--heading-evan {
     font-size: 12rem;
-    top: 0rem;
     left: 30rem;
+    top: 0rem;
   }
 
   .main--heading-apos {
     font-size: 6rem;
-    top: 5rem;
     left: 57rem;
+    top: 5rem;
   }
 
   .main--subheading-professional {
     font-size: 1.6rem;
-    top: 18rem;
     left: 42rem;
+    top: 18rem;
   }
 
   .main--subheading-portfolio {
     font-size: 1.8rem;
-    top: 19.5rem;
     left: 47rem;
+    top: 19.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .main--heading-hello {
     font-size: 13rem;
-    top: -10rem;
     left: 30rem;
+    top: -10rem;
   }
 
   .main--heading-evan {
     font-size: 12rem;
-    top: 0rem;
     left: 50rem;
+    top: 0rem;
   }
 
   .main--heading-apos {
     font-size: 6rem;
-    top: 5rem;
     left: 77rem;
+    top: 5rem;
   }
 
   .main--subheading-professional {
     font-size: 1.6rem;
-    top: 18rem;
     left: 62rem;
+    top: 18rem;
   }
 
   .main--subheading-portfolio {
     font-size: 1.8rem;
-    top: 19.5rem;
     left: 67rem;
+    top: 19.5rem;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .main--heading-hello {
     font-size: 13rem;
-    top: -10rem;
     left: 50rem;
+    top: -10rem;
   }
 
   .main--heading-evan {
     font-size: 12rem;
-    top: 0rem;
     left: 70rem;
+    top: 0rem;
   }
 
   .main--heading-apos {
     font-size: 6rem;
-    top: 5rem;
     left: 97rem;
+    top: 5rem;
   }
 
   .main--subheading-professional {
     font-size: 1.6rem;
-    top: 18rem;
     left: 82rem;
+    top: 18rem;
   }
 
   .main--subheading-portfolio {
     font-size: 1.8rem;
-    top: 19.5rem;
     left: 87rem;
+    top: 19.5rem;
   }
+}
+
+/* MAIN INTRODUCTION */
+.main--intro {
+  display: block;
+  background-color: var(--header--background-color);
+  padding: 2rem 0;
+}
+
+.intro--description h2 {
+  color: lightgreen;
+  margin: 0 4rem;
+}
+
+.intro--description p {
+  color: #fff;
+  padding-bottom: 4rem;
+  margin-left: 5rem;
+  margin-right: 3rem;
 }
 
 /* LOGO SECTION */
