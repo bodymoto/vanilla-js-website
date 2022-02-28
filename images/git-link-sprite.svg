@@ -1,6 +1,6 @@
 <svg width="0" height="0" class="hidden">
   <symbol version="1.0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 120.000000 120.000000" id="GitHub-Mark-120px-plus">
-    <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)" fill="#f1502f" stroke="none">
       <path d="M452 1170 c-109 -29 -187 -74 -272 -160 -87 -86 -131 -163 -160 -276
 -36 -141 -18 -294 52 -427 48 -92 164 -205 259 -251 103 -51 113 -48 117 35
 l3 66 -59 0 c-75 0 -116 23 -147 84 -13 26 -38 58 -55 73 -36 29 -31 51 9 41
@@ -24,7 +24,7 @@ l3 66 -59 0 c-75 0 -116 23 -147 84 -13 26 -38 58 -55 73 -36 29 -31 51 9 41
     </g>
   </symbol>
   <symbol version="1.0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 96.000000 96.000000" id="In-Blue-48_2x">
-    <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#0077b5" stroke="none">
       <path d="M25 935 l-25 -24 0 -431 0 -431 25 -24 24 -25 431 0 431 0 24 25 25
 24 0 431 0 431 -25 24 -24 25 -431 0 -431 0 -24 -25z m242 -127 c51 -48 15
 -138 -56 -138 -47 0 -81 32 -81 79 0 72 84 109 137 59z m469 -223 c72 -43 84
