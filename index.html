@@ -18,18 +18,36 @@
   </head>
   <body>
     <header class="header--page">
-      <nav class="grid--nav-1x2">
-        <ul class="nav--menu">
-          <span class="material-icons nav--icon"> desktop_windows </span>
-          <li class="nav--category">home</li>
-          <span class="material-icons nav--icon"> local_cafe </span>
-          <li class="nav--category">about</li>
-          <span class="material-icons nav--icon"> local_florist </span>
-          <li class="nav--category">portfolio</li>
-          <span class="material-icons nav--icon"> layers </span>
-          <li class="nav--category">resume</li>
-          <span class="material-icons nav--icon"> router </span>
-          <li class="nav--category">contact</li>
+      <nav class="nav collapsible">
+        <a href="/" class="nav--logo"
+          ><span class="material-icons"> room </span></a
+        >
+        <img
+          class="nav--menu-icon"
+          src="images/menu-icon.svg"
+          alt="Drop down menu icon."
+        />
+        <ul class="nav--list collapsible__content">
+          <li class="nav--category">
+            <span class="material-icons nav--icon"> desktop_windows </span
+            ><a href="#">home</a>
+          </li>
+          <li class="nav--category">
+            <span class="material-icons nav--icon"> local_cafe </span
+            ><a href="#">about</a>
+          </li>
+          <li class="nav--category">
+            <span class="material-icons nav--icon"> local_florist </span
+            ><a href="#">portfolio</a>
+          </li>
+          <li class="nav--category">
+            <span class="material-icons nav--icon"> layers </span
+            ><a href="#">resume</a>
+          </li>
+          <li class="nav--category">
+            <span class="material-icons nav--icon"> router </span
+            ><a href="#">contact</a>
+          </li>
         </ul>
       </nav>
       <main>
@@ -102,5 +120,6 @@
         perferendis ullam saepe maxime suscipit tempore.
       </p>
     </div>
+    <script src="scripts/collapsible.js"></script>
   </body>
 </html>
