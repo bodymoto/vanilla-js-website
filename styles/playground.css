@@ -117,29 +117,96 @@ body {
 /* MAIN GREETING */
 
 .main--greeting {
-  display: flex;
-  flex-wrap: wrap;
+  background-color: rgb(76, 121, 136);
+  position: relative;
+  min-height: 22rem;
 }
 
-.main--welcome-to {
-  color: lightblue;
-  font-family: "Josefin Sans", sans-serif, "BhuTuka Expanded One", cursive;
-  font-size: 5rem;
-  margin: 1rem 2rem;
-}
-
-.main--word-hello {
+.main--heading-hello {
   color: pink;
   font-family: "Shizuru", cursive;
-  font-size: 6rem;
-  margin: 1rem 2rem;
+  font-size: 8rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: -7rem;
+  left: 3rem;
   transform: rotate(-15deg);
 }
 
-.main--word-evan {
+.main--heading-evan {
   color: lightblue;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 8rem;
-  margin: 1rem 2rem;
+  font-size: 10rem;
+  position: absolute;
+  top: -2rem;
+  left: 10rem;
   transform: rotate(-5deg);
 }
+
+.main--heading-apos {
+  color: lightblue;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  position: absolute;
+  top: 3rem;
+  left: 32rem;
+  transform: rotate(7deg);
+}
+
+.main--subheading-professional {
+  color: lightblue;
+  font-family: "EB Garamond", serif;
+  font-size: 1.2rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 13rem;
+  left: 20rem;
+}
+
+.main--subheading-portfolio {
+  color: lightblue;
+  font-family: "EB Garamond", serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 14rem;
+  left: 24rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main--greeting {
+    padding: 5rem 10rem;
+  }
+
+  .main--heading-hello {
+    font-size: 13rem;
+    top: -10rem;
+    left: 10rem;
+  }
+
+  .main--heading-evan {
+    font-size: 12rem;
+    top: 0rem;
+    left: 30rem;
+  }
+
+  .main--heading-apos {
+    font-size: 6rem;
+    top: 5rem;
+    left: 57rem;
+  }
+
+  .main--subheading-professional {
+    font-size: 1.6rem;
+    top: 18rem;
+    left: 42rem;
+  }
+
+  .main--subheading-portfolio {
+    font-size: 1.8rem;
+    top: 19.5rem;
+    left: 47rem;
+  }
+}
+
+/* MAIN BODY */

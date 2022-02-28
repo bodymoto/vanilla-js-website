@@ -293,6 +293,14 @@ footer {
 }
 
 @media screen and (max-width: 423px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .experience--date {
+    margin-right: 5rem;
+  }
+
   .jobTitle {
     text-align: left;
     margin-left: 2rem;
