@@ -484,11 +484,6 @@ header {
 }
 
 /* ABOUT */
-.about--background {
-  background: 
-  );
-}
-
 .about--portrait {
   background-image: url();
   display: flex;
@@ -577,20 +572,60 @@ header {
   font-weight: bold;
 }
 
-/* GRIDS */
+/* FOOTER */
 
-/* TODO: SECOND SECTION - CLASS NAME UPDATES */
-/* .grid--header-wrapper {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  margin: auto;
-  gap: 10px;
-  grid-auto-columns: minmax(100px, auto);
-  grid-auto-rows: minmax(100px, auto);
+.footer--background {
+  background-color: black;
 }
 
-.grid--img-portrait {
-  grid-column: 4 / 8;
-  grid-row: 2 / 6;
-  background-color: yellow;
+.footer--content {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.footer--copyright {
+  display: flex;
+  align-items: end;
+  margin: 1rem 2rem;
+}
+
+.footer--copyright .material-icons {
+  align-items: center;
+  color: #fff;
+  font-size: 10rem;
+}
+
+.footer--content > ul {
+  padding: 4rem 0;
+  margin: 0;
+}
+
+.footer--copyright-text {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.footer--list {
+  margin: 0 4rem;
+}
+
+.footer--list-style {
+  list-style: none;
+}
+
+.footer--list-category {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+footer a:hover {
+  color: magenta;
+  font-weight: bold;
+  transform: scale(1.2);
 }
