@@ -118,6 +118,7 @@ p:nth-child(2),
 
 /* NAVIGATION BAR */
 .nav {
+  background-color: rgb(76, 121, 136);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
