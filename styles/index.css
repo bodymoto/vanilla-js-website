@@ -43,7 +43,7 @@ header {
   padding: 0.5rem 0.5rem;
 }
 
-.nav.collapsible--expanded .nav--menu-icon {
+.nav.collapsible--expanded .nav--dropdown-mobile-icon {
   border-radius: 5px;
   box-shadow: 0 0 0 3px rgb(93, 250, 21);
   opacity: 1;
@@ -594,38 +594,3 @@ header {
   grid-row: 2 / 6;
   background-color: yellow;
 }
-
-.grid--icon-git {
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-  background-color: tomato;
-}
-
-.grid--icon-linkedin {
-  grid-column: 3 / 5;
-  grid-row: 4 / 6;
-  background-color: lightblue;
-}
-
-.four {
-  grid-column: 6 / 8;
-  grid-row: 5 / 7;
-  background-color: pink;
-}
-.five {
-  grid-column: 8 / 10;
-  grid-row: 3 / 5;
-  background-color: lime;
-}
-
-.position--portrait {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.position--git,
-.position--linkedin {
-  display: inline-flex;
-  justify-content: center;
-} */
