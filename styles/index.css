@@ -580,19 +580,19 @@ header {
 
 .footer--content {
   display: flex;
-  padding: 1rem 0;
 }
 
 .footer--copyright {
   display: flex;
   align-items: end;
-  margin: 1rem 2rem;
+  margin: 0 2rem;
 }
 
-.footer--copyright .material-icons {
+.footer--copyright-category .material-icons {
   align-items: center;
   color: #fff;
-  font-size: 10rem;
+  font-size: 8rem;
+  padding-left: 2rem;
 }
 
 .footer--content > ul {
@@ -600,13 +600,15 @@ header {
   margin: 0;
 }
 
-.footer--copyright-text {
+.footer--copyright-list {
+  list-style: none;
   color: #fff;
+  margin: 0;
   font-size: 1.4rem;
 }
 
-.footer--list {
-  margin: 0 4rem;
+.footer--copyright-category {
+  padding: 2.5rem 0;
 }
 
 .footer--list-style {
@@ -628,4 +630,11 @@ footer a:hover {
   color: magenta;
   font-weight: bold;
   transform: scale(1.2);
+}
+
+/* GALAXY FOLD */
+@media screen and (max-width: 280px) {
+  .footer--copyright {
+    margin: 0;
+  }
 }
