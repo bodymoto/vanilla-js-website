@@ -370,9 +370,9 @@ header {
 
 .intro--description p {
   color: #fff;
-  padding-bottom: 4rem;
   margin-left: 5rem;
   margin-right: 3rem;
+  padding-bottom: 4rem;
 }
 
 /* LAPTOPS */
@@ -406,28 +406,28 @@ header {
 }
 
 .logo--html {
-  width: 5rem;
   height: 5rem;
+  width: 5rem;
 }
 
 .logo--css {
-  width: 4.5rem;
   height: 5rem;
+  width: 4.5rem;
 }
 
 .logo--js {
-  width: 4rem;
   height: 4.5rem;
+  width: 4rem;
 }
 
 .logo--python {
-  width: 5rem;
   height: 5rem;
+  width: 5rem;
 }
 
 .logo--git {
-  width: 5rem;
   height: 5rem;
+  width: 5rem;
 }
 
 /* GALAXY FOLD */
@@ -450,9 +450,9 @@ header {
   }
 
   .logo--display {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .logo--html,
@@ -464,28 +464,28 @@ header {
   }
 
   .logo--html {
-    width: 10rem;
     height: 10rem;
+    width: 10rem;
   }
 
   .logo--css {
-    width: 9rem;
     height: 10rem;
+    width: 9rem;
   }
 
   .logo--js {
-    width: 8rem;
     height: 9rem;
+    width: 8rem;
   }
 
   .logo--python {
-    width: 10rem;
     height: 10rem;
+    width: 10rem;
   }
 
   .logo--git {
-    width: 10rem;
     height: 10rem;
+    width: 10rem;
   }
 }
 
@@ -514,13 +514,13 @@ header {
 
 .resume--btn {
   background: var(--header--background-color);
-  border: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 2rem 3rem;
   border-radius: 40px;
+  border: 0;
   cursor: pointer;
+  font-weight: bold;
   margin-bottom: 7rem;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
 }
 
 .resume--btn a {
@@ -548,10 +548,10 @@ header {
 }
 
 .icon--btn {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
 .icon {
@@ -580,10 +580,10 @@ header {
 
 /* FOOTER */
 .footer--content {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 .footer--copyright {
@@ -602,10 +602,10 @@ header {
 }
 
 .footer--copyright-list {
-  list-style: none;
-  padding: 0;
   color: #fff;
   font-size: 1.4rem;
+  list-style: none;
+  padding: 0;
 }
 
 .footer--nav {
@@ -652,7 +652,7 @@ footer a:hover {
 @media screen and (min-width: 1024px) {
   .footer--copyright,
   .footer--nav .material-icons {
-    margin-right: 10rem;
     font-size: 1.3rem;
+    margin-right: 10rem;
   }
 }

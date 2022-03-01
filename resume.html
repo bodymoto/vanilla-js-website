@@ -4,16 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-End Resume</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Josefin+Sans:wght@400;700&family=Shizuru&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/resume.css" />
   </head>
   <body>
     <header>
-      <div>
-        <span class="grid grid--1x2">
-          <h1 class="h1--firstWord">Evan</h1>
-          <h1 class="h1--secondWord">Lanese</h1>
-        </span>
-      </div>
+      <nav class="nav collapsible">
+        <a href="/" class="nav--logo"
+          ><span class="material-icons"> room </span></a
+        >
+        <img
+          class="nav--dropdown-mobile-icon"
+          src="images/dropdown-mobile-icon.svg"
+          alt="Drop down menu icon."
+        />
+        <ul class="nav--list collapsible__content">
+          <li class="nav--category">
+            <span id="nav--icon" class="material-icons"> desktop_windows </span
+            ><a href="index.html">home</a>
+          </li>
+          <li class="nav--category">
+            <span id="nav--icon" class="material-icons"> local_cafe </span
+            ><a href="index.html">about</a>
+          </li>
+          <li class="nav--category">
+            <span id="nav--icon" class="material-icons"> local_florist </span
+            ><a href="index.html">portfolio</a>
+          </li>
+          <li class="nav--category">
+            <span id="nav--icon" class="material-icons"> layers </span
+            ><a href="resume.html">resume</a>
+          </li>
+          <li class="nav--category">
+            <span id="nav--icon" class="material-icons"> router </span
+            ><a href="index.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="grid grid--1x2">
+        <h1 class="h1--firstWord">Evan</h1>
+        <h1 class="h1--secondWord">Lanese</h1>
+      </section>
       <main>
         <ul class="grid grid--1x2 list">
           <li class="spriteLinkedin">
@@ -32,7 +70,7 @@
           </li>
         </ul>
       </main>
-      <hr />
+    <hr />
     </header>
     <section class="bottomPadding block">
       <div class="grid grid--1x2">
@@ -151,7 +189,35 @@
       </article>
     </section>
     <footer>
-      <div class="footer"></div>
+      <div class="footer--content">
+        <span class="footer--copyright">
+          <ul class="footer--copyright-list">
+            <li class="footer--copyright-category">
+              <span class="material-icons"> room </span>
+            </li>
+            <li class="footer--copyright-category">&copy; Hello Evan 2022</li>
+          </ul>
+        </span>
+        <span class="footer--nav">
+          <ul class="footer--nav-list">
+            <li class="footer--nav-category">
+              <a href="index.html">home</a>
+            </li>
+            <li class="footer--nav-category">
+              <a href="index.html">about</a>
+            </li>
+            <li class="footer--nav-category">
+              <a href="index.html">portfolio</a>
+            </li>
+            <li class="footer--nav-category">
+              <a href="resume.html">resume</a>
+            </li>
+            <li class="footer--nav-category">
+              <a href="index.html">contact</a>
+            </li>
+          </ul>
+        </span>
+      </div>
     </footer>
   </body>
 </html>
