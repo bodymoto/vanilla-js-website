@@ -91,7 +91,7 @@ header {
   padding-top: 1.2rem;
 }
 
-/* NAV NON-MOBILE */
+/* NON-MOBILE */
 @media screen and (min-width: 768px) {
   .collapsible__content {
     opacity: 1;
@@ -256,7 +256,7 @@ header {
   }
 }
 
-/* MAIN GREETING NONMOBILE */
+/* NONMOBILE */
 @media screen and (min-width: 650px) {
   .main--greeting {
     padding: 5rem 10rem;
@@ -437,7 +437,13 @@ header {
   }
 }
 
-/* LOGO NONMOBILE */
+@media screen and (min-width: 530px) {
+  .logo--main {
+    margin: 2rem 5rem;
+  }
+}
+
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .logo--main {
     margin: 5rem 3rem;
@@ -573,19 +579,19 @@ header {
 }
 
 /* FOOTER */
-
-.footer--background {
-  background-color: black;
-}
-
 .footer--content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
 .footer--copyright {
   display: flex;
-  align-items: end;
-  margin: 0 2rem;
+}
+
+.footer--copyright-category {
+  padding: 2.5rem;
 }
 
 .footer--copyright-category .material-icons {
@@ -595,46 +601,58 @@ header {
   padding-left: 2rem;
 }
 
-.footer--content > ul {
-  padding: 4rem 0;
-  margin: 0;
-}
-
 .footer--copyright-list {
   list-style: none;
+  padding: 0;
   color: #fff;
-  margin: 0;
   font-size: 1.4rem;
 }
 
-.footer--copyright-category {
-  padding: 2.5rem 0;
+.footer--nav {
+  padding: 0 2rem;
 }
 
-.footer--list-style {
+.footer--nav-list {
   list-style: none;
+  padding: 0;
 }
 
-.footer--list-category {
-  font-size: 1.4rem;
-  padding: 1rem;
+.footer--nav-category {
+  padding: 0.7rem;
 }
 
 footer a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.2s;
 }
 
 footer a:hover {
   color: magenta;
-  font-weight: bold;
-  transform: scale(1.2);
 }
 
-/* GALAXY FOLD */
-@media screen and (max-width: 280px) {
+@media screen and (min-width: 480px) {
+  .footer--copyright,
+  .footer--nav {
+    padding: 0 4rem;
+  }
+}
+
+/* NONMOBILE */
+@media screen and (min-width: 768px) {
   .footer--copyright {
-    margin: 0;
+    margin-right: 3rem;
+  }
+
+  .footer--copyright,
+  .footer--nav {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer--copyright,
+  .footer--nav .material-icons {
+    margin-right: 10rem;
+    font-size: 1.3rem;
   }
 }
