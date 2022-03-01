@@ -484,6 +484,11 @@ header {
 }
 
 /* ABOUT */
+.about--background {
+  background: 
+  );
+}
+
 .about--portrait {
   background-image: url();
   display: flex;
@@ -496,27 +501,48 @@ header {
   background-size: cover;
   border-radius: 100%;
   height: 30rem;
+  margin-bottom: -6.5rem;
   width: 30rem;
-}
-
-.github--btn,
-.linkedin--btn {
-  background-color: #fff;
-  height: 10rem;
-  width: 10rem;
 }
 
 .github--btn {
   border-radius: 100%;
+  height: 10rem;
+  width: 10rem;
+}
+
+.resume--btn {
+  background: var(--header--background-color);
+  border: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-bottom: 7rem;
+}
+
+.resume--btn a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #scale .github--btn,
-#scale .linkedin--btn {
-  transition: transform 0.6s;
+#scale .resume--btn {
+  transition: all 0.6s;
+}
+
+.resume--btn:hover {
+  background: #fff;
+  border: 1px solid magenta;
+}
+
+.resume--btn:hover a {
+  color: magenta;
 }
 
 #scale .github--btn:hover,
-#scale .linkedin--btn:hover {
+#scale .resume--btn:hover {
   transform: scale(1.3);
 }
 
@@ -528,7 +554,7 @@ header {
 }
 
 .icon {
-  margin: 2rem 2rem;
+  margin: 2rem 1rem;
 }
 
 #icon--gavel {
@@ -538,12 +564,17 @@ header {
 
 .about--list {
   list-style: none;
+  padding: 0 1rem;
   width: 100%;
 }
 
 .about--list-item {
   display: flex;
   flex-wrap: wrap;
+}
+
+.about--list-item p {
+  font-weight: bold;
 }
 
 /* GRIDS */
