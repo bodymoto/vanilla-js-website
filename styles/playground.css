@@ -22,14 +22,33 @@ body {
 /* GRID */
 .grid--3x1 {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about--quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+
+.about--quote-mj {
+  display: flex;
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-left: 10rem;
+  font-family: "Noto Serif Display", serif;
+}
+
+.about--quote-guru {
+  display: flex;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-right: 8rem;
+  font-family: "Noto Serif Display", serif;
 }
 
 /* ORIGINAL STYLES */
-
-.about--quote {
-  display: inline;
-}
-
 .about--portrait {
   background-image: url();
   display: flex;
