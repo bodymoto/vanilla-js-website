@@ -539,6 +539,8 @@ header {
 }
 
 .about--quote-mj {
+  animation-duration: 3s;
+  animation-name: slidein-mj;
   display: flex;
   font-family: "Noto Serif Display", serif;
   font-size: 3rem;
@@ -546,12 +548,28 @@ header {
   margin: 0 3rem;
 }
 
+@keyframes slidein-mj {
+  from {
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
 .about--quote-guru {
+  animation-duration: 4s;
+  animation-name: slidein-guru;
   display: flex;
   font-family: "Noto Serif Display", serif;
   font-size: 2.5rem;
   line-height: 4rem;
   margin: 0 3rem;
+}
+
+@keyframes slidein-guru {
+  from {
+    opacity: 0;
+    overflow: hidden;
+  }
 }
 
 .about--portrait {

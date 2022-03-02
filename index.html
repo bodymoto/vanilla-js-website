@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evan's Portfolio 2022</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com" as="style" />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      as="style"
+      crossorigin
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Josefin+Sans:wght@400;700&family=Noto+Serif+Display:ital,wght@1,300&family=Shizuru&display=swap"
       rel="stylesheet"
@@ -58,40 +63,38 @@
           <h2 class="main--subheading-professional">professional</h2>
           <h2 class="main--subheading-portfolio">portfolio</h2>
         </section>
-        <div class="main--intro">
+        <article class="main--intro">
           <div class="intro--description">
             <h2>Rising Software Developer</h2>
             <p>
               Fundamentals are everything&period; Yet there are essential
-              fundamentals to the software industry that go undiscussed&period;
+              foundations to the software industry that go undiscussed&period;
               Try Googling&comma;
               <span class="intro--quote">
                 &quot;the fundamentals of programming&comma;&quot;
               </span>
-              and you&apos;ll find things like&semi; analysis&comma; or
-              variables&comma; or data structures&comma; or algorithms&period;
-              Each are useful and compelling subjects&comma; but something much
-              deeper &ndash; and arguably more fundamental &ndash; is
-              missing&period;
+              and you&apos;ll find&semi; analysis&comma; or variables&comma; or
+              data structures&comma; or algorithms&period; Each are useful and
+              compelling subjects&comma; but something much deeper &ndash; and
+              arguably more fundamental &ndash; is missing&period;
             </p>
             <p>
-              Before you lay down the concrete to support your building you must
-              first understand the earth that lay beneath your feet&period; As a
-              self&ndash;taught maverick who has spent the last 10 years keeping
-              up with the latest trends within the IT industry I understand
-              first and foremost what it took to develop the essential habits
-              necessary to remain relevant&period; I have now refocused these
-              principles into the new and exciting field of software
-              development&period; It helps being a nerd&comma; but I know that
-              fundamentally this isn&apos;t a sprint &ndash; it&apos;s a
-              marathon&excl;
+              Before you lay down a foundation for your building you have to
+              first look at the foundational earth beneath you&period; 10 years
+              within the IT industry, between tech and manager, has pressed me
+              to develop the essential habits & routine necessary to always
+              improve&period; I have now refocused these principles into the new
+              and exciting field of software development&period; It definitely
+              helps being a nerd&comma; but what distinquishes my fundamentals
+              from others is knowing that this isn&apos;t a sprint &ndash;
+              it&apos;s a marathon&period;
             </p>
             <p>
-              To find out more&comma;
-              <a href="#">connect&excl;</a>
+              <a href="#">Connect</a>
+              with me to find out more&excl;
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </header>
     <main>
@@ -101,26 +104,31 @@
             class="logo--html"
             src="images/logo/HTML5-logo.png"
             alt="html5 logo"
+            loading="lazy"
           />
           <img
             class="logo--css"
             src="images/logo/CSS3-logo.png"
             alt="css3 logo"
+            loading="lazy"
           />
           <img
             class="logo--js"
             src="images/logo/JavaScript-logo.png"
             alt="javascript logo"
+            loading="lazy"
           />
           <img
             class="logo--python"
             src="images/logo/python-logo.png"
             alt="python logo"
+            loading="lazy"
           />
           <img
             class="logo--git"
             src="images/logo/Git-Icon.png"
             alt="git logo"
+            loading="lazy"
           />
         </div>
       </div>
