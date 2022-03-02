@@ -539,7 +539,7 @@ header {
 }
 
 .about--quote-mj {
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-name: slidein-mj;
   display: flex;
   font-family: "Noto Serif Display", serif;
@@ -556,7 +556,7 @@ header {
 }
 
 .about--quote-guru {
-  animation-duration: 4s;
+  animation-duration: 7s;
   animation-name: slidein-guru;
   display: flex;
   font-family: "Noto Serif Display", serif;
