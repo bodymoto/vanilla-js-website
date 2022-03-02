@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Evan's Portfolio 2022</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,39 +18,39 @@
   </head>
   <body>
     <header>
-      <nav class="nav collapsible">
-        <a href="/" class="nav--logo"
+      <nav class="navi collapsible">
+        <a href="/" class="navi--logo"
           ><span class="material-icons"> room </span></a
         >
         <img
-          class="nav--dropdown-mobile-icon"
+          class="navi--dropdown-mobile-icon"
           src="images/dropdown-mobile-icon.svg"
           alt="Drop down menu icon."
         />
-        <ul class="nav--list collapsible__content">
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> desktop_windows </span
+        <ul class="navi--list collapsible__content">
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> desktop_windows </span
             ><a href="#">home</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> local_cafe </span
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_cafe </span
             ><a href="#">about</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> local_florist </span
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_florist </span
             ><a href="#">portfolio</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> layers </span
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> layers </span
             ><a href="resume.html">resume</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> router </span
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> router </span
             ><a href="#">contact</a>
           </li>
         </ul>
       </nav>
-      <main>
+      <div>
         <section class="main--greeting">
           <h1 class="main--heading-hello">hello</h1>
           <h1 class="main--heading-evan">evan</h1>
@@ -58,8 +58,8 @@
           <h2 class="main--subheading-professional">professional</h2>
           <h2 class="main--subheading-portfolio">portfolio</h2>
         </section>
-        <article class="main--intro">
-          <section class="intro--description">
+        <div class="main--intro">
+          <div class="intro--description">
             <h2>Rising Software Developer</h2>
             <p>
               Fundamentals are everything&period; Yet there are essential
@@ -90,119 +90,123 @@
               To find out more&comma;
               <a href="#">connect&excl;</a>
             </p>
-          </section>
-        </article>
-      </main>
-    </header>
-    <article class="logo--main">
-      <div class="logo--display">
-        <img
-          class="logo--html"
-          src="images/logo/HTML5-logo.png"
-          alt="html5 logo"
-        />
-        <img
-          class="logo--css"
-          src="images/logo/CSS3-logo.png"
-          alt="css3 logo"
-        />
-        <img
-          class="logo--js"
-          src="images/logo/JavaScript-logo.png"
-          alt="javascript logo"
-        />
-        <img
-          class="logo--python"
-          src="images/logo/python-logo.png"
-          alt="python logo"
-        />
-        <img class="logo--git" src="images/logo/Git-Icon.png" alt="git logo" />
+          </div>
+        </div>
       </div>
-    </article>
-    <article>
-      <div class="grid--3x1">
-        <div>
-          <div class="about--quote">
-            <p class="about--quote-mj">
-              &quot;Get the fundamentals down and the level of everything you do
-              will rise&period;&quot; &ndash;Michael Jordan
-            </p>
-          </div>
-        </div>
-        <div class="about--portrait">
-          <div id="scale" class="img--self-portrait icon--btn">
-            <button class="resume--btn">
-              <a href="resume.html">resume</a>
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="about--quote">
-            <p class="about--quote-guru">
-              &quot;Success is not about being better than someone else&period;
-              Success is about fulfilling the intent behind your
-              action&period;&quot; &ndash;Jagadish Vasudev
-            </p>
-          </div>
+    </header>
+    <main>
+      <div class="logo--main">
+        <div class="logo--display">
+          <img
+            class="logo--html"
+            src="images/logo/HTML5-logo.png"
+            alt="html5 logo"
+          />
+          <img
+            class="logo--css"
+            src="images/logo/CSS3-logo.png"
+            alt="css3 logo"
+          />
+          <img
+            class="logo--js"
+            src="images/logo/JavaScript-logo.png"
+            alt="javascript logo"
+          />
+          <img
+            class="logo--python"
+            src="images/logo/python-logo.png"
+            alt="python logo"
+          />
+          <img
+            class="logo--git"
+            src="images/logo/Git-Icon.png"
+            alt="git logo"
+          />
         </div>
       </div>
       <div>
-        <div id="scale" class="icon--btn">
+        <div class="grid--3x1">
           <div>
-            <a href="https://github.com/boshimoto/">
-              <svg class="icon github--btn">
-                <use
-                  href="images/git-link-sprite.svg#GitHub-Mark-120px-plus"
-                ></use>
-              </svg>
-            </a>
+            <div class="about--quote">
+              <p class="about--quote-mj">
+                &quot;Get the fundamentals down and the level of everything you
+                do will rise&period;&quot; &ndash;Michael Jordan
+              </p>
+            </div>
+          </div>
+          <div class="about--portrait">
+            <div class="scale img--self-portrait icon--btn">
+              <a class="resume--btn" href="resume.html">resume</a>
+            </div>
           </div>
           <div>
-            <ul class="about--list">
-              <li class="about--list-item">
-                <span id="icon--gavel" class="material-icons"> gavel </span>
-                <p>Git Experienced</p>
-              </li>
-              <li class="about--list-item">
-                <span id="icon--gavel" class="material-icons"> gavel </span>
-                <p>Commit History</p>
-              </li>
-              <li class="about--list-item">
-                <span id="icon--gavel" class="material-icons"> gavel </span>
-                <p>Steady Improvement</p>
-              </li>
-            </ul>
+            <div class="about--quote">
+              <p class="about--quote-guru">
+                &quot;Success is not about being better than someone
+                else&period; Success is about fulfilling the intent behind your
+                action&period;&quot; &ndash;Jagadish Vasudev
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="scale icon--btn">
+            <div>
+              <a href="https://github.com/boshimoto/">
+                <svg class="icon github--btn">
+                  <use
+                    href="images/git-link-sprite.svg#GitHub-Mark-120px-plus"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+            <div>
+              <ul class="about--list">
+                <li class="about--list-item">
+                  <span class="material-icons icon--gavel"> gavel </span>
+                  <p>Git Experienced</p>
+                </li>
+                <li class="about--list-item">
+                  <span class="material-icons icon--gavel"> gavel </span>
+                  <p>Commit History</p>
+                </li>
+                <li class="about--list-item">
+                  <span class="material-icons icon--gavel"> gavel </span>
+                  <p>Steady Improvement</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </article>
-    <hr />
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quis
-        quasi blanditiis iure excepturi facere enim sunt dolores quod, eius
-        incidunt dolor voluptatum culpa modi recusandae saepe minima quia!
-        Impedit expedita earum cupiditate illum ad accusamus tempora totam ut
-        fuga voluptatibus magnam architecto iste amet cumque possimus quis non
-        nobis assumenda, consequuntur animi sapiente recusandae? Ea quos, ut
-        suscipit nesciunt, optio fugit quasi nisi explicabo laudantium a
-        reiciendis error. Expedita nisi accusantium aperiam magni autem earum
-        maiores quia, mollitia, atque perferendis cupiditate ipsum qui delectus
-        rem molestias ratione accusamus impedit reiciendis fugiat vero! Vel
-        perferendis ullam saepe maxime suscipit tempore.
-      </p>
-    </div>
+      <hr />
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          quis quasi blanditiis iure excepturi facere enim sunt dolores quod,
+          eius incidunt dolor voluptatum culpa modi recusandae saepe minima
+          quia! Impedit expedita earum cupiditate illum ad accusamus tempora
+          totam ut fuga voluptatibus magnam architecto iste amet cumque possimus
+          quis non nobis assumenda, consequuntur animi sapiente recusandae? Ea
+          quos, ut suscipit nesciunt, optio fugit quasi nisi explicabo
+          laudantium a reiciendis error. Expedita nisi accusantium aperiam magni
+          autem earum maiores quia, mollitia, atque perferendis cupiditate ipsum
+          qui delectus rem molestias ratione accusamus impedit reiciendis fugiat
+          vero! Vel perferendis ullam saepe maxime suscipit tempore.
+        </p>
+      </div>
+    </main>
     <footer>
       <div class="footer--content">
-        <span class="footer--copyright">
+        <div class="footer--copyright">
           <ul class="footer--copyright-list">
             <li class="footer--copyright-category">
               <span class="material-icons"> room </span>
             </li>
             <li class="footer--copyright-category">&copy; Hello Evan 2022</li>
           </ul>
-        </span>
-        <span class="footer--nav">
+        </div>
+        <div class="footer--nav">
           <ul class="footer--nav-list">
             <li class="footer--nav-category">
               <a href="#">home</a>
@@ -220,7 +224,7 @@
               <a href="#">contact</a>
             </li>
           </ul>
-        </span>
+        </div>
       </div>
     </footer>
     <script src="scripts/collapsible.js"></script>

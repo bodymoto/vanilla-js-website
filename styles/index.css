@@ -14,7 +14,8 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif, "Josefin Sans", sans-serif, "Shizuru", cursive,
+    "Noto Serif Display", serif;
   font-size: 1.8rem;
 }
 
@@ -31,7 +32,7 @@ header {
 }
 
 /* NAVIGATION BAR */
-.nav {
+.navi {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -49,18 +50,18 @@ header {
   opacity: 1;
 }
 
-.nav--logo .material-icons {
+.navi--logo .material-icons {
   font-size: 4rem;
   padding: 0.5rem 0.5rem;
 }
 
-.nav.collapsible--expanded .nav--dropdown-mobile-icon {
+.navi.collapsible--expanded .navi--dropdown-mobile-icon {
   border-radius: 5px;
   box-shadow: 0 0 0 3px rgb(93, 250, 21);
   opacity: 1;
 }
 
-.nav--dropdown-mobile-icon {
+.navi--dropdown-mobile-icon {
   border-radius: 5px;
   cursor: pointer;
   height: 6rem;
@@ -70,31 +71,31 @@ header {
   width: 6rem;
 }
 
-.nav a {
+.navi a {
   color: var(--color-white);
   padding: 0.7rem 0.5rem;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.nav a:hover {
+.navi a:hover {
   color: magenta;
 }
 
-.nav--list {
+.navi--list {
   list-style: none;
   margin: 0;
   padding: 0 2rem;
   width: 100%;
 }
 
-#nav--icon {
+.navi--icon {
   color: var(--color-white);
   font-size: 1.3rem;
   padding: 0.5rem 0.5rem;
 }
 
-.nav--category {
+.navi--category {
   border-bottom: 1px solid #222;
   font-size: 1.8rem;
   font-weight: bold;
@@ -109,16 +110,16 @@ header {
     overflow: visible;
   }
 
-  .nav--dropdown-mobile-icon {
+  .navi--dropdown-mobile-icon {
     display: none;
   }
 
-  .nav--list {
+  .navi--list {
     display: flex;
     width: auto;
   }
 
-  .nav--category {
+  .navi--category {
     border: 0;
     font-size: 1.8rem;
     padding: 1.5rem 0;
@@ -132,12 +133,12 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav--logo .material-icons {
+  .navi--logo .material-icons {
     font-size: 2rem;
     padding: 0.5rem 4rem;
   }
 
-  .nav--category {
+  .navi--category {
     font-size: 1.2rem;
     padding-right: 3rem;
     padding-top: 1.2rem;
@@ -573,15 +574,12 @@ header {
   background: var(--header--background-color);
   border-radius: 40px;
   border: 0;
+  color: var(--color-white);
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   margin-top: 29rem;
   margin-bottom: 7rem;
   padding: 1rem 2rem;
-}
-
-.resume--btn a {
-  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -591,23 +589,20 @@ header {
   width: 10rem;
 }
 
-#scale .github--btn,
-#scale .resume--btn {
+.scale .github--btn,
+.scale .resume--btn {
   transition: all 0.6s;
 }
 
 .resume--btn:hover {
   background: var(--color-white);
   border: 1px solid magenta;
+  color: magenta;
   text-transform: uppercase;
 }
 
-.resume--btn:hover a {
-  color: magenta;
-}
-
-#scale .github--btn:hover,
-#scale .resume--btn:hover {
+.scale .github--btn:hover,
+.scale .resume--btn:hover {
   transform: scale(1.3);
 }
 
@@ -623,7 +618,7 @@ header {
   margin: 2rem 1rem;
 }
 
-#icon--gavel {
+.icon--gavel {
   color: gold;
   font-size: 4rem;
 }
