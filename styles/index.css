@@ -28,7 +28,6 @@ header {
     magenta 20%,
     var(--header--background-color) 35%
   );
-  /* background-color: var(--header--background-color); */
 }
 
 /* NAVIGATION BAR */
@@ -208,7 +207,7 @@ header {
   top: 15rem;
 }
 
-/* GALAXY FOLD */
+/* MOBILE */
 @media screen and (max-width: 374px) {
   .main--greeting {
     background-color: rgb(76, 121, 136);
@@ -372,8 +371,8 @@ header {
 /* MAIN INTRODUCTION */
 .main--intro {
   display: block;
-  padding: 2rem 0;
   min-height: 90rem;
+  padding: 2rem 0;
 }
 
 .intro--description h2 {
@@ -471,7 +470,7 @@ header {
   width: 5rem;
 }
 
-/* GALAXY FOLD */
+/* MOBILE */
 @media screen and (max-width: 280px) {
   .logo--main {
     margin: 2rem 1rem;
@@ -539,7 +538,7 @@ header {
   background-image: url();
   display: flex;
   justify-content: center;
-  margin: 5rem 0;
+  margin-bottom: 15rem;
 }
 
 .img--self-portrait {
@@ -551,18 +550,13 @@ header {
   width: 30rem;
 }
 
-.github--btn {
-  border-radius: 100%;
-  height: 10rem;
-  width: 10rem;
-}
-
 .resume--btn {
   background: var(--header--background-color);
   border-radius: 40px;
   border: 0;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
+  margin-top: 29rem;
   margin-bottom: 7rem;
   padding: 1rem 2rem;
 }
@@ -570,6 +564,12 @@ header {
 .resume--btn a {
   color: var(--color-white);
   text-decoration: none;
+}
+
+.github--btn {
+  border-radius: 100%;
+  height: 10rem;
+  width: 10rem;
 }
 
 #scale .github--btn,
@@ -676,6 +676,7 @@ footer a:hover {
   color: magenta;
 }
 
+/* MOBILE */
 @media screen and (min-width: 480px) {
   .footer--copyright,
   .footer--nav {
