@@ -2,6 +2,9 @@
 
 :root {
   --header--background-color: rgb(76, 121, 136);
+  --color-white: #fff;
+  --color-lightgreen: #90ee90;
+  --color-lightblue: #add8e6;
 }
 
 /* TYPOGRAPHY */
@@ -16,7 +19,16 @@ body {
 }
 
 header {
-  background-color: var(--header--background-color);
+  background: radial-gradient(
+    circle at bottom,
+    transparent 0%,
+    tomato 5%,
+    yellow 10%,
+    pink 15%,
+    magenta 20%,
+    var(--header--background-color) 35%
+  );
+  /* background-color: var(--header--background-color); */
 }
 
 /* NAVIGATION BAR */
@@ -60,7 +72,7 @@ header {
 }
 
 .nav a {
-  color: #fff;
+  color: var(--color-white);
   padding: 0.7rem 0.5rem;
   text-decoration: none;
   transition: color 0.3s;
@@ -78,14 +90,14 @@ header {
 }
 
 #nav--icon {
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.3rem;
   padding: 0.5rem 0.5rem;
 }
 
 .nav--category {
   border-bottom: 1px solid #222;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 0.3rem;
   padding-top: 1.2rem;
@@ -148,52 +160,52 @@ header {
   color: pink;
   font-family: "Shizuru", cursive;
   font-size: 8rem;
-  left: 4.5rem;
+  left: 2.5rem;
   margin: 0;
   position: absolute;
   text-transform: uppercase;
-  top: -1rem;
+  top: 0.5rem;
   transform: rotate(-15deg);
 }
 
 .main--heading-evan {
-  color: lightblue;
+  color: var(--color-lightblue);
   font-family: "Josefin Sans", sans-serif;
   font-size: 10rem;
-  left: 12.5rem;
+  left: 10.5rem;
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   transform: rotate(-5deg);
 }
 
 .main--heading-apos {
-  color: lightblue;
+  color: var(--color-lightblue);
   font-family: "Josefin Sans", sans-serif;
   font-size: 4rem;
-  left: 34.5rem;
+  left: 32.5rem;
   position: absolute;
-  top: 3rem;
+  top: 4rem;
   transform: rotate(7deg);
 }
 
 .main--subheading-professional {
-  color: lightblue;
+  color: var(--color-lightblue);
   font-family: "EB Garamond", serif;
   font-size: 1.2rem;
   left: 19.5rem;
   position: absolute;
   text-transform: uppercase;
-  top: 13rem;
+  top: 14rem;
 }
 
 .main--subheading-portfolio {
-  color: lightblue;
+  color: var(--color-lightblue);
   font-family: "EB Garamond", serif;
   font-size: 1.4rem;
   left: 23.5rem;
   position: absolute;
   text-transform: uppercase;
-  top: 14rem;
+  top: 15rem;
 }
 
 /* GALAXY FOLD */
@@ -211,12 +223,12 @@ header {
     left: 2.5rem;
     position: absolute;
     text-transform: uppercase;
-    top: 0;
+    top: 0.5rem;
     transform: rotate(-15deg);
   }
 
   .main--heading-evan {
-    color: lightblue;
+    color: var(--color-lightblue);
     font-family: "Josefin Sans", sans-serif;
     font-size: 7rem;
     left: 9.5rem;
@@ -226,7 +238,7 @@ header {
   }
 
   .main--heading-apos {
-    color: lightblue;
+    color: var(--color-lightblue);
     font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
     left: 25rem;
@@ -236,7 +248,7 @@ header {
   }
 
   .main--subheading-professional {
-    color: lightblue;
+    color: var(--color-lightblue);
     font-family: "EB Garamond", serif;
     font-size: 1.2rem;
     left: 16.5rem;
@@ -246,7 +258,7 @@ header {
   }
 
   .main--subheading-portfolio {
-    color: lightblue;
+    color: var(--color-lightblue);
     font-family: "EB Garamond", serif;
     font-size: 1.4rem;
     left: 18.5rem;
@@ -361,22 +373,51 @@ header {
 .main--intro {
   display: block;
   padding: 2rem 0;
+  min-height: 90rem;
 }
 
 .intro--description h2 {
-  color: lightgreen;
+  color: var(--color-lightgreen);
   margin: 0 4rem;
 }
 
 .intro--description p {
-  color: #fff;
+  color: var(--color-white);
+  line-height: 2.2rem;
   margin-left: 5rem;
   margin-right: 3rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
+  text-shadow: 1px 2px 4px var(--header--background-color);
 }
 
-/* LAPTOPS */
+.intro--description a {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.intro--description a:hover {
+  color: var(--color-lightgreen);
+}
+
+.intro--quote {
+  font-style: italic;
+}
+
+/* NONMOBILE */
+@media screen and (min-width: 768px) {
+  .main--intro {
+    min-height: 60rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  .main--intro {
+    min-height: 55rem;
+  }
+
   .intro--description h2 {
     margin: 0 25rem;
   }
@@ -490,6 +531,10 @@ header {
 }
 
 /* ABOUT */
+.about--quote {
+  display: inline;
+}
+
 .about--portrait {
   background-image: url();
   display: flex;
@@ -517,14 +562,13 @@ header {
   border-radius: 40px;
   border: 0;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 7rem;
-  padding: 2rem 3rem;
-  text-transform: uppercase;
+  padding: 1rem 2rem;
 }
 
 .resume--btn a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -534,8 +578,9 @@ header {
 }
 
 .resume--btn:hover {
-  background: #fff;
+  background: var(--color-white);
   border: 1px solid magenta;
+  text-transform: uppercase;
 }
 
 .resume--btn:hover a {
@@ -555,6 +600,7 @@ header {
 }
 
 .icon {
+  /* class built into svg component */
   margin: 2rem 1rem;
 }
 
@@ -596,13 +642,13 @@ header {
 
 .footer--copyright-category .material-icons {
   align-items: center;
-  color: #fff;
+  color: var(--color-white);
   font-size: 8rem;
   padding-left: 2rem;
 }
 
 .footer--copyright-list {
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.4rem;
   list-style: none;
   padding: 0;
@@ -622,7 +668,7 @@ header {
 }
 
 footer a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
