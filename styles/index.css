@@ -540,7 +540,7 @@ header {
 
 .about--quote-mj {
   animation-duration: 6s;
-  animation-name: slidein-mj;
+  animation-name: fadein-mj;
   display: flex;
   font-family: "Noto Serif Display", serif;
   font-size: 3rem;
@@ -548,7 +548,7 @@ header {
   margin: 0 3rem;
 }
 
-@keyframes slidein-mj {
+@keyframes fadein-mj {
   from {
     opacity: 0;
     overflow: hidden;
@@ -557,7 +557,7 @@ header {
 
 .about--quote-guru {
   animation-duration: 7s;
-  animation-name: slidein-guru;
+  animation-name: fadein-guru;
   display: flex;
   font-family: "Noto Serif Display", serif;
   font-size: 2.5rem;
@@ -565,7 +565,7 @@ header {
   margin: 0 3rem;
 }
 
-@keyframes slidein-guru {
+@keyframes fadein-guru {
   from {
     opacity: 0;
     overflow: hidden;
