@@ -18,90 +18,18 @@ body {
 }
 
 /* PLAYGROUND */
-
-/* GRID */
-.grid--3x1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+hr {
+  margin: 0 5rem;
 }
 
-.about--quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 3rem;
+.background {
+  background-color: red;
 }
 
-.about--quote-mj {
-  display: flex;
-  font-size: 4rem;
-  line-height: 5rem;
-  margin-left: 10rem;
-  font-family: "Noto Serif Display", serif;
+.resume--page {
+  margin: 1rem 2rem;
 }
 
-.about--quote-guru {
-  display: flex;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  margin-right: 8rem;
-  font-family: "Noto Serif Display", serif;
-}
-
-/* ORIGINAL STYLES */
-.about--portrait {
-  background-image: url();
-  display: flex;
-  justify-content: center;
-  margin: 5rem 0;
-}
-
-.img--self-portrait {
-  background-image: url(../images/self-portrait.jpg);
-  background-size: cover;
-  border-radius: 100%;
-  height: 30rem;
-  margin-bottom: -6.5rem;
-  width: 30rem;
-}
-
-.resume--btn {
-  background: var(--header--background-color);
-  border-radius: 40px;
-  border: 0;
-  cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-  margin-top: 29rem;
-  margin-bottom: 7rem;
-  padding: 1rem 2rem;
-}
-
-.resume--btn a {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-#scale .resume--btn {
-  transition: all 0.6s;
-}
-
-.resume--btn:hover {
-  background: var(--color-white);
-  border: 1px solid magenta;
-  text-transform: uppercase;
-}
-
-.resume--btn:hover a {
-  color: magenta;
-}
-
-#scale .resume--btn:hover {
-  transform: scale(1.3);
-}
-
-.icon--btn {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.resume--contact {
+  min-height: 40rem;
 }

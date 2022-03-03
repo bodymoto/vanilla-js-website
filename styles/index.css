@@ -372,7 +372,7 @@ header {
 /* MAIN INTRODUCTION */
 .main--intro {
   display: block;
-  min-height: 90rem;
+  min-height: 85rem;
   padding: 2rem 0;
 }
 
@@ -388,18 +388,6 @@ header {
   margin-right: 3rem;
   padding-bottom: 1rem;
   text-shadow: 1px 2px 4px var(--header--background-color);
-}
-
-.intro--description a {
-  color: white;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.intro--description a:hover {
-  color: var(--color-lightgreen);
 }
 
 .intro--quote {
@@ -580,7 +568,7 @@ header {
 }
 
 .img--self-portrait {
-  background-image: url(../images/self-portrait.jpg);
+  background-image: url(../images/self-portrait-min.jpg);
   background-size: cover;
   border-radius: 100%;
   height: 30rem;
