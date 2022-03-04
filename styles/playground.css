@@ -16,26 +16,36 @@ body {
     sans-serif;
   font-size: 1.8rem;
   background-color: lightgrey;
-  letter-spacing: .3rem;
+  letter-spacing: 0.25rem;
 }
 
 h1 {
   margin-bottom: 3rem;
+  font-weight: 400;
 }
 
 /* PLAYGROUND */
+
+/* HEAD */
 hr {
   margin: 0 8rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 .resume--page {
   background-color: var(--color-white);
   margin: 0 4rem;
-  min-height: 100rem
+  min-height: 100rem;
+  width: 115rem;
 }
 
-.resume--head {
-  margin: 0 4rem;
+.resume--head,
+.resume--skills {
+  margin: 0 6rem;
 }
 
 .resume--head {
@@ -44,17 +54,28 @@ hr {
 
 .resume--head-name {
   font-size: 5rem;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   letter-spacing: 0;
-  margin-left: 4rem;
+  margin-left: 2.2rem;
 }
 
 .resume--head-contact {
+  font-size: 1.4rem;
   text-transform: uppercase;
-  font-size: 2.2rem;
   margin: 0 3rem;
-  padding-top: 5rem;
+  padding-top: 8rem;
   padding-left: 5rem;
+}
+
+/* SKILLS */
+.resume--skills-heading {
+  display: flex;
+  margin-left: 2.2rem;
+}
+
+.resume--skills-list {
+  display: flex;
+  list-style: none;
 }
 
 /* font-family: 'Crushed', cursive; */
