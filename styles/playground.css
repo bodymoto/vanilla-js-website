@@ -24,6 +24,11 @@ h1 {
   font-weight: 400;
 }
 
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
 /* PLAYGROUND */
 
 /* HEAD */
@@ -68,14 +73,20 @@ main {
 }
 
 /* SKILLS */
-.resume--skills-heading {
+.resume--skills-topic {
   display: flex;
+  justify-content: left;
+  align-items: center;
   margin-left: 2.2rem;
 }
 
 .resume--skills-list {
   display: flex;
   list-style: none;
+}
+
+.resume--skills-list-item {
+  padding-right: 5rem;
 }
 
 /* font-family: 'Crushed', cursive; */
