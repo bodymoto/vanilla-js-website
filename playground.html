@@ -3,15 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Josefin+Sans:wght@400;700&family=Noto+Serif+Display:ital,wght@1,300&family=Shizuru&display=swap"
-      rel="stylesheet"
-    />
+    <title>Evans Resume 2022</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -19,21 +11,56 @@
     <link rel="stylesheet" href="styles/playground.css" />
   </head>
   <body>
-    <div class="background">
+    <header>
+      <nav class="navi collapsible">
+        <a href="/" class="navi--logo"
+          ><span class="material-icons"> room </span></a
+        >
+        <img
+          class="navi--dropdown-mobile-icon"
+          src="images/dropdown-mobile-icon.svg"
+          alt="Drop down menu icon."
+        />
+        <ul class="navi--list collapsible__content">
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> desktop_windows </span
+            ><a href="#">home</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_cafe </span
+            ><a href="#">about</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_florist </span
+            ><a href="#">portfolio</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> layers </span
+            ><a href="resume.html">resume</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> router </span
+            ><a href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
       <div class="resume--page">
-        <div class="resumme--contact">
-          <div>
-            <p>Lorem ipsum.</p>
+        <div class="resume--head">
+          <div class="resume--head-name">
+            <h1>Evan<br>Lanese</h1>
           </div>
-          <div>
+          <div class="resume--head-contact">
+            <h2>Front End Developer</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-              incidunt?
+              mr.lanese@gmail.com | helloevan.dev
             </p>
           </div>
         </div>
         <hr />
       </div>
-    </div>
+    </main>
+  <script src="scripts/collapsible.js"></script>
   </body>
 </html>
