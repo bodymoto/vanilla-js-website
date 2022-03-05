@@ -48,12 +48,13 @@ main {
   width: 115rem;
 }
 
-.resume--head,
-.resume--skills {
+.resume--head-cell,
+.resume--skills-cell,
+.resume--projects-cell {
   margin: 0 6rem;
 }
 
-.resume--head {
+.resume--head-cell {
   display: flex;
 }
 
@@ -73,20 +74,49 @@ main {
 }
 
 /* SKILLS */
-.resume--skills-topic {
+.resume--skills-content {
   display: flex;
   justify-content: left;
   align-items: center;
   margin-left: 2.2rem;
+  min-width: 15rem;
 }
 
-.resume--skills-list {
+.skills--title {
+  min-width: 15rem;
+}
+
+.skills--list {
   display: flex;
   list-style: none;
 }
 
-.resume--skills-list-item {
+.skills--list-item {
   padding-right: 5rem;
+}
+
+/* PROJECTS */
+.resume--projects-content {
+  margin-left: 2.2rem;
+}
+
+.resume--projects-showdown,
+.resume--projects-website {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.project--title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  min-width: 15rem;
+}
+
+.project--title-detail {
+  margin: 0 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.05rem;
 }
 
 /* font-family: 'Crushed', cursive; */
