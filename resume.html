@@ -3,222 +3,267 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Front-End Resume</title>
+    <title>Evans Resume 2022</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Josefin+Sans:wght@400;700&family=Shizuru&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
-    <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/resume.css" />
+    <link rel="stylesheet" href="styles/playground.css" />
   </head>
   <body>
     <header>
-      <nav class="nav collapsible">
-        <a href="/" class="nav--logo"
+      <nav class="navi collapsible">
+        <a href="/" class="navi--logo"
           ><span class="material-icons"> room </span></a
         >
         <img
-          class="nav--dropdown-mobile-icon"
+          class="navi--dropdown-mobile-icon"
           src="images/dropdown-mobile-icon.svg"
           alt="Drop down menu icon."
         />
-        <ul class="nav--list collapsible__content">
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> desktop_windows </span
-            ><a href="index.html">home</a>
+        <ul class="navi--list collapsible__content">
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> desktop_windows </span
+            ><a href="#">home</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> local_cafe </span
-            ><a href="index.html">about</a>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_cafe </span
+            ><a href="#">about</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> local_florist </span
-            ><a href="index.html">portfolio</a>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_florist </span
+            ><a href="#">portfolio</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> layers </span
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> layers </span
             ><a href="resume.html">resume</a>
           </li>
-          <li class="nav--category">
-            <span id="nav--icon" class="material-icons"> router </span
-            ><a href="index.html">contact</a>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> router </span
+            ><a href="#">contact</a>
           </li>
         </ul>
       </nav>
-      <section class="grid grid--1x2">
-        <h1 class="h1--firstWord">Evan</h1>
-        <h1 class="h1--secondWord">Lanese</h1>
-      </section>
-      <main>
-        <ul class="grid grid--1x2 list">
-          <li class="spriteLinkedin">
-            <a href="https://www.linkedin.com/in/evanlanese/">
-              <svg class="icon">
-                <use href="images/git-link-sprite.svg#In-Blue-48_2x"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="spriteGitHub">
-            <a href="https://github.com/boshimoto/">
-            <svg class="icon">
-              <use href="images/git-link-sprite.svg#GitHub-Mark-120px-plus"></use>
-            </svg>
-            </a>
-          </li>
-        </ul>
-      </main>
-    <hr />
     </header>
-    <section class="bottomPadding block">
-      <div class="grid grid--1x2">
-        <h2>Technical Skills</h2>
-      </div>
-      <article>
-        <ul class="list">
-          <li class="list--display">Python 3</li>
-          <li>|</li>
-          <li class="list--display">JavaScript</li>
-          <li>|</li>
-          <li class="list--display">HTML5</li>
-          <li>|</li>
-          <li class="list--display">CSS3</li>
-          <li>|</li>
-          <li class="list--display">Git</li>
-          <li>|</li>
-          <li class="list--display">OOP</li>
-          <li>|</li>
-          <li class="list--display">Decomposition</li>
-        </ul>
-      </article>
-    </section>
-    <hr />
-    <section class="bottomPadding block">
-      <div class="grid grid--1x2 bottomPadding">
-        <h2>Projects</h2>
-      </div>
-      <article>
-        <div class="grid grid--1x2">
-          <h3 class="subject">Showdown</h3>
+    <main>
+      <div class="resume--page">
+        <div class="resume--head-cell">
+          <section class="resume--head-name">
+            <h1>Evan<br />Lanese</h1>
+          </section>
+          <section class="resume--head-contact">
+            <h2>front end developer</h2>
+            <p>helloevan&period;dev</p>
+            <p>mr&period;lanese@gmail&period;com</p>
+            <p>github&period;com&sol;boshimoto</p>
+            <p>linkedin&period;com&sol;in&sol;evanlanese</p>
+            <h3>pennsylvania&comma; usa</h3>
+          </section>
         </div>
-          <span>
-            <p class="showdown">A tool to automate local network health checks on Cisco iOS devices.
-              Enter your credentials and device host name into Showdown&apos;s prompt. A new folder will be created on your Windows desktop called, &quot;Network Checks&quot;. Showdown then SSH&apos;s into the device, runs a set of commands, and saves the command output within a text file named after the device. This file is saved inside the desktop folder. Showdown will then prompt for another host name and repeat the SSH process, or stop running when &quot;q&quot; is entered.
-              </p>
-            <p>➪Written in Python. Use the PIP package manager to install. Windows 10 tested</p>
-          </span>
-          <div class="grid grid--1x2">
-            <h3 class="subject">Web page</h3>
-          </div>
-          <span>
-            <p>A single page website to demonstrate design mark-up techniques; grids, sprites, image optimization, mobile and tablet ready, well formatted code, and built using component-first object-oriented CSS.</p>
-            <p class="portfolio">➪Written in HTML, CSS, JavaScript</p>
-          </span>
-        </div>
-      </article>
-    </section>
-    <hr />
-    <section class="bottomPadding block">
-      <div class="grid grid--1x2">
-        <h2 class="bottomPadding">Education</h2>
-      </div>
-      <div>
-        <summary class="grid">
-          <div>
-            <p class="gridText">A self-taught IT professional now with a passion to learn software - some lessons include:
-              </p>
-          </div>
-          </summary>
-      </div>
-      <summary class="grid wrapper">
-        <ul class="listBullets gridBullets">
-          <li><a href="https://developers.google.com/edu/python/">Google for Education Python Class</a></li>
-          <li><a href="https://codeinplace.stanford.edu/">Stanfords Code in Place Python Series</a></li>
-          <li><a href="https://www.coursera.org/specializations/python">Python for Everybody by Professor Charles Severance, University of Michigan</a></li>
-          <li><a href="https://codewithmosh.com/courses">The Ultimate HTML5 & CSS3 Series</a></li>
-          <li><a href="https://codewithmosh.com/courses">The Ultimate Javascript Mastery Series</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Introduction_to_Web_development">Introduction to Web development</a></li>
-          <li>Python Crash Course: A Hands-On, Project-Based Introduction to Programming</li>
-          <li>Python Tricks: A Buffet of Awesome Python Features</li>
-        </ul>
-      </summary>
-    </section>
-    <hr />
-    <section class="bottomPadding block">
-      <div class="grid grid--1x2 bottomPadding">
-        <h2>Experience</h2>
-      </div>
-      <article>
-        <div class="grid grid--1x2">
-          <h3 class="subject">Amazon</h3>
-        </div>
-        <span>
-          <p class="experience--date newMargin">September 2020 - Present</p>
-          <div class="grid grid--1x2">
-            <h4 class="jobTitle">IT Support Associate II</h4>
-          </div>
-            <div class="grid wrapper">
-              <ul class="listBullets gridBullets">
-                <li>Deployed Cisco C9500/9300 switches to existing network infrastructure; racked, cabled, updated iOS, tested/verified</li>
-                <li>Installed Windows media server; racked, cabled, re-imaged, configured network info, Q/A testing</li>
-                <li>Insufficient power supply required power be shutdown to live cabinet equipment and upgraded; physical install, configured UPS, configured exterior heat sensor, calibrated batteries</li>
-                <li>Aided in new FC site deployments - setup of network equipment</li>
+        <hr />
+        <div class="resume--skills-cell">
+          <section class="resume--skills-content">
+            <div class="skills--title">
+              <h3>skills</h3>
+            </div>
+            <div>
+              <ul class="skills--list">
+                <li class="skills--list-item">HTML5</li>
+                <li class="skills--list-item">CSS3</li>
+                <li class="skills--list-item">JavaScript</li>
+                <li class="skills--list-item">Python</li>
+                <li class="skills--list-item">Git</li>
               </ul>
             </div>
-          </span>
-          <div class="grid grid--1x2">
-            <h3 class="subject">Kinetix Technology Services</h3>
-          </div>
-          <span>
-            <p class="experience--date newMargin">July 2018 - September 2019</p>
-            <div class="grid grid--1x2">
-              <h4 class="jobTitle">IT Account Manager</h4>
-            </div>
-            <div class="grid wrapper">
-              <ul class="listBullets gridBullets">
-                <li>Oversaw 15 clientele and ran weekly customer meetings</li>
-                <li>Discussed the technical demands of their company</li>
-                <li>Provided feedback on weekly tickets</li>
-                <li>Addressed IT questions or related project work</li>
-              </ul>
-            </div>
-          </span>
+          </section>
         </div>
-      </article>
-    </section>
-    <footer>
-      <div class="footer--content">
-        <span class="footer--copyright">
-          <ul class="footer--copyright-list">
-            <li class="footer--copyright-category">
-              <span class="material-icons"> room </span>
-            </li>
-            <li class="footer--copyright-category">&copy; Hello Evan 2022</li>
-          </ul>
-        </span>
-        <span class="footer--nav">
-          <ul class="footer--nav-list">
-            <li class="footer--nav-category">
-              <a href="index.html">home</a>
-            </li>
-            <li class="footer--nav-category">
-              <a href="index.html">about</a>
-            </li>
-            <li class="footer--nav-category">
-              <a href="index.html">portfolio</a>
-            </li>
-            <li class="footer--nav-category">
-              <a href="resume.html">resume</a>
-            </li>
-            <li class="footer--nav-category">
-              <a href="index.html">contact</a>
-            </li>
-          </ul>
-        </span>
+        <hr />
+        <div class="resume--projects-cell">
+          <section class="resume--projects-content">
+            <h3>projects</h3>
+            <div class="resume--projects-showdown">
+              <div class="project--title">
+                <p>showdown</p>
+              </div>
+              <div class="project--title-detail">
+                <p>
+                  A PIP8 compliant tool ready to automate the network
+                  verification checks of local Cisco iOS devices&period;
+                  Designed to increase productivity within a live Amazon site
+                  during the project review of a site&apos;s network
+                  infrastructure&period;
+                </p>
+                <ol>
+                  <li>
+                    Follow the README to install on Windows using PIP package
+                    manager&period;
+                  </li>
+                  <li>
+                    Enter your device credentials and destination host name into
+                    the prompt&period;
+                  </li>
+                  <li>
+                    Showdown will create a new folder on your desktop
+                    named&comma; &quot;Network Checks&quot;&period;
+                  </li>
+                  <li>
+                    Showdown SSH&apos;s into the destination device&comma; runs
+                    a set of commands&comma; and saves the command output to a
+                    &apos;file&period;txt&apos; named after the device&period;
+                  </li>
+                  <li>
+                    The file is stored within your new desktop folder&period;
+                  </li>
+                  <li>
+                    You will be prompted to enter additional destination hosts
+                    so the SSH process may repeat&comma; and stops running when
+                    &quot;q&quot; is instead entered&period;
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="resume--projects-website">
+              <div class="project--title">
+                <p>helloevan.dev</p>
+              </div>
+              <div class="project--title-detail">
+                <p>
+                  A live hosted website that is W3 validated and built upon
+                  modern mark&dash;up techniques&semi; sprites&comma;
+                  grids&comma; flex&comma; image optimization&comma; mobile &
+                  tablet ready&comma; well&dash;structured DOM&comma; and
+                  multiple JS scripts&period;
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr />
+        <div class="resume--education-cell">
+          <section class="resume--education-content">
+            <h3>education</h3>
+            <div>
+              <div class="education--details">
+                <div class="education--details-bold">
+                  <p>
+                    Code with Mosh&comma; codewithmosh&period;com&nbsp;&mdash;
+                  </p>
+                </div>
+                <div>
+                  <p>&nbsp;The HTML5 & CSS3 & JavaScript Series&comma; 2022</p>
+                </div>
+              </div>
+              <div class="education--details">
+                <div class="education--details-bold">
+                  <p>
+                    Mozilla&comma;
+                    developer&period;mozilla&period;org&nbsp;&mdash;
+                  </p>
+                </div>
+                <div>
+                  <p>&nbsp;Introduction to Web development&comma; 2021</p>
+                </div>
+              </div>
+              <div class="education--details">
+                <div class="education--details-bold">
+                  <p>
+                    University of Stanford&comma;
+                    codeinplace&period;stanford&period;edu&nbsp;&mdash;
+                  </p>
+                </div>
+                <div>
+                  <p>&nbsp;Python Series&comma; 2021</p>
+                </div>
+              </div>
+              <div class="education--details">
+                <div class="education--details-bold">
+                  <p>
+                    Google for Education&comma;
+                    developers&period;google&period;com&nbsp;&mdash;
+                  </p>
+                </div>
+                <div>
+                  <p>&nbsp;Python Class&comma; 2021</p>
+                </div>
+              </div>
+              <div class="education--details">
+                <div class="education--details-bold">
+                  <p>
+                    University of Michigan&comma;
+                    coursera&period;org&nbsp;&mdash;
+                  </p>
+                </div>
+                <div>
+                  <p>&nbsp;Python for Everybody&comma; 2020</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr />
+        <div class="resume--experience-cell">
+          <section class="resume--experience-content">
+            <h3>experience</h3>
+            <div class="resume--experience-subject">
+              <div class="experience--subject-cell">
+                <div class="experience--title">
+                  <div class="experience--title-bold">
+                    <p>
+                      IT Support Associate II&nbsp;&mdash;&nbsp;Amazon&comma;
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      &nbsp;Breinigsville PA&comma; Sept&period; 2020 &ndash;
+                      Present
+                    </p>
+                  </div>
+                </div>
+                <div class="experience--details">
+                  <p>
+                    Deployed Cisco C9500&sol;9300 switches to existing network
+                    infrastructure&semi; racked&comma; cabled&comma; updated
+                    iOS&comma; tested&sol;verified&period; Installed Windows
+                    media server&semi; racked&comma; cabled&comma;
+                    re&dash;imaged&comma; configured network info&comma; Q&sol;A
+                    testing&period; Insufficient power supply required power be
+                    shutdown to live cabinet equipment and upgrade&semi;
+                    physical install&comma; configured UPS&comma; configured
+                    exterior heat sensor&comma; calibrated batteries&period;
+                    Aided in new FC site deployment &ndash; setup of network
+                    equipment&period;
+                  </p>
+                </div>
+              </div>
+              <div class="experience--subject-cell">
+                <div class="experience--title">
+                  <div class="experience--title-bold">
+                    <p>
+                      IT Account Manager&nbsp;&mdash;&nbsp;Kinetix Tech
+                      Solutions&comma;
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      &nbsp;San Mateo CA&comma; July 2018 &ndash; Sept&period;
+                      2019
+                    </p>
+                  </div>
+                </div>
+                <div class="experience--details">
+                  <p>
+                    Oversaw 15 clientele and ran weekly customer
+                    meetings&period; Discussed the technical demands of their
+                    company&period; Provided feedback on weekly tickets&period;
+                    Addressed IT questions or related project work&period;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </footer>
+    </main>
     <script src="scripts/collapsible.js"></script>
   </body>
 </html>
