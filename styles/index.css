@@ -292,7 +292,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   .main--heading-evan {
     font-size: 35rem;
     left: 69rem;
@@ -419,7 +419,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   .intro--description h2 {
     margin: 8rem 35rem;
   }
