@@ -20,8 +20,8 @@ body {
 }
 
 h1 {
-  margin-bottom: 3rem;
   font-weight: 400;
+  margin-bottom: 3rem;
 }
 
 h3,
@@ -52,6 +52,7 @@ main {
 
 .resume--page {
   background-color: var(--color-white);
+  margin-bottom: 4rem;
   margin: 0 4rem;
   min-height: 100rem;
   width: 115rem;
@@ -62,25 +63,25 @@ main {
 }
 
 .resume--head-name {
-  font-size: 5rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 5rem;
   letter-spacing: 0;
   margin-left: 2.2rem;
 }
 
 .resume--head-contact {
   font-size: 1.4rem;
-  text-transform: uppercase;
   margin: 0 3rem;
-  padding-top: 8rem;
   padding-left: 5rem;
+  padding-top: 8rem;
+  text-transform: uppercase;
 }
 
 /* SKILLS */
 .resume--skills-content {
+  align-items: center;
   display: flex;
   justify-content: left;
-  align-items: center;
   margin-left: 2.2rem;
   min-width: 15rem;
 }
@@ -106,20 +107,20 @@ main {
 .resume--projects-showdown,
 .resume--projects-website {
   display: flex;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .project--title {
   font-size: 1.4rem;
-  text-transform: uppercase;
   min-width: 15rem;
+  text-transform: uppercase;
 }
 
 .project--title-detail {
-  margin: 0 2rem;
   font-size: 1.4rem;
-  line-height: 2rem;
   letter-spacing: 0;
+  line-height: 2rem;
+  margin: 0 2rem;
 }
 
 .project--title-detail ol {
@@ -128,25 +129,56 @@ main {
 
 /* EDUCATION */
 .resume--education-content {
-  margin-left: 2.2rem;
   margin-bottom: 2rem;
+  margin-left: 2.2rem;
 }
 
 .resume--education-content p {
-  margin: 0.7rem 0;
+  letter-spacing: 0.1rem;
+  margin: 0.4rem 0;
 }
 
 .education--details {
   display: flex;
+  font-size: 1.6rem;
+  margin-right: 2rem;
 }
 
-.details--bold {
+.education--details-bold {
   font-weight: 700;
 }
 
 /* EXPERIENCE */
 .resume--experience-content {
+  margin-bottom: 8rem;
   margin-left: 2.2rem;
+}
+
+.resume--experience-subject {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.experience--subject-cell {
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+.experience--title {
+  display: flex;
+}
+
+.experience--title-bold {
+  font-weight: 700;
+}
+
+.experience--title p,
+.experience--details p {
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  line-height: 2rem;
+  margin-right: 1rem;
+  margin: 0.5rem 0;
 }
 
 /* font-family: 'Crushed', cursive; */
