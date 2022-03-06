@@ -219,7 +219,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .main--greeting {
-    min-height: 33rem;
+    min-height: 38rem;
   }
 
   .main--heading-evan {
@@ -246,10 +246,6 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-  .main--greeting {
-    min-height: 33rem;
-  }
-
   .main--heading-evan {
     font-size: 27rem;
     left: 31rem;
@@ -272,10 +268,6 @@ header {
 }
 
 @media screen and (min-width: 1400px) {
-  .main--greeting {
-    min-height: 33rem;
-  }
-
   .main--heading-evan {
     font-size: 29rem;
     left: 51rem;
@@ -297,6 +289,29 @@ header {
   .main--subheading-portfolio {
     left: 100rem;
     top: 27.2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main--heading-evan {
+    font-size: 35rem;
+    left: 69rem;
+    top: -1.5rem;
+    transform: rotate(-15deg);
+  }
+
+  .main--heading-apos {
+    font-size: 3rem;
+    left: 140rem;
+    top: -1rem;
+  }
+
+  .main--subheading-professional {
+    left: 115rem;
+  }
+
+  .main--subheading-portfolio {
+    left: 120rem;
   }
 }
 
@@ -401,6 +416,26 @@ header {
 
   .intro--list {
     padding: 0 22rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .intro--description h2 {
+    margin: 8rem 35rem;
+  }
+
+  .intro--description p {
+    margin-right: 45rem;
+  }
+
+  .intro--title-cell {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-right: 30rem;
+  }
+
+  .intro--list {
+    padding: 0 50rem;
   }
 }
 
