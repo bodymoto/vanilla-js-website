@@ -1,10 +1,10 @@
 @import "./normalize.css";
 
 :root {
-  --header--background-color: rgb(76, 121, 136);
+  --header--background-color: rgba(76, 121, 136, 0.8);
   --color-white: #fff;
   --color-lightgreen: #90ee90;
-  --color-lightblue: #add8e6;
+  --color-lightblue: #b8e0ee;
 }
 
 /* TYPOGRAPHY */
@@ -13,26 +13,19 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
-    sans-serif, "Josefin Sans", sans-serif, "Shizuru", cursive,
-    "Noto Serif Display", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Josefin Sans",
+    sans-serif, "Noto Serif Display", serif;
   font-size: 1.8rem;
 }
 
 header {
-  background: radial-gradient(
-    circle at bottom,
-    transparent 0%,
-    tomato 5%,
-    yellow 10%,
-    pink 15%,
-    magenta 20%,
-    var(--header--background-color) 35%
-  );
+  background: url(/images/Punos-Silas.webp);
+  background-size: cover;
 }
 
 /* NAVIGATION BAR */
 .navi {
+  background-color: var(--header--background-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -79,7 +72,7 @@ header {
 }
 
 .navi a:hover {
-  color: magenta;
+  color: var(--color-lightgreen);
 }
 
 .navi--list {
@@ -139,8 +132,8 @@ header {
   }
 
   .navi--category {
-    font-size: 1.2rem;
-    padding-right: 3rem;
+    font-size: 1.5rem;
+    padding-right: 2rem;
     padding-top: 1.2rem;
   }
 
@@ -152,267 +145,262 @@ header {
 /* MAIN GREETING */
 
 .main--greeting {
-  min-height: 22rem;
+  min-height: 25rem;
   position: relative;
-}
-
-.main--heading-hello {
-  color: pink;
-  font-family: "Shizuru", cursive;
-  font-size: 8rem;
-  left: 2.5rem;
-  margin: 0;
-  position: absolute;
-  text-transform: uppercase;
-  top: 0.5rem;
-  transform: rotate(-15deg);
 }
 
 .main--heading-evan {
   color: var(--color-lightblue);
+  background-color: var(--header--background-color);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 10rem;
-  left: 10.5rem;
+  font-size: 19rem;
+  left: 0;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  top: -1rem;
-  transform: rotate(-5deg);
+  top: 2rem;
+  transform: rotate(-10deg);
 }
 
 .main--heading-apos {
   color: var(--color-lightblue);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 4rem;
-  left: 32.5rem;
+  font-size: 3rem;
+  left: 38.5rem;
   position: absolute;
-  top: 4rem;
-  transform: rotate(7deg);
+  top: 1rem;
+  transform: rotate(15deg);
 }
 
 .main--subheading-professional {
   color: var(--color-lightblue);
-  font-family: "EB Garamond", serif;
-  font-size: 1.2rem;
-  left: 19.5rem;
+  font-family: "Noto Serif Display", serif;
+  font-size: 3rem;
+  left: 18.5rem;
   position: absolute;
   text-transform: uppercase;
-  top: 14rem;
+  top: 14.2rem;
 }
 
 .main--subheading-portfolio {
   color: var(--color-lightblue);
-  font-family: "EB Garamond", serif;
-  font-size: 1.4rem;
-  left: 23.5rem;
+  font-family: "Noto Serif Display", serif;
+  font-size: 2.2rem;
+  left: 24.2rem;
   position: absolute;
   text-transform: uppercase;
-  top: 15rem;
-}
-
-/* MOBILE */
-@media screen and (max-width: 374px) {
-  .main--greeting {
-    background-color: rgb(76, 121, 136);
-    min-height: 15rem;
-    position: relative;
-  }
-
-  .main--heading-hello {
-    color: pink;
-    font-family: "Shizuru", cursive;
-    font-size: 6rem;
-    left: 2.5rem;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0.5rem;
-    transform: rotate(-15deg);
-  }
-
-  .main--heading-evan {
-    color: var(--color-lightblue);
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 7rem;
-    left: 9.5rem;
-    position: absolute;
-    top: 0;
-    transform: rotate(-5deg);
-  }
-
-  .main--heading-apos {
-    color: var(--color-lightblue);
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 3rem;
-    left: 25rem;
-    position: absolute;
-    top: 3rem;
-    transform: rotate(7deg);
-  }
-
-  .main--subheading-professional {
-    color: var(--color-lightblue);
-    font-family: "EB Garamond", serif;
-    font-size: 1.2rem;
-    left: 16.5rem;
-    position: absolute;
-    text-transform: uppercase;
-    top: 10rem;
-  }
-
-  .main--subheading-portfolio {
-    color: var(--color-lightblue);
-    font-family: "EB Garamond", serif;
-    font-size: 1.4rem;
-    left: 18.5rem;
-    position: absolute;
-    text-transform: uppercase;
-    top: 11rem;
-  }
+  top: 17.3rem;
 }
 
 /* NONMOBILE */
 @media screen and (min-width: 650px) {
-  .main--greeting {
-    padding: 5rem 10rem;
-  }
-
-  .main--heading-hello {
-    font-size: 13rem;
-    left: 10rem;
-    top: 3rem;
-  }
-
   .main--heading-evan {
-    font-size: 12rem;
-    left: 30rem;
-    top: 4rem;
+    font-size: 22rem;
+    left: 13rem;
+    top: -1rem;
   }
 
   .main--heading-apos {
-    font-size: 6rem;
-    left: 57rem;
-    top: 9rem;
+    font-size: 5rem;
+    left: 59rem;
+    top: -1rem;
   }
 
   .main--subheading-professional {
-    font-size: 1.6rem;
-    left: 42rem;
+    left: 35.5rem;
+    top: 14.2rem;
+  }
+
+  .main--subheading-portfolio {
+    left: 42.2rem;
+    top: 17.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main--greeting {
+    min-height: 33rem;
+  }
+
+  .main--heading-evan {
+    font-size: 26rem;
+    left: 15rem;
+    top: 2rem;
+  }
+
+  .main--heading-apos {
+    font-size: 4rem;
+    left: 69rem;
+    top: 3rem;
+  }
+
+  .main--subheading-professional {
+    left: 45.5rem;
     top: 21rem;
   }
 
   .main--subheading-portfolio {
-    font-size: 1.8rem;
-    left: 47rem;
-    top: 22.5rem;
+    left: 52.2rem;
+    top: 24.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .main--heading-hello {
-    font-size: 13rem;
-    left: 30rem;
+  .main--greeting {
+    min-height: 33rem;
+  }
+
+  .main--heading-evan {
+    font-size: 27rem;
+    left: 31rem;
+    top: 1.5rem;
+    transform: rotate(-7deg);
+  }
+
+  .main--heading-apos {
+    left: 87rem;
     top: 3rem;
   }
 
-  .main--heading-evan {
-    font-size: 12rem;
-    left: 50rem;
-    top: 4rem;
-  }
-
-  .main--heading-apos {
-    font-size: 6rem;
-    left: 77rem;
-    top: 9rem;
-  }
-
   .main--subheading-professional {
-    font-size: 1.6rem;
-    left: 62rem;
-    top: 21rem;
+    left: 70.5rem;
   }
 
   .main--subheading-portfolio {
-    font-size: 1.8rem;
-    left: 67rem;
-    top: 22.5rem;
+    left: 75.2rem;
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .main--heading-hello {
-    font-size: 13rem;
-    left: 50rem;
-    top: -0;
+@media screen and (min-width: 1400px) {
+  .main--greeting {
+    min-height: 33rem;
   }
 
   .main--heading-evan {
-    font-size: 12rem;
-    left: 70rem;
-    top: 1rem;
+    font-size: 29rem;
+    left: 51rem;
+    top: 2.5rem;
+    transform: rotate(-8deg);
   }
 
   .main--heading-apos {
-    font-size: 6rem;
-    left: 97rem;
-    top: 6rem;
+    font-size: 4rem;
+    left: 111rem;
+    top: 4rem;
   }
 
   .main--subheading-professional {
-    font-size: 1.6rem;
-    left: 82rem;
-    top: 18rem;
+    left: 95rem;
+    top: 24rem;
   }
 
   .main--subheading-portfolio {
-    font-size: 1.8rem;
-    left: 87rem;
-    top: 19.5rem;
+    left: 100rem;
+    top: 27.2rem;
   }
 }
 
 /* MAIN INTRODUCTION */
 .main--intro {
   display: block;
-  min-height: 85rem;
+  min-height: 55rem;
   padding: 2rem 0;
+  background-color: var(--header--background-color);
+}
+
+.intro--description {
+  margin: 5rem 0;
+  text-shadow: -5px -5px 1px blueviolet;
 }
 
 .intro--description h2 {
   color: var(--color-lightgreen);
-  margin: 0 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 5rem;
+  line-height: normal;
+  margin: 0 2rem;
 }
 
-.intro--description p {
-  color: var(--color-white);
-  line-height: 2.2rem;
-  margin-left: 5rem;
-  margin-right: 3rem;
-  padding-bottom: 1rem;
-  text-shadow: 1px 2px 4px var(--header--background-color);
+.intro--title-cell {
+  display: flex;
+  justify-content: right;
+  margin: 5rem 0;
+  margin-right: 8rem;
 }
 
-.intro--quote {
-  font-style: italic;
+.intro--title-cell p {
+  color: pink;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  margin-bottom: 0;
+  text-shadow: -5px -5px 1px blueviolet;
+  text-transform: uppercase;
+}
+
+.intro--list-cell {
+  display: flex;
+  justify-content: right;
+}
+
+.intro--list {
+  color: pink;
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+}
+
+.intro--list-item {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.7rem;
+  padding: 0.7rem;
+  text-align: right;
+  text-shadow: -5px -5px 1px blueviolet;
 }
 
 /* NONMOBILE */
-@media screen and (min-width: 768px) {
-  .main--intro {
-    min-height: 60rem;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .main--intro {
-    min-height: 55rem;
+    min-height: 63rem;
   }
 
   .intro--description h2 {
-    margin: 0 25rem;
+    margin: 8rem 17rem;
   }
 
   .intro--description p {
-    margin-left: 35rem;
-    margin-right: 23rem;
+    margin-right: 13rem;
+  }
+
+  .intro--title-cell {
+    margin: 10rem 0;
+    margin-bottom: 1rem;
+    margin-right: 9rem;
+  }
+
+  .intro--list {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .intro--description h2 {
+    margin: 8rem 22rem;
+  }
+
+  .intro--description p {
+    margin-right: 25rem;
+  }
+
+  .intro--title-cell {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-right: 9rem;
+  }
+
+  .intro--list {
+    padding: 0 22rem;
   }
 }
 
