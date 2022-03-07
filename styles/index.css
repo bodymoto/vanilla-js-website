@@ -209,6 +209,7 @@ header {
   }
 
   .subheading--cell {
+    border-radius: 3rem;
     margin: 0 5rem;
   }
 
@@ -239,9 +240,9 @@ header {
   }
 
   .subheading--cell {
-    min-height: 40vh;
-    margin: 3rem 25rem;
     border-radius: 3rem;
+    margin: 3rem 25rem;
+    min-height: 40vh;
   }
 
   .subheading--intro-name {
