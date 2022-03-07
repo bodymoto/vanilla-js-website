@@ -5,10 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evans Resume 2022</title>
     <link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      as="style"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Serif+Display:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/playground.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navi collapsible">
+        <div class="navi--clickable">
+          <img
+            class="navi--dropdown-mobile-icon"
+            src="images/dropdown-mobile-icon.svg"
+            alt="Drop down menu icon."
+          />
+        </div>
+        <ul class="navi--list collapsible__content">
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> desktop_windows </span
+            ><a href="#">home</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_cafe </span
+            ><a href="#">about</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> layers </span
+            ><a href="resume.html" target="_blank">resume</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> local_florist </span
+            ><a href="#">portfolio</a>
+          </li>
+          <li class="navi--category">
+            <span class="material-icons navi--icon"> router </span
+            ><a href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <section class="heading--cell">
+          <div class="heading--title">
+            <h1>rising<br />software<br />developer</h1>
+          </div>
+        </section>
+        <section class="subheading--cell">
+          <div class="subheading--intro">
+            <div class="subheading--intro-name">
+              <h2>evan<br />lanese</h2>
+            </div>
+            <div class="subheading--list-cell">
+              <ul class="subheading--list">
+                <li class="subheading--list-item">experienced tech</li>
+                <li class="subheading--list-item">big nerd</li>
+                <li class="subheading--list-item">marathon learner</li>
+                <li class="subheading--list-item">computer hunk</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <main>
+      <div class="logo--main">
+        <div class="logo--display">
+          <img
+            class="logo--html"
+            src="images/logo/html5-logo.png"
+            alt="html5 logo"
+            loading="lazy"
+          />
+          <img
+            class="logo--css"
+            src="images/logo/css3-logo.png"
+            alt="css3 logo"
+            loading="lazy"
+          />
+          <img
+            class="logo--js"
+            src="images/logo/javascript-logo.png"
+            alt="javascript logo"
+            loading="lazy"
+          />
+          <img
+            class="logo--python"
+            src="images/logo/python-logo.png"
+            alt="python logo"
+            loading="lazy"
+          />
+          <img
+            class="logo--git"
+            src="images/logo/git-Icon.png"
+            alt="git logo"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="scripts/collapsible.js"></script>
+  </body>
 </html>
