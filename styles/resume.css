@@ -70,9 +70,12 @@ hr {
 
 /* NAVIGATION BAR */
 .navi {
+  background-color: rgb(139, 139, 139);
+}
+
+.navi--clickable {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 .collapsible__content {
@@ -87,14 +90,9 @@ hr {
   opacity: 1;
 }
 
-.navi--logo .material-icons {
-  font-size: 4rem;
-  padding: 0.5rem 0.5rem;
-}
-
 .navi.collapsible--expanded .navi--dropdown-mobile-icon {
   border-radius: 5px;
-  box-shadow: 0 0 0 3px rgb(93, 250, 21);
+  box-shadow: 0 0 0 3px var(--color-lightgreen);
   opacity: 1;
 }
 
@@ -116,13 +114,13 @@ hr {
 }
 
 .navi a:hover {
-  color: lightgreen;
+  color: var(--color-lightgreen);
 }
 
 .navi--list {
   list-style: none;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 100%;
 }
 
@@ -135,13 +133,16 @@ hr {
 .navi--category {
   border-bottom: 1px solid #222;
   font-size: 1.8rem;
-  font-weight: 700;
   letter-spacing: 0.3rem;
   padding-top: 1.2rem;
 }
 
 /* NON-MOBILE */
 @media screen and (min-width: 768px) {
+  .navi {
+    height: 5rem;
+  }
+
   .collapsible__content {
     opacity: 1;
     overflow: visible;
@@ -154,35 +155,25 @@ hr {
   .navi--list {
     display: flex;
     width: auto;
+    justify-content: right;
   }
 
   .navi--category {
     border: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 1.5rem 0;
     padding-left: 1rem;
   }
 
   .material-icons {
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding: 0.2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .navi--logo .material-icons {
-    font-size: 2rem;
-    padding: 0.5rem 4rem;
-  }
-
   .navi--category {
-    font-size: 1.2rem;
-    padding-right: 3rem;
-    padding-top: 1.2rem;
-  }
-
-  .material-icons {
-    font-size: 1.2rem;
+    padding-right: 1rem;
   }
 }
 
