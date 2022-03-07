@@ -216,7 +216,7 @@ header {
     letter-spacing: 3.5rem;
     line-height: 3rem;
     padding: 1rem 1rem;
-    text-shadow: -2.5px -2.5px 1px var(--color-lightgreen);
+    text-shadow: -1.5px -1.5px 1px var(--color-lightgreen);
   }
 
   .subheading--list-item {
@@ -241,6 +241,7 @@ header {
   .subheading--cell {
     min-height: 40vh;
     margin: 3rem 25rem;
+    border-radius: 3rem;
   }
 
   .subheading--intro-name {
@@ -518,7 +519,7 @@ header {
 /* FOOTER */
 .footer {
   background: rgba(76, 121, 136, 1);
-  color: rgb(224, 224, 224);
+  color: rgb(194, 194, 194);
   padding: 2rem 0;
 }
 
@@ -527,6 +528,7 @@ header {
 }
 
 .footer a {
+  color: rgb(194, 194, 194);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -540,7 +542,18 @@ header {
 }
 
 .footer--heading h4 {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer--heading-icons {
+  display: flex;
+}
+
+.footer--icon {
+  display: flex;
+  margin: 0 0.4rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .footer--list {
@@ -553,6 +566,7 @@ header {
   padding: 0.2rem 0;
 }
 
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .footer {
     display: flex;
