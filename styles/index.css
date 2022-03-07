@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Josefin Sans",
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Montserrat",
     sans-serif, "Noto Serif Display", serif;
   font-size: 1.8rem;
 }
@@ -26,9 +26,11 @@ header {
 /* NAVIGATION BAR */
 .navi {
   background-color: var(--header--background-color);
+}
+
+.navi--clickable {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 .collapsible__content {
@@ -43,14 +45,9 @@ header {
   opacity: 1;
 }
 
-.navi--logo .material-icons {
-  font-size: 4rem;
-  padding: 0.5rem 0.5rem;
-}
-
 .navi.collapsible--expanded .navi--dropdown-mobile-icon {
   border-radius: 5px;
-  box-shadow: 0 0 0 3px rgb(93, 250, 21);
+  box-shadow: 0 0 0 3px var(--color-lightgreen);
   opacity: 1;
 }
 
@@ -78,7 +75,7 @@ header {
 .navi--list {
   list-style: none;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 100%;
 }
 
@@ -91,13 +88,16 @@ header {
 .navi--category {
   border-bottom: 1px solid #222;
   font-size: 1.8rem;
-  font-weight: bold;
   letter-spacing: 0.3rem;
   padding-top: 1.2rem;
 }
 
 /* NON-MOBILE */
 @media screen and (min-width: 768px) {
+  .navi {
+    height: 5rem;
+  }
+
   .collapsible__content {
     opacity: 1;
     overflow: visible;
@@ -110,332 +110,151 @@ header {
   .navi--list {
     display: flex;
     width: auto;
+    justify-content: right;
   }
 
   .navi--category {
     border: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 1.5rem 0;
     padding-left: 1rem;
   }
 
   .material-icons {
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding: 0.2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .navi--logo .material-icons {
-    font-size: 2rem;
-    padding: 0.5rem 4rem;
-  }
-
   .navi--category {
-    font-size: 1.5rem;
-    padding-right: 2rem;
-    padding-top: 1.2rem;
-  }
-
-  .material-icons {
-    font-size: 1.2rem;
+    padding-right: 1rem;
   }
 }
 
-/* MAIN GREETING */
+/* HEADING */
 
-.main--greeting {
-  min-height: 25rem;
+.heading--cell {
+  min-height: 50vh;
   position: relative;
 }
 
-.main--heading-evan {
-  color: var(--color-lightblue);
+.heading--title {
+  align-items: center;
   background-color: var(--header--background-color);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 19rem;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 2rem;
-  transform: rotate(-10deg);
-}
-
-.main--heading-apos {
-  color: var(--color-lightblue);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3rem;
-  left: 38.5rem;
-  position: absolute;
-  top: 1rem;
-  transform: rotate(15deg);
-}
-
-.main--subheading-professional {
-  color: var(--color-lightblue);
-  font-family: "Noto Serif Display", serif;
-  font-size: 3rem;
-  left: 18.5rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: 14.2rem;
-}
-
-.main--subheading-portfolio {
-  color: var(--color-lightblue);
-  font-family: "Noto Serif Display", serif;
-  font-size: 2.2rem;
-  left: 24.2rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: 17.3rem;
-}
-
-/* NONMOBILE */
-@media screen and (min-width: 650px) {
-  .main--heading-evan {
-    font-size: 22rem;
-    left: 13rem;
-    top: -1rem;
-  }
-
-  .main--heading-apos {
-    font-size: 5rem;
-    left: 59rem;
-    top: -1rem;
-  }
-
-  .main--subheading-professional {
-    left: 35.5rem;
-    top: 14.2rem;
-  }
-
-  .main--subheading-portfolio {
-    left: 42.2rem;
-    top: 17.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .main--greeting {
-    min-height: 38rem;
-  }
-
-  .main--heading-evan {
-    font-size: 26rem;
-    left: 15rem;
-    top: 2rem;
-  }
-
-  .main--heading-apos {
-    font-size: 4rem;
-    left: 69rem;
-    top: 3rem;
-  }
-
-  .main--subheading-professional {
-    left: 45.5rem;
-    top: 21rem;
-  }
-
-  .main--subheading-portfolio {
-    left: 52.2rem;
-    top: 24.5rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .main--heading-evan {
-    font-size: 27rem;
-    left: 31rem;
-    top: 1.5rem;
-    transform: rotate(-7deg);
-  }
-
-  .main--heading-apos {
-    left: 87rem;
-    top: 3rem;
-  }
-
-  .main--subheading-professional {
-    left: 70.5rem;
-  }
-
-  .main--subheading-portfolio {
-    left: 75.2rem;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .main--heading-evan {
-    font-size: 29rem;
-    left: 51rem;
-    top: 2.5rem;
-    transform: rotate(-8deg);
-  }
-
-  .main--heading-apos {
-    font-size: 4rem;
-    left: 111rem;
-    top: 4rem;
-  }
-
-  .main--subheading-professional {
-    left: 95rem;
-    top: 24rem;
-  }
-
-  .main--subheading-portfolio {
-    left: 100rem;
-    top: 27.2rem;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  .main--heading-evan {
-    font-size: 35rem;
-    left: 69rem;
-    top: -1.5rem;
-    transform: rotate(-15deg);
-  }
-
-  .main--heading-apos {
-    font-size: 3rem;
-    left: 140rem;
-    top: -1rem;
-  }
-
-  .main--subheading-professional {
-    left: 115rem;
-  }
-
-  .main--subheading-portfolio {
-    left: 120rem;
-  }
-}
-
-/* MAIN INTRODUCTION */
-.main--intro {
-  display: block;
-  min-height: 55rem;
-  padding: 2rem 0;
-  background-color: var(--header--background-color);
-}
-
-.intro--description {
-  margin: 5rem 0;
-  text-shadow: -5px -5px 1px blueviolet;
-}
-
-.intro--description h2 {
   color: var(--color-lightgreen);
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-  font-size: 5rem;
-  line-height: normal;
-  margin: 0 2rem;
-}
-
-.intro--title-cell {
   display: flex;
-  justify-content: right;
-  margin: 5rem 0;
-  margin-right: 8rem;
-}
-
-.intro--title-cell p {
-  color: pink;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
+  font-weight: 900;
+  justify-content: center;
   letter-spacing: 1rem;
-  margin-bottom: 0;
-  text-shadow: -5px -5px 1px blueviolet;
+  line-height: 2.9rem;
+  padding-top: 7rem;
+  text-shadow: -3px -3px 1px blueviolet;
   text-transform: uppercase;
 }
 
-.intro--list-cell {
+.subheading--cell {
+  background-color: var(--header--background-color);
+  min-height: 40vh;
+  padding: 1rem 0;
+}
+
+.subheading--intro {
+  margin: 2rem;
+}
+
+.subheading--intro-name {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  letter-spacing: 2rem;
+  line-height: 2rem;
+  margin: 0 1rem;
+  text-shadow: -2px -2px 1px var(--color-lightgreen);
+  text-transform: uppercase;
+}
+
+.subheading--list-cell {
   display: flex;
   justify-content: right;
 }
 
-.intro--list {
-  color: pink;
+.subheading--list {
   list-style: none;
-  margin-top: 1.5rem;
-  padding: 0 2rem;
 }
 
-.intro--list-item {
-  font-size: 1.9rem;
-  font-weight: 700;
+.subheading--list-item {
+  color: var(--color-white);
+  font-size: 1.4rem;
   letter-spacing: 0.7rem;
-  padding: 0.7rem;
+  padding: 0.5rem;
   text-align: right;
-  text-shadow: -5px -5px 1px blueviolet;
+  text-shadow: -1.5px -1.5px 1px var(--color-lightgreen);
 }
 
 /* NONMOBILE */
-@media screen and (min-width: 1024px) {
-  .main--intro {
-    min-height: 63rem;
+@media screen and (min-width: 768px) {
+  .heading--cell {
+    min-height: 50vh;
+    position: relative;
   }
 
-  .intro--description h2 {
-    margin: 8rem 17rem;
+  .heading--title {
+    font-size: 3rem;
+    letter-spacing: 2rem;
+    line-height: 4.3rem;
+    padding-top: 10rem;
+    text-shadow: -5px -5px 1px blueviolet;
   }
 
-  .intro--description p {
-    margin-right: 13rem;
+  .subheading--cell {
+    margin: 0 5rem;
   }
 
-  .intro--title-cell {
-    margin: 10rem 0;
-    margin-bottom: 1rem;
-    margin-right: 9rem;
+  .subheading--intro-name {
+    letter-spacing: 3.5rem;
+    line-height: 3rem;
+    padding: 1rem 1rem;
+    text-shadow: -2.5px -2.5px 1px var(--color-lightgreen);
   }
 
-  .intro--list {
-    padding: 0 10rem;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .intro--description h2 {
-    margin: 8rem 22rem;
-  }
-
-  .intro--description p {
-    margin-right: 25rem;
-  }
-
-  .intro--title-cell {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    margin-right: 9rem;
-  }
-
-  .intro--list {
-    padding: 0 22rem;
+  .subheading--list-item {
+    letter-spacing: 1rem;
+    padding: 1rem;
   }
 }
 
-@media screen and (min-width: 1800px) {
-  .intro--description h2 {
-    margin: 8rem 35rem;
+@media screen and (min-width: 1440px) {
+  .heading--cell {
+    min-height: 50vh;
+    position: relative;
   }
 
-  .intro--description p {
-    margin-right: 45rem;
+  .heading--title {
+    font-size: 4rem;
+    line-height: 6.3rem;
+    padding-top: 9rem;
+    text-shadow: -9px -9px 1px blueviolet;
   }
 
-  .intro--title-cell {
+  .subheading--cell {
+    min-height: 40vh;
+    margin: 3rem 25rem;
+  }
+
+  .subheading--intro-name {
+    font-size: 1.2rem;
+  }
+
+  .subheading--list {
     margin-top: 0;
-    margin-bottom: 1rem;
-    margin-right: 30rem;
   }
 
-  .intro--list {
-    padding: 0 50rem;
+  .subheading--list-item {
+    font-size: 1.7rem;
+    letter-spacing: 1.5rem;
+    padding: 1rem 1rem;
   }
 }
 
@@ -601,12 +420,12 @@ header {
 }
 
 .resume--btn {
-  background: var(--header--background-color);
+  background: rgba(76, 121, 136, 1);
   border-radius: 40px;
   border: 0;
   color: var(--color-white);
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 29rem;
   margin-bottom: 7rem;
   padding: 1rem 2rem;
@@ -664,10 +483,6 @@ header {
   flex-wrap: wrap;
 }
 
-.about--list-item p {
-  font-weight: bold;
-}
-
 /* LAPTOPS */
 @media screen and (min-width: 1024px) {
   .grid--3x1 {
@@ -686,7 +501,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   .about--quote-mj {
     font-size: 4rem;
     line-height: 5rem;

@@ -12,7 +12,7 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Serif+Display:ital,wght@1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Noto+Serif+Display:ital,wght@1,300&display=swap"
       rel="stylesheet"
     />
     <link
@@ -24,14 +24,13 @@
   <body>
     <header>
       <nav class="navi collapsible">
-        <a href="/" class="navi--logo"
-          ><span class="material-icons"> room </span></a
-        >
-        <img
-          class="navi--dropdown-mobile-icon"
-          src="images/dropdown-mobile-icon.svg"
-          alt="Drop down menu icon."
-        />
+        <div class="navi--clickable">
+          <img
+            class="navi--dropdown-mobile-icon"
+            src="images/dropdown-mobile-icon.svg"
+            alt="Drop down menu icon."
+          />
+        </div>
         <ul class="navi--list collapsible__content">
           <li class="navi--category">
             <span class="material-icons navi--icon"> desktop_windows </span
@@ -56,31 +55,26 @@
         </ul>
       </nav>
       <div>
-        <section class="main--greeting">
-          <h1 class="main--heading-evan">evan</h1>
-          <h2 class="main--heading-apos">&apos;s</h2>
-          <h2 class="main--subheading-professional">website</h2>
-          <h2 class="main--subheading-portfolio">portfolio</h2>
+        <section class="heading--cell">
+          <div class="heading--title">
+            <h1>rising<br />software<br />developer</h1>
+          </div>
         </section>
-        <article class="main--intro">
-          <div class="intro--description">
-            <h2>Rising<br />Software<br />Developer</h2>
-            <div class="intro--title-cell">
-              <p>
-                fundamental<br />
-                focus
-              </p>
+        <section class="subheading--cell">
+          <div class="subheading--intro">
+            <div class="subheading--intro-name">
+              <h2>evan<br />lanese</h2>
             </div>
-            <div class="intro--list-cell">
-              <ul class="intro--list">
-                <li class="intro--list-item">ten years in tech</li>
-                <li class="intro--list-item">big nerd</li>
-                <li class="intro--list-item">marathon learner</li>
-                <li class="intro--list-item">computer hunk</li>
+            <div class="subheading--list-cell">
+              <ul class="subheading--list">
+                <li class="subheading--list-item">experienced tech</li>
+                <li class="subheading--list-item">big nerd</li>
+                <li class="subheading--list-item">marathon learner</li>
+                <li class="subheading--list-item">computer hunk</li>
               </ul>
             </div>
           </div>
-        </article>
+        </section>
       </div>
     </header>
     <main>
