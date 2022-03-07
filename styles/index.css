@@ -517,14 +517,22 @@ header {
 
 /* FOOTER */
 .footer {
-  background-color: rgb(107, 107, 107);
+  background: rgba(76, 121, 136, 1);
   color: rgb(224, 224, 224);
   padding: 2rem 0;
 }
 
-.footer hr {
-  color: var(--header--background-color);
-  margin: 3rem 0;
+.footer--cell {
+  margin: 1rem 2rem;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--color-lightgreen);
 }
 
 .footer--heading {
@@ -543,4 +551,22 @@ header {
 
 .footer--list-item {
   padding: 0.2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .copyrights {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .copyrights {
+    padding: 0 10rem;
+  }
 }
