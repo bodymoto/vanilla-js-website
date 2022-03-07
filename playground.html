@@ -21,97 +21,19 @@
     <link rel="stylesheet" href="styles/playground.css" />
   </head>
   <body>
-    <header>
-      <nav class="navi collapsible">
-        <div class="navi--clickable">
-          <img
-            class="navi--dropdown-mobile-icon"
-            src="images/dropdown-mobile-icon.svg"
-            alt="Drop down menu icon."
-          />
-        </div>
-        <ul class="navi--list collapsible__content">
-          <li class="navi--category">
-            <span class="material-icons navi--icon"> desktop_windows </span
-            ><a href="#">home</a>
-          </li>
-          <li class="navi--category">
-            <span class="material-icons navi--icon"> local_cafe </span
-            ><a href="#">about</a>
-          </li>
-          <li class="navi--category">
-            <span class="material-icons navi--icon"> layers </span
-            ><a href="resume.html" target="_blank">resume</a>
-          </li>
-          <li class="navi--category">
-            <span class="material-icons navi--icon"> local_florist </span
-            ><a href="#">portfolio</a>
-          </li>
-          <li class="navi--category">
-            <span class="material-icons navi--icon"> router </span
-            ><a href="#">contact</a>
-          </li>
-        </ul>
-      </nav>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
       <div>
-        <section class="heading--cell">
-          <div class="heading--title">
-            <h1>rising<br />software<br />developer</h1>
-          </div>
-        </section>
-        <section class="subheading--cell">
-          <div class="subheading--intro">
-            <div class="subheading--intro-name">
-              <h2>evan<br />lanese</h2>
-            </div>
-            <div class="subheading--list-cell">
-              <ul class="subheading--list">
-                <li class="subheading--list-item">experienced tech</li>
-                <li class="subheading--list-item">big nerd</li>
-                <li class="subheading--list-item">marathon learner</li>
-                <li class="subheading--list-item">computer hunk</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
       </div>
-    </header>
-    <main>
-      <div class="logo--main">
-        <div class="logo--display">
-          <img
-            class="logo--html"
-            src="images/logo/html5-logo.png"
-            alt="html5 logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--css"
-            src="images/logo/css3-logo.png"
-            alt="css3 logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--js"
-            src="images/logo/javascript-logo.png"
-            alt="javascript logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--python"
-            src="images/logo/python-logo.png"
-            alt="python logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--git"
-            src="images/logo/git-Icon.png"
-            alt="git logo"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </main>
-    <script src="scripts/collapsible.js"></script>
+    </form>
   </body>
 </html>
