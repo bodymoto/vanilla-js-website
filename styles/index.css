@@ -156,12 +156,14 @@ header {
 }
 
 .subheading--cell {
-  background-color: var(--header--background-color);
   min-height: 40vh;
   padding: 1rem 0;
 }
 
 .subheading--intro {
+  background-color: var(--header--background-color);
+  border-radius: 3rem;
+  padding: 2rem;
   margin: 2rem;
 }
 
@@ -171,7 +173,7 @@ header {
   letter-spacing: 2rem;
   line-height: 2rem;
   margin: 0 1rem;
-  text-shadow: -2px -2px 1px var(--color-lightgreen);
+  text-shadow: -1px -1px 1px var(--color-lightgreen);
   text-transform: uppercase;
 }
 
@@ -182,15 +184,26 @@ header {
 
 .subheading--list {
   list-style: none;
+  margin-top: 0;
 }
 
 .subheading--list-item {
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   letter-spacing: 0.7rem;
   padding: 0.5rem;
   text-align: right;
-  text-shadow: -1.5px -1.5px 1px var(--color-lightgreen);
+  text-shadow: -1px -1px 1px var(--color-lightgreen);
+}
+
+.subheading--intro-face {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.subheading--intro-face img {
+  width: 20rem;
+  height: 20rem;
 }
 
 /* NONMOBILE */
@@ -203,14 +216,18 @@ header {
   .heading--title {
     font-size: 3rem;
     letter-spacing: 2rem;
-    line-height: 4.3rem;
+    line-height: 4.7rem;
     padding-top: 10rem;
     text-shadow: -5px -5px 1px blueviolet;
   }
 
   .subheading--cell {
-    border-radius: 3rem;
-    margin: 0 5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .subheading--intro {
+    min-width: 60vh;
   }
 
   .subheading--intro-name {
@@ -239,10 +256,9 @@ header {
     text-shadow: -9px -9px 1px blueviolet;
   }
 
-  .subheading--cell {
-    border-radius: 3rem;
-    margin: 3rem 25rem;
-    min-height: 40vh;
+  .subheading--intro-face img {
+    width: 15rem;
+    height: 15rem;
   }
 
   .subheading--intro-name {
@@ -254,7 +270,6 @@ header {
   }
 
   .subheading--list-item {
-    font-size: 1.7rem;
     letter-spacing: 1.5rem;
     padding: 1rem 1rem;
   }
