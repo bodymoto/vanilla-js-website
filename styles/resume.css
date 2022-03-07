@@ -110,11 +110,12 @@ hr {
   color: var(--color-white);
   padding: 0.7rem 0.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 .navi a:hover {
-  color: var(--color-lightgreen);
+  color: rgb(116, 255, 162);
+  font-size: 2rem;
 }
 
 .navi--list {
@@ -399,7 +400,7 @@ main {
 .footer {
   background: rgb(139, 139, 139);
   color: rgb(194, 194, 194);
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .footer--cell {
@@ -413,7 +414,7 @@ main {
 }
 
 .footer a:hover {
-  color: var(--color-lightgreen);
+  color: var(--color-white);
 }
 
 .footer--heading {
