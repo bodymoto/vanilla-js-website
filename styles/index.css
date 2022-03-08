@@ -135,8 +135,8 @@ header {
 /* HEADING */
 
 .heading--cell {
-  min-height: 50vh;
-  position: relative;
+  min-height: 25vh;
+  position: static;
 }
 
 .heading--title {
@@ -150,7 +150,7 @@ header {
   justify-content: center;
   letter-spacing: 1rem;
   line-height: 3rem;
-  padding-top: 7rem;
+  padding-top: 2rem;
   text-shadow: -3px -3px 1px blueviolet;
   text-transform: uppercase;
 }
@@ -209,15 +209,16 @@ header {
 /* NONMOBILE */
 @media screen and (min-width: 768px) {
   .heading--cell {
-    min-height: 50vh;
-    position: relative;
+    min-height: 35vh;
+    padding: 0;
+    position: static;
   }
 
   .heading--title {
     font-size: 3rem;
     letter-spacing: 2rem;
     line-height: 4.7rem;
-    padding-top: 10rem;
+    padding-top: 6rem;
     text-shadow: -5px -5px 1px blueviolet;
   }
 
@@ -227,7 +228,8 @@ header {
   }
 
   .subheading--intro {
-    min-width: 60vh;
+    min-width: 50vh;
+    padding: 2rem;
   }
 
   .subheading--intro-name {
@@ -244,16 +246,15 @@ header {
 }
 
 @media screen and (min-width: 1440px) {
-  .heading--cell {
-    min-height: 50vh;
-    position: relative;
-  }
-
   .heading--title {
     font-size: 4rem;
     line-height: 6.7rem;
-    padding-top: 9rem;
+    padding-top: 3rem;
     text-shadow: -9px -9px 1px blueviolet;
+  }
+
+  .subheading--cell {
+    padding-top: 2rem;
   }
 
   .subheading--intro-face img {
