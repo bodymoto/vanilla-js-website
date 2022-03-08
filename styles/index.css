@@ -149,7 +149,7 @@ header {
   font-weight: 900;
   justify-content: center;
   letter-spacing: 1rem;
-  line-height: 2.9rem;
+  line-height: 3rem;
   padding-top: 7rem;
   text-shadow: -3px -3px 1px blueviolet;
   text-transform: uppercase;
@@ -173,7 +173,7 @@ header {
   letter-spacing: 2rem;
   line-height: 2rem;
   margin: 0 1rem;
-  text-shadow: -1px -1px 1px var(--color-lightgreen);
+  text-shadow: -1px -1px 1px blueviolet;
   text-transform: uppercase;
 }
 
@@ -193,7 +193,7 @@ header {
   letter-spacing: 0.7rem;
   padding: 0.5rem;
   text-align: right;
-  text-shadow: -1px -1px 1px var(--color-lightgreen);
+  text-shadow: -1px -1px 1px blueviolet;
 }
 
 .subheading--intro-face {
@@ -530,6 +530,84 @@ header {
     line-height: 5rem;
     margin-right: 4rem;
   }
+}
+
+/* CONTACT */
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid var(--color-lightgreen);
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+#message:focus {
+  border-color: rgb(138, 43, 226);
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
+}
+
+button {
+  background: rgb(138, 43, 226);
+  color: #fff;
+  font-size: 2rem;
+  border: 0;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  outline: 0;
+}
+
+.form--cell {
+  margin: 0;
+  line-height: 1.5;
+  padding: 5rem 2rem;
+  background-color: var(--header--background-color);
+}
+
+.form--heading {
+  color: var(--color-lightgreen);
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: -4px -4px 1px blueviolet;
+}
+
+.form--group {
+  margin-bottom: 1rem;
+}
+
+.form--label {
+  color: var(--color-lightgreen);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
+.form--input-field,
+textarea {
+  width: 90%;
+}
+
+.form--profession {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.4rem;
+}
+
+.form--btn {
+  color: var(--color-white);
+  padding: 0 0.3rem;
+  font-size: 80%;
 }
 
 /* FOOTER */

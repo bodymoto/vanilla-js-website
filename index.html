@@ -188,6 +188,78 @@
           vero! Vel perferendis ullam saepe maxime suscipit tempore.
         </p>
       </div>
+      <form action="" id="contact">
+        <div class="form--cell">
+          <div>
+            <h4 class="form--heading">Connect</h4>
+          </div>
+          <div class="form--group">
+            <label class="form--label" for="name">Name</label>
+            <input
+              id="name"
+              class="form--input-field"
+              minlength="4"
+              maxlength="20"
+              required
+              type="text"
+            />
+          </div>
+          <div class="form--group">
+            <label class="form--label" for="email">Email</label>
+            <input
+              id="email"
+              class="form--input-field"
+              minlength="13"
+              maxlength="20"
+              required
+              type="email"
+            />
+          </div>
+          <div class="form--group form--profession">
+            <div class="form--profession">
+              <input type="radio" name="profession" id="agent" />
+              <label for="agent" class="form--btn">Manager</label>
+            </div>
+            <div class="form--profession">
+              <input type="radio" name="profession" id="recruiter" />
+              <label for="recruiter" class="form--btn">Recruiter</label>
+            </div>
+            <div class="form--profession">
+              <input type="radio" name="profession" id="hunter" />
+              <label for="hunter" class="form--btn">Headhunter</label>
+            </div>
+          </div>
+          <div class="form--group">
+            <label class="form--label" for="subject">Subject</label>
+            <input
+              id="subject"
+              class="form--input-field"
+              placeholder="this is about.."
+              minlength="10"
+              maxlength="35"
+              required
+              type="text"
+            />
+          </div>
+          <div class="form--group">
+            <label class="form--label" for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="54"
+              rows="10"
+              placeholder="i'm writing to you because.."
+              minlength="20"
+              maxlength="1000"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
       <div class="footer">
