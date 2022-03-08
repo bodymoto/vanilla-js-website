@@ -1,2 +1,2 @@
 # helloworld
-Personal portfolio page.
+Personal portfolio webpage.
