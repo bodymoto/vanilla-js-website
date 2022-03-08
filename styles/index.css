@@ -421,6 +421,10 @@ header {
   }
 }
 
+.about--portrait-cell {
+  margin: 4rem 0;
+}
+
 .about--portrait {
   background-image: url();
   display: flex;
@@ -471,6 +475,10 @@ header {
 .scale .github--btn:hover,
 .scale .resume--btn:hover {
   transform: scale(1.3);
+}
+
+.about--github-cell {
+  margin-bottom: 4rem;
 }
 
 .icon--btn {
@@ -531,6 +539,12 @@ header {
     line-height: 5rem;
     margin-right: 4rem;
   }
+}
+
+/* PROJECTS */
+.projects--showdown-cell {
+  display: flexbox;
+  flex-wrap: wrap;
 }
 
 /* CONTACT */
