@@ -554,25 +554,32 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 #message:focus {
   border-color: rgb(138, 43, 226);
-  outline: 0;
   box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
+  outline: 0;
 }
 
 button {
   background: rgb(138, 43, 226);
+  border-radius: 5px;
+  border: 0;
   color: #fff;
   font-size: 2rem;
-  border: 0;
-  padding: 1rem 2rem;
-  border-radius: 5px;
   outline: 0;
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: var(--color-lightgreen);
+  color: rgb(138, 43, 226);
+  font-weight: 700;
 }
 
 .form--cell {
-  margin: 0;
-  line-height: 1.5;
-  padding: 5rem 2rem;
   background-color: var(--header--background-color);
+  line-height: 1.5;
+  margin: 0;
+  padding: 5rem 2rem;
 }
 
 .form--heading {
@@ -599,15 +606,15 @@ textarea {
 }
 
 .form--profession {
-  display: flex;
   align-items: center;
+  display: flex;
   padding: 0.5rem 0.4rem;
 }
 
 .form--btn {
   color: var(--color-white);
-  padding: 0 0.3rem;
   font-size: 80%;
+  padding: 0 0.3rem;
 }
 
 /* NONMOBILE */
