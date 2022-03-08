@@ -15,12 +15,16 @@ body {
     sans-serif;
   font-size: 1.8rem;
   background-color: rgb(139, 139, 139);
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.22rem;
 }
 
 h1 {
   font-weight: 400;
   margin-bottom: 3rem;
+}
+
+h2 {
+  letter-spacing: 0.5rem;
 }
 
 h3,
