@@ -403,24 +403,24 @@ main {
 }
 
 /* FOOTER */
-.footer {
+#footer {
   background: var(--background-darkgrey);
   color: var(--color-lightgrey);
   padding: 0;
 }
 
-.footer--cell {
-  margin: 1rem 2rem;
-}
-
-.footer a {
+#footer a {
   color: var(--color-lightgrey);
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer a:hover {
+#footer a:hover {
   color: var(--color-white);
+}
+
+.footer--cell {
+  margin: 1rem 2rem;
 }
 
 .footer--heading {
@@ -459,7 +459,7 @@ main {
 
 /* NONMOBILE */
 @media screen and (min-width: 768px) {
-  .footer {
+  #footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
