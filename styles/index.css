@@ -440,14 +440,9 @@ header {
   background-image: url(../images/about/self-portrait-min.jpg);
   background-size: cover;
   border-radius: 100%;
-  filter: grayscale(90%);
   height: 30rem;
   margin-bottom: -6.5rem;
   width: 30rem;
-}
-
-.img--self-portrait:hover {
-  filter: none;
 }
 
 .resume--btn {
@@ -534,6 +529,14 @@ header {
     font-size: 2rem;
     margin-right: 2rem;
   }
+
+  .img--self-portrait {
+    filter: grayscale(90%);
+  }
+
+  .img--self-portrait:hover {
+    filter: none;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -551,15 +554,30 @@ header {
 }
 
 /* PROJECTS */
-.projects {
+#projects {
+  background: black;
 }
 
-.projects--showdown-cell {
+.projects--heading {
+  padding-top: 6rem;
 }
 
-.showdown--images {
-  border: 2px solid red;
-  height: 30rem;
+.projects--heading-one,
+.projects--heading-two {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.projects--heading-one {
+  text-align: left;
+}
+
+.projects-heading-two {
+  text-align: right;
 }
 
 /* CONTACT */
@@ -676,24 +694,24 @@ textarea {
 }
 
 /* FOOTER */
-.footer {
+#footer {
   background: var(--header--background-color-solid);
   color: rgb(194, 194, 194);
   padding: 2rem 0;
 }
 
-.footer--cell {
-  margin: 1rem 2rem;
-}
-
-.footer a {
+#footer a {
   color: rgb(194, 194, 194);
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer a:hover {
+#footer a:hover {
   color: var(--color-lightgreen);
+}
+
+.footer--cell {
+  margin: 1rem 2rem;
 }
 
 .footer--heading {
@@ -731,7 +749,7 @@ textarea {
 
 /* NONMOBILE */
 @media screen and (min-width: 768px) {
-  .footer {
+  #footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;

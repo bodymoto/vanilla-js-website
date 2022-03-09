@@ -81,41 +81,41 @@
       </div>
     </header>
     <main>
-      <div id="about" class="logo--main">
-        <div class="logo--display">
-          <img
-            class="logo--html"
-            src="images/logo/html5-logo.png"
-            alt="html5 logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--css"
-            src="images/logo/css3-logo.png"
-            alt="css3 logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--js"
-            src="images/logo/javascript-logo.png"
-            alt="javascript logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--python"
-            src="images/logo/python-logo.png"
-            alt="python logo"
-            loading="lazy"
-          />
-          <img
-            class="logo--git"
-            src="images/logo/git-Icon.png"
-            alt="git logo"
-            loading="lazy"
-          />
+      <div id="about">
+        <div class="logo--main">
+          <div class="logo--display">
+            <img
+              class="logo--html"
+              src="images/logo/html5-logo.png"
+              alt="html5 logo"
+              loading="lazy"
+            />
+            <img
+              class="logo--css"
+              src="images/logo/css3-logo.png"
+              alt="css3 logo"
+              loading="lazy"
+            />
+            <img
+              class="logo--js"
+              src="images/logo/javascript-logo.png"
+              alt="javascript logo"
+              loading="lazy"
+            />
+            <img
+              class="logo--python"
+              src="images/logo/python-logo.png"
+              alt="python logo"
+              loading="lazy"
+            />
+            <img
+              class="logo--git"
+              src="images/logo/git-Icon.png"
+              alt="git logo"
+              loading="lazy"
+            />
+          </div>
         </div>
-      </div>
-      <div>
         <div class="about--portrait-cell grid--3x1">
           <div>
             <div class="about--quote">
@@ -173,18 +173,12 @@
         </div>
       </div>
       <div id="projects">
-        <div class="projects--showdown-cell">
-          <div>
-            <img
-              class="showdown--images"
-              src="images/projects/ps-download-showdown.PNG"
-              alt=""
-            />
-          </div>
-          <div></div>
+        <div class="projects--heading">
+          <h3 class="projects--heading-one">ongoing</h3>
+          <h3 class="projects--heading-two">projects</h3>
         </div>
       </div>
-      <form action="https://formspree.io/f/xyyojlrj" method="POST" id="contact">
+      <form id="contact" action="https://formspree.io/f/xyyojlrj" method="POST">
         <div class="form--cell">
           <div>
             <h4 class="form--heading">Contact</h4>
@@ -260,83 +254,79 @@
         </div>
       </form>
     </main>
-    <footer>
-      <div class="footer">
-        <section class="copyrights footer--cell footer--heading">
+    <footer id="footer">
+      <section class="copyrights footer--cell footer--heading">
+        <div>
+          <h4>evan lanese</h4>
+        </div>
+        <div class="footer--heading-icons">
           <div>
-            <h4>evan lanese</h4>
-          </div>
-          <div class="footer--heading-icons">
-            <div>
-              <a href="https://github.com/boshimoto/" target="_blank">
-                <svg class="footer--icon">
-                  <use
-                    href="images/about/github-git-linkedin-sprite.svg#Git-Icon"
-                  ></use>
-                </svg>
-              </a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/evanlanese/" target="_blank">
-                <svg class="footer--icon">
-                  <use
-                    href="images/about/github-git-linkedin-sprite.svg#In-Blue-14_2x"
-                  ></use>
-                </svg>
-              </a>
-            </div>
+            <a href="https://github.com/boshimoto/" target="_blank">
+              <svg class="footer--icon">
+                <use
+                  href="images/about/github-git-linkedin-sprite.svg#Git-Icon"
+                ></use>
+              </svg>
+            </a>
           </div>
           <div>
-            <p>&copy; helloevan.dev 2022</p>
-          </div>
-        </section>
-        <div class="footer--cell">
-          <div class="footer--heading">
-            <h4>menu</h4>
-          </div>
-          <div>
-            <ul class="footer--list">
-              <li class="footer--list-item"><a href="#home">home</a></li>
-              <li class="footer--list-item"><a href="#about">about</a></li>
-              <li class="footer--list-item">
-                <a href="#projects">projects</a>
-              </li>
-            </ul>
+            <a href="https://www.linkedin.com/in/evanlanese/" target="_blank">
+              <svg class="footer--icon">
+                <use
+                  href="images/about/github-git-linkedin-sprite.svg#In-Blue-14_2x"
+                ></use>
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="footer--cell">
-          <div class="footer--heading">
-            <h4>developers</h4>
-          </div>
-          <div>
-            <ul class="footer--list">
-              <li class="footer--list-item">
-                <a href="resume.html">resume</a>
-              </li>
-              <li class="footer--list-item">
-                <a href="https://github.com/boshimoto/showdown" target="_blank"
-                  >showdown</a
-                >
-              </li>
-              <li class="footer--list-item">
-                <a
-                  href="https://github.com/boshimoto/helloworld"
-                  target="_blank"
-                  >website</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div>
+          <p>&copy; helloevan.dev 2022</p>
         </div>
-        <div class="footer--cell">
-          <div class="footer--heading">
-            <h4>support</h4>
-          </div>
-          <div>
-            <ul class="footer--list">
-              <li class="footer--list-item"><a href="#contact">contact</a></li>
-            </ul>
-          </div>
+      </section>
+      <div class="footer--cell">
+        <div class="footer--heading">
+          <h4>menu</h4>
+        </div>
+        <div>
+          <ul class="footer--list">
+            <li class="footer--list-item"><a href="#home">home</a></li>
+            <li class="footer--list-item"><a href="#about">about</a></li>
+            <li class="footer--list-item">
+              <a href="#projects">projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer--cell">
+        <div class="footer--heading">
+          <h4>developers</h4>
+        </div>
+        <div>
+          <ul class="footer--list">
+            <li class="footer--list-item">
+              <a href="resume.html">resume</a>
+            </li>
+            <li class="footer--list-item">
+              <a href="https://github.com/boshimoto/showdown" target="_blank"
+                >showdown</a
+              >
+            </li>
+            <li class="footer--list-item">
+              <a href="https://github.com/boshimoto/helloworld" target="_blank"
+                >website</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer--cell">
+        <div class="footer--heading">
+          <h4>support</h4>
+        </div>
+        <div>
+          <ul class="footer--list">
+            <li class="footer--list-item"><a href="#contact">contact</a></li>
+          </ul>
         </div>
       </div>
     </footer>
