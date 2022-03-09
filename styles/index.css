@@ -290,6 +290,12 @@ footer {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .about--skill-logos {
+    padding-bottom: 5rem;
+  }
+}
+
 /* PORTRAIT/QUOTES */
 #about {
   background-color: var(--color-white);
