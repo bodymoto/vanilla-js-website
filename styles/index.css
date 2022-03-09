@@ -1,10 +1,10 @@
 @import "./normalize.css";
 
 :root {
-  --header--background-color: rgba(76, 121, 136, 0.8);
+  --header--background-color-opaque: rgba(76, 121, 136, 0.8);
+  --header--background-color-solid: rgb(76, 121, 136);
   --color-white: #fff;
   --color-lightgreen: #90ee90;
-  --color-lightblue: #b8e0ee;
 }
 
 /* GENERAL */
@@ -25,7 +25,7 @@ header {
 
 /* NAVIGATION BAR */
 .navi {
-  background-color: var(--header--background-color);
+  background-color: var(--header--background-color-opaque);
 }
 
 .navi--clickable {
@@ -141,7 +141,7 @@ header {
 
 .heading--title {
   align-items: center;
-  background-color: var(--header--background-color);
+  background-color: var(--header--background-color-opaque);
   color: var(--color-lightgreen);
   display: flex;
   font-family: "Montserrat", sans-serif;
@@ -161,7 +161,7 @@ header {
 }
 
 .subheading--intro {
-  background-color: var(--header--background-color);
+  background-color: var(--header--background-color-opaque);
   border-radius: 3rem;
   padding: 2rem;
   margin: 2rem;
@@ -204,6 +204,10 @@ header {
 .subheading--intro-face img {
   width: 20rem;
   height: 20rem;
+}
+
+.subheading--intro-face > img:hover {
+  filter: hue-rotate(50deg);
 }
 
 /* NONMOBILE */
@@ -436,13 +440,18 @@ header {
   background-image: url(../images/about/self-portrait-min.jpg);
   background-size: cover;
   border-radius: 100%;
+  filter: grayscale(90%);
   height: 30rem;
   margin-bottom: -6.5rem;
   width: 30rem;
 }
 
+.img--self-portrait:hover {
+  filter: none;
+}
+
 .resume--btn {
-  background: rgba(76, 121, 136, 1);
+  background: var(--header--background-color-solid);
   border-radius: 40px;
   border: 0;
   color: var(--color-white);
@@ -469,6 +478,7 @@ header {
   background: var(--color-white);
   border: 1px solid magenta;
   color: magenta;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -501,7 +511,6 @@ header {
 .about--list {
   list-style: none;
   padding: 0 1rem;
-  width: 100%;
 }
 
 .about--list-item {
@@ -542,9 +551,15 @@ header {
 }
 
 /* PROJECTS */
+.projects {
+}
+
 .projects--showdown-cell {
-  display: flexbox;
-  flex-wrap: wrap;
+}
+
+.showdown--images {
+  border: 2px solid red;
+  height: 30rem;
 }
 
 /* CONTACT */
@@ -577,7 +592,8 @@ button {
   background: rgb(138, 43, 226);
   border-radius: 5px;
   border: 0;
-  color: #fff;
+  color: var(--color-white);
+  cursor: pointer;
   font-size: 2rem;
   outline: 0;
   padding: 1rem 2rem;
@@ -591,7 +607,7 @@ button:hover {
 }
 
 .form--cell {
-  background-color: var(--header--background-color);
+  background-color: var(--header--background-color-opaque);
   line-height: 1.5;
   margin: 0;
   padding: 5rem 2rem;
@@ -610,6 +626,7 @@ button:hover {
 
 .form--label {
   color: var(--color-lightgreen);
+  cursor: pointer;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.3rem;
@@ -660,7 +677,7 @@ textarea {
 
 /* FOOTER */
 .footer {
-  background: rgba(76, 121, 136, 1);
+  background: var(--header--background-color-solid);
   color: rgb(194, 194, 194);
   padding: 2rem 0;
 }
