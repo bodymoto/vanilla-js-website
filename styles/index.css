@@ -75,18 +75,18 @@ header {
 .navi--list {
   list-style: none;
   margin: 0;
-  padding: 0 1rem;
-  width: 100%;
+  padding: 0;
 }
 
 .navi--icon {
   color: var(--color-white);
   font-size: 1.3rem;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0;
+  padding-left: 0.5rem;
 }
 
 .navi--category {
-  border-bottom: 1px solid #222;
+  border-bottom: 2px solid blueviolet;
   font-size: 1.8rem;
   letter-spacing: 0.3rem;
   padding-top: 1.2rem;
@@ -555,19 +555,19 @@ header {
 
 /* PROJECTS */
 #projects {
-  background: black;
+  background: rgb(56, 56, 56);
+  color: var(--color-white);
 }
 
 .projects--heading {
-  padding-top: 6rem;
+  padding-top: 10rem;
 }
 
 .projects--heading-one,
 .projects--heading-two {
-  color: var(--color-white);
-  font-size: 2rem;
+  font-size: 3.8rem;
   font-weight: 300;
-  letter-spacing: 2.5rem;
+  letter-spacing: 1.7rem;
   margin: 0;
   text-transform: uppercase;
 }
@@ -576,8 +576,17 @@ header {
   text-align: left;
 }
 
-.projects-heading-two {
+.projects--heading-two {
   text-align: right;
+}
+
+.projects--showdown {
+  margin: 0.5rem;
+}
+
+.showdown--image {
+  max-width: 100%;
+  height: auto;
 }
 
 /* CONTACT */
