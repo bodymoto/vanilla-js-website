@@ -442,12 +442,20 @@ footer {
   color: var(--color-white);
 }
 
+.projects--cell {
+  padding: 10rem 0;
+}
+
 .projects--heading {
-  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
 }
 
 .projects--heading-one,
 .projects--heading-two {
+  display: inline-flex;
   font-size: 3.8rem;
   font-weight: 300;
   letter-spacing: 1.7rem;
@@ -456,20 +464,55 @@ footer {
 }
 
 .projects--heading-one {
-  text-align: left;
+  margin-right: -1.1rem;
 }
 
 .projects--heading-two {
-  text-align: right;
+  font-weight: 700;
+  margin-left: -1.1rem;
 }
 
-.projects--showdown {
+.grid--2x1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project--badge {
+  position: absolute;
   margin: 0.5rem;
 }
 
-.showdown--image {
+.project--badge-icon {
+  font-size: 3rem;
+}
+
+.projects--showdown-image {
+  border: 0.5px solid red;
   max-width: 100%;
+  clip-path: polygon(0 20%, 90% 0, 100% 0, 100% 80%, 10% 100%, 0 100%);
   height: auto;
+}
+
+.projects--showdown-details {
+  display: flex;
+  justify-content: right;
+  border: 0.5px solid red;
+  padding: 3rem;
+}
+
+.projects--showdown-title {
+  margin-top: -4.5rem;
+  border: 0.5px solid red;
+}
+
+.projects--showdown-heading {
+  margin: 0;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* CONTACT */
