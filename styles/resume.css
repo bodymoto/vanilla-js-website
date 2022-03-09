@@ -16,7 +16,7 @@ body {
     sans-serif;
   font-size: 1.8rem;
   background-color: var(--background-darkgrey);
-  letter-spacing: 0.22rem;
+  letter-spacing: 0.1rem;
 }
 
 header,
@@ -26,7 +26,7 @@ footer {
   margin: 0 auto;
 }
 
-/* h1 {
+h1 {
   font-weight: 400;
   margin-bottom: 3rem;
 }
@@ -41,8 +41,8 @@ h4 {
 }
 
 hr {
-  margin: 0 8rem;
-} */
+  margin: 0 3rem;
+}
 
 /* PAGE MARGIN */
 .resume--head-cell,
@@ -51,27 +51,6 @@ hr {
 .resume--education-cell,
 .resume--experience-cell {
   margin: 0 6rem;
-}
-
-/* NONMOBILE */
-@media screen and (min-width: 768px) {
-  h1 {
-    font-weight: 400;
-    margin-bottom: 3rem;
-  }
-
-  h2 {
-    letter-spacing: 0.5rem;
-  }
-
-  h3,
-  h4 {
-    text-transform: uppercase;
-  }
-
-  hr {
-    margin: 0 8rem;
-  }
 }
 
 /* NAVIGATION */
@@ -112,11 +91,12 @@ hr {
   color: var(--color-white);
   padding: 0.7rem 0.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 .navi a:hover {
-  color: var(--color-lightgrey);
+  color: magenta;
+  font-weight: 700;
 }
 
 .navi--list {
@@ -174,28 +154,23 @@ hr {
   }
 }
 
-/* CONTACT */
+/* TITLE INFO */
 .resume--page {
-  margin: 0 1rem;
-  margin-bottom: 1rem;
-  width: 43rem;
+  background-color: var(--color-white);
 }
 
 .resume--head-name {
-  font-size: 10rem;
-  letter-spacing: 0;
+  font-size: 3rem;
+  padding-top: 1rem;
 }
 
 .resume--head-contact {
-  font-size: 2rem;
-  margin: 0 1rem;
-  padding-left: 1rem;
-  padding-top: 4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .resume--head-contact p {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 /* NONMOBILE */
@@ -206,7 +181,6 @@ hr {
   }
 
   .resume--page {
-    background-color: var(--color-white);
     margin: 0 4rem;
     margin-bottom: 4rem;
     min-height: 100rem;
@@ -229,24 +203,19 @@ hr {
     margin: 0 3rem;
     padding-left: 5rem;
     padding-top: 8rem;
-    text-transform: uppercase;
   }
 }
 
 /* SKILLS */
-.skills--title {
-  min-width: 10rem;
-}
-
 .skills--list {
-  padding-left: 0;
+  list-style: none;
 }
 
 .skills--list-item {
-  padding-right: 1rem;
+  padding-top: 0.5rem;
 }
 
-/* MOBILE */
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .resume--skills-content {
     align-items: center;
@@ -257,12 +226,14 @@ hr {
   }
 
   .skills--title {
+    font-size: 1.8rem;
     min-width: 15rem;
   }
 
   .skills--list {
     display: flex;
-    list-style: none;
+    padding-left: 0;
+    padding-right: 1rem;
   }
 
   .skills--list-item {
@@ -272,15 +243,15 @@ hr {
 
 /* PROJECTS */
 .project--title {
-  font-size: 1.8rem;
-  min-width: 10rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 .project--title-detail {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
-/* MOBILE */
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .resume--projects-content {
     margin-left: 2.2rem;
@@ -295,7 +266,6 @@ hr {
   .project--title {
     font-size: 1.4rem;
     min-width: 15rem;
-    text-transform: uppercase;
   }
 
   .project--title-detail {
@@ -312,10 +282,10 @@ hr {
 
 /* EDUCATION */
 .education--details {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
-/* MOBILE */
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .resume--education-content {
     margin-bottom: 2rem;
@@ -323,7 +293,6 @@ hr {
   }
 
   .resume--education-content p {
-    letter-spacing: 0.1rem;
     margin: 0.4rem 0;
   }
 
@@ -340,12 +309,7 @@ hr {
 
 /* EXPERIENCE */
 .resume--experience-content {
-  margin-bottom: 4rem;
-}
-
-.experience--subject-cell {
-  margin-bottom: 2rem;
-  margin-right: 1rem;
+  padding-bottom: 3rem;
 }
 
 .experience--title-bold {
@@ -354,13 +318,14 @@ hr {
 
 .experience--title p,
 .experience--details p {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   .resume--experience-content {
-    margin-bottom: 8rem;
+    padding-bottom: 6rem;
     margin-left: 2.2rem;
   }
 
@@ -376,10 +341,6 @@ hr {
 
   .experience--title {
     display: flex;
-  }
-
-  .experience--title-bold {
-    font-weight: 700;
   }
 
   .experience--title p,
