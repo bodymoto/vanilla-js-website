@@ -1,8 +1,9 @@
 @import "./normalize.css";
 
 :root {
-  --header--background-color: rgb(76, 121, 136);
+  --background-darkgrey: rgb(139, 139, 139);
   --color-white: #fff;
+  --color-lightgrey: rgb(194, 194, 194);
 }
 
 /* GENERAL */
@@ -14,7 +15,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-size: 1.8rem;
-  background-color: rgb(139, 139, 139);
+  background-color: var(--background-darkgrey);
   letter-spacing: 0.22rem;
 }
 
@@ -75,7 +76,7 @@ hr {
 
 /* NAVIGATION BAR */
 .navi {
-  background-color: rgb(139, 139, 139);
+  background-color: var(--background-darkgrey);
 }
 
 .navi--clickable {
@@ -97,7 +98,7 @@ hr {
 
 .navi.collapsible--expanded .navi--dropdown-mobile-icon {
   border-radius: 5px;
-  box-shadow: 0 0 0 3px var(--color-lightgreen);
+  box-shadow: 0 0 0 3px var(--color-white);
   opacity: 1;
 }
 
@@ -119,7 +120,7 @@ hr {
 }
 
 .navi a:hover {
-  color: rgb(116, 255, 162);
+  color: var(--color-white);
   font-size: 2rem;
 }
 
@@ -403,8 +404,8 @@ main {
 
 /* FOOTER */
 .footer {
-  background: rgb(139, 139, 139);
-  color: rgb(194, 194, 194);
+  background: var(--background-darkgrey);
+  color: var(--color-lightgrey);
   padding: 0;
 }
 
@@ -413,7 +414,7 @@ main {
 }
 
 .footer a {
-  color: rgb(194, 194, 194);
+  color: var(--color-lightgrey);
   text-decoration: none;
   transition: color 0.3s;
 }
