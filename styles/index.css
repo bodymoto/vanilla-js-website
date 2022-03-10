@@ -139,7 +139,7 @@ footer {
 
 /* HEADING */
 .heading--cell {
-  min-height: 25vh;
+  max-height: 25vh;
   position: static;
 }
 
@@ -171,6 +171,7 @@ footer {
   border-radius: 3rem;
   padding: 1rem;
   margin: 2rem;
+  max-height: 45rem;
 }
 
 .subheading--intro-name {
@@ -214,6 +215,11 @@ footer {
 
 /* NONMOBILE */
 @media screen and (min-width: 768px) {
+  .heading--cell {
+    max-height: 45vh;
+    position: static;
+  }
+
   .heading--title {
     font-size: 5rem;
     letter-spacing: 0.5rem;
