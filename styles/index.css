@@ -437,13 +437,18 @@ footer {
 }
 
 /* PROJECTS */
+hr {
+  color: rgb(148, 148, 148);
+}
+
 #projects {
   background: rgb(56, 56, 56);
   color: var(--color-white);
 }
 
 .projects--cell {
-  padding: 10rem 0;
+  padding-bottom: 5rem;
+  padding-top: 10rem;
 }
 
 .projects--heading {
@@ -472,6 +477,14 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  hr {
+    opacity: 0;
+  }
+
+  .projects--cell {
+    padding-bottom: 2rem;
+  }
+
   .projects--heading-one,
   .projects--heading-two {
     font-size: 3.8rem;
@@ -524,32 +537,22 @@ footer {
   }
 }
 
-/* SHOWDOWN */
+/* PROJECTS/SHOWDOWN */
 .projects--showdown-image {
   border-radius: 1rem;
-  max-width: 99%;
   clip-path: polygon(0 0, 20% 0, 100% 9%, 100% 100%, 80% 100%, 0 90%);
   height: auto;
+  max-width: 99%;
 }
 
 .projects--showdown-details {
   padding: 0.5rem;
 }
 
-.projects--showdown-list {
-  margin: 0;
-  padding-bottom: 2rem;
-}
-
-.projects--showdown-list-item {
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  letter-spacing: 0.2rem;
-}
-
 .projects--showdown-title {
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
   padding-top: 4rem;
 }
 
@@ -558,32 +561,34 @@ footer {
 }
 
 .projects--showdown-heading {
-  margin: 0;
   font-size: 2rem;
   font-style: italic;
   font-weight: 100;
   letter-spacing: 2rem;
+  margin: 0;
   text-transform: uppercase;
+}
+
+.projects--showdown-list {
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+.projects--showdown-list-item {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
   .projects--showdown-list-item {
     font-size: 1.7rem;
-    padding: 0.5rem;
     letter-spacing: 0.2rem;
+    padding: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .projects--showdown-list {
-    padding-top: 5rem;
-  }
-
-  .projects--showdown-list-item {
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-  }
-
   .projects--showdown-title {
     padding-top: 8rem;
   }
@@ -594,6 +599,96 @@ footer {
 
   .projects--showdown-heading {
     font-size: 4rem;
+  }
+
+  .projects--showdown-list {
+    padding-top: 5rem;
+  }
+
+  .projects--showdown-list-item {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* PROJECTS/PORTFOLIO */
+.projects--portfolio-details {
+  padding: 0.5rem;
+}
+
+.projects--portfolio-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.projects--portfolio-heading {
+  margin: 0;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+
+.projects--portfolio-subtitle {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.projects--portfolio-subheading {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.projects--portfolio-list {
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+.projects--portfolio-list-item {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+}
+
+.projects--portfolio-image {
+  border-radius: 1rem;
+  clip-path: polygon(0 10%, 80% 0, 100% 0, 100% 90%, 20% 100%, 0 100%);
+  height: auto;
+  max-width: 99%;
+}
+
+@media screen and (min-width: 1024px) {
+  .projects--portfolio-list-item {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projects--portfolio-title {
+    padding-top: 8rem;
+  }
+
+  .projects--badge-icon {
+    font-size: 4rem;
+  }
+
+  .projects--portfolio-heading {
+    font-size: 4rem;
+  }
+
+  .projects--portfolio-list {
+    padding-top: 5rem;
+  }
+
+  .projects--portfolio-list-item {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
   }
 }
 
