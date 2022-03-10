@@ -234,6 +234,10 @@ footer {
 }
 
 /* ABOUT */
+#about {
+  background-color: var(--color-white);
+}
+
 /* SKILLS */
 .about--skill-logos {
   display: flex;
@@ -303,10 +307,6 @@ footer {
 }
 
 /* PORTRAIT/QUOTES */
-#about {
-  background-color: var(--color-white);
-}
-
 .about--quote {
   align-items: center;
   display: flex;
@@ -426,7 +426,7 @@ footer {
   flex-wrap: wrap;
 }
 
-/* LAPTOPS */
+/* NONMOBILE/LAPTOPS */
 @media screen and (min-width: 1024px) {
   .about--grid--3x1 {
     display: grid;
@@ -482,6 +482,7 @@ hr {
   margin-left: -0.4rem;
 }
 
+/* NONMOBILE */
 @media screen and (min-width: 768px) {
   hr {
     opacity: 0;
@@ -586,6 +587,7 @@ hr {
   padding: 0.5rem;
 }
 
+/* NONMOBILE */
 @media screen and (min-width: 1024px) {
   .projects--showdown-list-item {
     font-size: 1.7rem;
@@ -669,6 +671,7 @@ hr {
   max-width: 99%;
 }
 
+/* NONMOBILE */
 @media screen and (min-width: 1024px) {
   .projects--portfolio-list-item {
     font-size: 1.7rem;
