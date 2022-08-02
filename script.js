@@ -44,14 +44,15 @@ document.addEventListener('scroll', () => {
     previousYPos = window.pageYOffset;
 });
 
-const leadCard = document.querySelectorAll('.lead__grid--card');
+
+
+const ctaCard = document.querySelectorAll('.cta__card');
 
 const flipCard = function flipCard() {
-    for (let card in leadCard) {
-        if (Object.hasOwn(leadCard, card)) {
-            leadCard[card].addEventListener('mouseover', () => {
-                leadCard[card].classList.add('is-flipped');
-    
+    for (let card in ctaCard) {
+        if (Object.hasOwn(ctaCard, card)) {
+            ctaCard[card].addEventListener('mouseover', () => {
+                ctaCard[card].classList.add('is-flipped');
             })
         }
     }
