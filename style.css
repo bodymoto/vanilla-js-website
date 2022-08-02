@@ -113,6 +113,7 @@ header { background: var(--color-white); }
 
 .front h1 {
     font-size: 4em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .icon-list {
@@ -168,6 +169,7 @@ header { background: var(--color-white); }
 
 .cta__body-text h2 {
     text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
     padding-bottom: 1em;
     font-size: 2em;
 }

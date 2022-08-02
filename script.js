@@ -44,18 +44,10 @@ document.addEventListener('scroll', () => {
     previousYPos = window.pageYOffset;
 });
 
+const ctaCards = document.querySelectorAll('.cta__card');
 
-
-const ctaCard = document.querySelectorAll('.cta__card');
-
-const flipCard = function flipCard() {
-    for (let card in ctaCard) {
-        if (Object.hasOwn(ctaCard, card)) {
-            ctaCard[card].addEventListener('mouseover', () => {
-                ctaCard[card].classList.add('is-flipped');
-            })
-        }
-    }
-}
-
-flipCard();
+ctaCards.forEach( element => {
+    element.addEventListener('mouseover', () => {
+        element.classList.add('is-flipped');
+    })
+})
