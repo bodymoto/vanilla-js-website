@@ -2,6 +2,7 @@
     --color-red: rgb(208, 2, 27);
     --color-offwhite: rgb(245, 245, 245);
     --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
 }
 
 * {
@@ -25,6 +26,41 @@ a:active {
     color: var(--color-red);
 }
 
+/* BUTTONS */
+.btn-primary {
+    font-weight: 600;
+    font-size: .8em;
+    background: var(--color-white);
+    padding: 20px 40px;
+    border: var(--color-red) solid 2px;
+    border-radius: 20px;
+}
+
+.btn-primary:hover {
+    color: var(--color-white);
+    background: var(--color-red);
+    transition: .5s ease;
+}
+
+.btn-secondary {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: .8em;
+    background: var(--color-red);
+    padding: 20px 40px;
+    border: var(--color-red) solid 2px;
+    border-radius: 20px;
+    margin: 0 1em;
+}
+
+.btn-secondary:hover {
+    color: var(--color-black);
+    background: var(--color-white);
+    transition: .5s ease;
+    border: var(--color-white) solid 2px;
+}
+
+/* TOP OF DOCUMENT */
 header { background: var(--color-white); }
 
 .header__area {
@@ -76,6 +112,7 @@ header { background: var(--color-white); }
     border: none;
 }
 
+/* HERO SECTION */
 .hero__container {
     background: url(/cpu.jpg) no-repeat center;
     background-size: cover;
@@ -124,7 +161,7 @@ header { background: var(--color-white); }
     color: black;
     display: flex;
     justify-content: end;
-    background: #fff;
+    background: var(--color-white);
     margin: 5px 0;
 }
 
@@ -180,31 +217,14 @@ header { background: var(--color-white); }
     80% { transform: translateY(0);}
 }
 
-.hero__container--grid p {
-    animation: leftSlide 2s;
-}
-
-@keyframes leftSlide {
-    0% { transform: translateX(-200%); }
-    50% { transform: translateX(3%); }
-    100% { transform: translateX(0);}
-}
-
-.front-button {
+.hero__button {
     display: flex;
     align-items: flex-start;
-    justify-content: end;
+    justify-content: center;
+    margin: 1em 2.5em;
 }
 
-.front-button button {
-    margin: 0 2.5em;
-    padding: 30px 50px;
-    border-radius: 20px;
-    border: none;
-}
-
-
-
+/* CALL TO ACTION SECTION */
 .cta__container {
     background: radial-gradient(
         circle,
@@ -214,7 +234,7 @@ header { background: var(--color-white); }
     padding: 2em;
 }
 
-.cta__container--grid {
+.cta__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -223,7 +243,7 @@ header { background: var(--color-white); }
     border-radius: 20px;
 }
 
-.cta__container--text {
+.cta__narrative-scene {
     grid-area: text;
     display: flex;
     flex-direction: column;
@@ -231,53 +251,33 @@ header { background: var(--color-white); }
     width: 100%;
     height: 100%;
     padding: 0 1em;
-}
-
-.cta__container--description-body {
-    display: flex;
-    flex-direction: column;
     text-align: center;
 }
 
-.cta__body-text h2 {
+.cta__narrative h2 {
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 1em;
     font-size: 2em;
 }
 
-.cta__body-text p {
+.cta__narrative p {
     font-size: .9em;
     line-height: 1.5em;
 }
 
-.cta__body-text p:nth-child(2) {
+.cta__narrative p:nth-child(2) {
     font-style: italic;
     padding-top: 5px;
 }
 
-.cta__body-button {
+.cta__narrative-button {
     display: flex;
     justify-content: center;
     margin: 2em;
 }
 
-.btn {
-    font-weight: 600;
-    font-size: .8em;
-    background: var(--color-white);
-    padding: 20px 40px;
-    border: var(--color-red) solid 2px;
-    border-radius: 20px;
-}
-
-.btn:hover {
-    color: var(--color-white);
-    background: var(--color-red);
-    transition: .5s ease;
-}
-
-.cta__container--cards {
+.cta__card-scene {
     grid-area: cards;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -292,6 +292,8 @@ header { background: var(--color-white); }
     transform-style: preserve-3d;
     padding-bottom: 100%;
 }
+
+.cta__card.is-flipped { transform: rotateY(-180deg); }
 
 .cta__card img {
     width: 100%;
@@ -310,10 +312,12 @@ header { background: var(--color-white); }
 .cta__face-front {
     border: .05em solid black;
     background: var(--color-offwhite);
-    animation: rotateZ 2s ease;
-    animation-delay: 2s;
 }
 
+.cta__face-front.is-spinning {
+    animation: rotateZ 2s ease;
+    animation-delay: 1s;
+}
 @keyframes rotateZ {
     from { transform: rotateZ(0); }
     to { transform: rotateZ(180deg); }
@@ -333,5 +337,3 @@ header { background: var(--color-white); }
 .cta__face-back-c2r3 { transform: rotateY( 180deg ); }
 .cta__face-back-c3r3 { transform: rotateY( 180deg ); }
 .cta__face-back-c4r3 { transform: rotateY( 180deg ); }
-
-.cta__card.is-flipped { transform: rotateY(-180deg); }

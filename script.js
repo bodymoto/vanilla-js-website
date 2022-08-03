@@ -11,11 +11,11 @@ const iconSwap = (element, starturl='', endurl='') => {
     }
 };
 
-navBtn.addEventListener('click', () => 
-    {iconSwap(navBtn.firstChild.nextElementSibling,
+navBtn.addEventListener('click', iconSwap(
+    navBtn.firstChild.nextElementSibling,
     '/img/nav/menu-open.svg',
     '/img/nav/menu-close.svg')
-});
+);
 
 const debounce = (fn, timeout) => {
     let timeoutId;
@@ -44,10 +44,26 @@ document.addEventListener('scroll', () => {
     previousYPos = window.pageYOffset;
 });
 
-const ctaCards = document.querySelectorAll('.cta__card');
+const eachCard = document.querySelectorAll('.cta__card');
 
-ctaCards.forEach( element => {
+eachCard.forEach( element => {
     element.addEventListener('mouseover', () => {
         element.classList.add('is-flipped');
     })
 })
+
+const cardScene = document.querySelector('.cta__grid');
+const cardFront = document.querySelectorAll('.cta__face-front');
+
+window.addEventListener('scroll', spinCards)
+
+function spinCards() {
+    const fieldOfView = window.innerHeight;
+    const baseLine = cardScene.getBoundingClientRect().top;
+
+    cardFront.forEach(card => {
+        if (baseLine < fieldOfView) {
+            card.classList.add('is-spinning');
+        } else { card.classList.remove('is-spinning'); }
+    })
+}
