@@ -165,23 +165,23 @@ header { background: var(--color-white); }
     margin: 5px 0;
 }
 
-.hero__icons img:nth-last-of-type(4) {
+.hero__icons img:nth-of-type(1) {
     animation: zoomS 2s forwards, zoomBreak 2s;
 }
 
-.hero__icons img:nth-last-of-type(3) {
+.hero__icons img:nth-of-type(2) {
     transform: translateX(1000%);
     animation: zoomM 1.5s forwards, zoomHop 1.7s;
     animation-delay: .5s;
 }
 
-.hero__icons img:nth-last-of-type(2) {
+.hero__icons img:nth-of-type(3) {
     transform: translateX(1000%);
     animation: zoomL 1.5s forwards, zoomHop 1.7s;
     animation-delay: .6s;
 }
 
-.hero__icons img:nth-last-of-type(1) {
+.hero__icons img:nth-of-type(4) {
     transform: translateX(1000%);
     animation: zoomXL 1.5s forwards, zoomHop 1.7s;
     animation-delay: .6s;
