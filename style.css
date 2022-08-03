@@ -76,12 +76,8 @@ header { background: var(--color-white); }
     border: none;
 }
 
-
-
-
-
-.container {
-    background: url(/underwater-by-john-cahil-rom_1920x1440.jpg) no-repeat center;
+.hero__container {
+    background: url(/cpu.jpg) no-repeat center;
     background-size: cover;
     display: flex;
     position: relative;
@@ -90,7 +86,7 @@ header { background: var(--color-white); }
     width: 100%;
 }
 
-.container:after {
+.hero__container:after {
     content: '';
     position: absolute;
     top: 0;
@@ -99,37 +95,113 @@ header { background: var(--color-white); }
     height: 100%;
     background: rgba(0, 0, 0, .5);
     box-shadow: 
-        inset 120px 120px 300px rgba(0, 0, 0, .9),
-        inset -120px -100px 300px rgba(0, 0, 0, .9);
+        inset 120px 120px 300px rgba(0, 0, 0, 1),
+        inset -120px -100px 300px rgba(0, 0, 0, 1);
     mix-blend-mode: overlay;
 }
 
-.front {
+.hero__container--grid {
+    display: grid;
+    grid-template-rows: 30% 60px 60px 1fr;
     z-index: 1;
     color: var(--color-white);
-    transform: translateY(30%);
-    margin: 2em;
+    text-align: end;
+    margin: 1em;
 }
 
-.front h1 {
-    font-size: 4em;
+.hero__h1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 2.3em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.icon-list {
+.hero__icons {
+    display: inline;
+    color: black;
     display: flex;
     justify-content: end;
-    margin-right: 1em;
+    background: #fff;
+    margin: 5px 0;
 }
 
-.icon-list > p {
-    padding-right: 2em;
+.hero__icons img:nth-last-of-type(4) {
+    animation: zoomS 2s forwards, zoomBreak 2s;
 }
 
-.icon-list li {
-    display: inline;
+.hero__icons img:nth-last-of-type(3) {
+    transform: translateX(1000%);
+    animation: zoomM 1.5s forwards, zoomHop 1.7s;
+    animation-delay: .5s;
 }
 
+.hero__icons img:nth-last-of-type(2) {
+    transform: translateX(1000%);
+    animation: zoomL 1.5s forwards, zoomHop 1.7s;
+    animation-delay: .6s;
+}
+
+.hero__icons img:nth-last-of-type(1) {
+    transform: translateX(1000%);
+    animation: zoomXL 1.5s forwards, zoomHop 1.7s;
+    animation-delay: .6s;
+}
+
+@keyframes zoomS {
+    0% { transform: translateX(1000%); }
+    100% { transform: translateX(0);}
+}
+
+@keyframes zoomM {
+    50% { transform: translateX(-180%);}
+    100% { transform: translateX(0);}
+}
+
+@keyframes zoomL {
+    50% { transform: translateX(-360%);}
+    100% { transform: translateX(0);}
+}
+
+@keyframes zoomXL {
+    50% { transform: translateX(-450%);}
+    100% { transform: translateX(0);}
+}
+
+@keyframes zoomBreak {
+    50% {transform: rotateZ(-45deg);}
+    100% {transform: rotateZ(0);}
+}
+
+@keyframes zoomHop {
+    70% { transform: translateY(-20px);}
+    80% { transform: translateY(0);}
+}
+
+.hero__container--grid p {
+    animation: leftSlide 2s;
+}
+
+@keyframes leftSlide {
+    0% { transform: translateX(-200%); }
+    50% { transform: translateX(3%); }
+    100% { transform: translateX(0);}
+}
+
+.front-button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+.front-button button {
+    margin: 0 2.5em;
+    padding: 30px 50px;
+    border-radius: 20px;
+    border: none;
+}
 
 
 
