@@ -3,26 +3,27 @@ const navBtn = document.querySelector('.nav__btn');
 let previousYPos;
 
 const iconSwap = (element, starturl='', endurl='') => {
-    if(element.src.endsWith(starturl)){
+    if (element.src.endsWith(starturl)) {
         element.src = endurl;
-    }
-    else if(element.src.endsWith(endurl)){
+    } else if (element.src.endsWith(endurl)) {
         element.src = starturl;
     }
 };
 
-navBtn.addEventListener('click', iconSwap(
-    navBtn.firstChild.nextElementSibling,
-    '/img/nav/menu-open.svg',
-    '/img/nav/menu-close.svg')
-);
+navBtn.addEventListener('click', () => {
+    iconSwap(
+        navBtn.firstChild.nextElementSibling,
+        '/img/nav/menu-ready.svg',
+        '/img/nav/menu-close.svg'
+    )
+});
 
-const debounce = (fn, timeout) => {
+const debounce = (func, timeout) => {
     let timeoutId;
     return (...args) => {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-            fn.apply(this, args);
+            func.apply(this, args);
         }, timeout);
     };
 };
@@ -44,26 +45,30 @@ document.addEventListener('scroll', () => {
     previousYPos = window.pageYOffset;
 });
 
-const eachCard = document.querySelectorAll('.cta__card');
+const allCards = document.querySelectorAll('.cta__card');
 
-eachCard.forEach( element => {
+allCards.forEach( element => {
     element.addEventListener('mouseover', () => {
         element.classList.add('is-flipped');
     })
-})
+    element.addEventListener('contextmenu', (event) => {
+        // set to false to protect privacy
+        event.preventDefault();
+    })
+});
 
 const cardScene = document.querySelector('.cta__grid');
-const cardFront = document.querySelectorAll('.cta__face-front');
+const cardsFront = document.querySelectorAll('.cta__face-front');
 
-window.addEventListener('scroll', spinCards)
-
-function spinCards() {
+const spinCards = function spinCards() {
     const fieldOfView = window.innerHeight;
     const baseLine = cardScene.getBoundingClientRect().top;
 
-    cardFront.forEach(card => {
+    cardsFront.forEach(card => {
         if (baseLine < fieldOfView) {
             card.classList.add('is-spinning');
         } else { card.classList.remove('is-spinning'); }
     })
-}
+};
+
+window.addEventListener('scroll', spinCards);
