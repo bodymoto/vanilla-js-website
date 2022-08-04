@@ -33,14 +33,16 @@ a:active {
     width: 100%;
 }
 
-.r-corners {
+.r-corners--sm {
     border-radius: 8px;
 }
 
-/* BUTTONS */
+.r-corners--m {
+    border-radius: 20px;
+}
+
 .btn-primary {
     background: var(--color-white);
-    border-radius: 20px;
     border: var(--color-red) solid 2px;
     font-size: .8em;
     font-weight: 600;
@@ -56,7 +58,6 @@ a:active {
 
 .btn-secondary {
     background: var(--color-red);
-    border-radius: 20px;
     border: var(--color-red) solid 2px;
     color: var(--color-white);
     font-size: .8em;
@@ -73,7 +74,7 @@ a:active {
     transition: .5s ease;
 }
 
-/* TOP OF DOCUMENT */
+/* HEADER/NAV SECTION */
 .header__area {
     /* height to maintain DOM during navBar anime */
     height: 100px;
@@ -125,10 +126,10 @@ a:active {
 
 /* HERO SECTION */
 .hero__container {
+    background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
     background-size:cover;
-    background: url(/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
     display: flex;
-    height: 86vh;
+    height: 90vh;
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -151,6 +152,7 @@ a:active {
     margin: 16px;
     min-height: 500px;
     text-align: end;
+    z-index: 1;
 }
 
 .hero__h1 {
@@ -197,6 +199,13 @@ a:active {
     transform: translateX(200vh);
 }
 
+.hero__button {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+}
+
 @keyframes zoomX {
     0% { transform: translateX(2000%); }
     50% {transform: rotateZ(-45deg);}
@@ -223,13 +232,6 @@ a:active {
     80% { transform: translateY(0);}
 }
 
-.hero__button {
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-    margin: 0 40px;
-}
-
 /* CALL TO ACTION SECTION */
 .cta__container {
     background: radial-gradient(
@@ -241,9 +243,8 @@ a:active {
 }
 
 .cta__grid {
-    background: url(/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
+    background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
     background-size: cover;
-    border-radius: 20px;
     box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
     display: grid;
     grid-template-areas: 'cards text';
@@ -284,7 +285,7 @@ a:active {
 
 .cta__card-scene {
     display: grid;
-    gap: 1px;
+    gap: 2px;
     grid-area: cards;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -293,7 +294,7 @@ a:active {
 }
 
 .cta__card {
-    padding-bottom: 100%;
+    padding-bottom: 99%;
     transform-style: preserve-3d;
     transition: transform 1s;
     user-select: none;
@@ -314,14 +315,15 @@ a:active {
 }
 
 .cta__face-front.is-spinning {
-    animation-delay: 1s;
     animation: rotateZ 2s ease;
+    animation-delay: 1s;
 }
 @keyframes rotateZ {
     from { transform: rotateZ(0); }
     to { transform: rotateZ(180deg); }
 }
 
+/* PICTURE GRID */
 /* TOP ROW */
 .cta__face-back-c1r1 { transform: rotateY( 180deg ); }
 .cta__face-back-c2r1 { transform: rotateY( 180deg ); }
