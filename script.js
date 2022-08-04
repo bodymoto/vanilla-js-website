@@ -1,4 +1,4 @@
-const navBar = document.querySelector('.header__container');
+const navBar = document.getElementById('navigation');
 const navBtn = document.querySelector('.nav__btn');
 let previousYPos;
 
@@ -40,11 +40,6 @@ const updateNavBarDrop = debounce((previousYPos) => {
     }
 }, 300);
 
-document.addEventListener('scroll', () => {
-    updateNavBarDrop(previousYPos);
-    previousYPos = window.pageYOffset;
-});
-
 const allCards = document.querySelectorAll('.cta__card');
 
 allCards.forEach( element => {
@@ -57,18 +52,35 @@ allCards.forEach( element => {
     })
 });
 
-const cardScene = document.querySelector('.cta__grid');
-const cardsFront = document.querySelectorAll('.cta__face-front');
+// !NOTE currently the hero element position is before cta element
+const heroContainer = document.getElementById('hero');
+let heroContainerTop;
+
+const ctaNarrative = document.querySelector('.cta__narrative-scene');
+const cardsFrontFace = document.querySelectorAll('.cta__face-front');
+
+let ctaTopPosition;
+
+const animationEvent = function animationEvent(element, attribute='', triggerPos, scrollYPos) {
+    // if top of an element crosses a particular y coordinate
+    if (triggerPos > scrollYPos ) {
+        element.classList.add(attribute);
+    } else { element.classList.remove(attribute); }
+}
 
 const spinCards = function spinCards() {
-    const fieldOfView = window.innerHeight;
-    const baseLine = cardScene.getBoundingClientRect().top;
-
-    cardsFront.forEach(card => {
-        if (baseLine < fieldOfView) {
+    cardsFrontFace.forEach(card => {
+        if (ctaTopPosition > heroContainerTop) {
             card.classList.add('is-spinning');
         } else { card.classList.remove('is-spinning'); }
     })
 };
 
-window.addEventListener('scroll', spinCards);
+document.addEventListener('scroll', () => {
+    updateNavBarDrop(previousYPos);
+    animationEvent(ctaNarrative, 'active', ctaTopPosition, heroContainerTop);
+    spinCards();
+    previousYPos = window.pageYOffset;
+    heroContainerTop = heroContainer.getBoundingClientRect().bottom;
+    ctaTopPosition = previousYPos + heroContainerTop;
+});

@@ -129,7 +129,7 @@ a:active {
     background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
     background-size:cover;
     display: flex;
-    height: 90vh;
+    height: calc(100vh - 100px);
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -258,6 +258,13 @@ a:active {
     justify-content: center;
     padding: 0 16px;
     text-align: center;
+}
+
+.cta__narrative-scene.active { animation: setScene 2s ease forwards; }
+
+@keyframes setScene {
+    from { transform:scale(0) }
+    to { transform:scale(1) }
 }
 
 .cta__narrative-title {
