@@ -129,7 +129,7 @@ a:active {
     background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
     background-size:cover;
     display: flex;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -160,7 +160,7 @@ a:active {
     color: var(--color-offwhite);
     display: flex;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2em;
+    font-size: 1.7em;
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
@@ -260,11 +260,15 @@ a:active {
     text-align: center;
 }
 
-.cta__narrative-scene.active { animation: setScene 2s ease forwards; }
+.cta__narrative {
+    filter: opacity(0);
+}
+
+.cta__narrative.active { animation: setScene 1.5s ease forwards; }
 
 @keyframes setScene {
-    from { transform:scale(0) }
-    to { transform:scale(1) }
+    from { filter: blur(50px) opacity(0); }
+    to { filter: blur(0) opacity(1); }
 }
 
 .cta__narrative-title {
@@ -301,6 +305,7 @@ a:active {
 }
 
 .cta__card {
+    position: relative;
     padding-bottom: 99%;
     transform-style: preserve-3d;
     transition: transform 1s;
@@ -346,3 +351,20 @@ a:active {
 .cta__face-back-c2r3 { transform: rotateY( 180deg ); }
 .cta__face-back-c3r3 { transform: rotateY( 180deg ); }
 .cta__face-back-c4r3 { transform: rotateY( 180deg ); }
+
+
+@media screen and (max-width: 700px) {
+    .cta__grid {
+        display: grid;
+        grid-template-areas: 'text';
+        grid-template-columns: 1fr;
+    }
+    
+    .cta__card-scene {
+        display: none;
+    }
+    
+    .cta__narrative-scene {
+        margin: 10%;
+    }
+}
