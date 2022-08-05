@@ -1,3 +1,6 @@
+/* Style Guide
+https://airbnb.io/javascript/ */
+
 const navBar = document.getElementById('navigation');
 const navBtn = document.querySelector('.nav__btn');
 let previousYPos;
@@ -10,39 +13,45 @@ const iconSwap = (element, starturl='', endurl='') => {
     }
 };
 
-navBtn.addEventListener('click', () => {
-    iconSwap(
-        navBtn.firstChild.nextElementSibling,
+const navIcon = (element, starturl='', endurl='') => {
+    return iconSwap(navBtn.firstChild.nextElementSibling,
         '/img/nav/menu-ready.svg',
-        '/img/nav/menu-close.svg'
-    );
-});
+        '/img/nav/menu-close.svg')
+}
 
-// https://www.freecodecamp.org/news/javascript-debounce-example/
-// https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086
+navBtn.addEventListener('click', navIcon);
 
-const debounce = function debounce(func, delay) {
+/* https://www.freecodecamp.org/news/javascript-debounce-example/
+https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086 */
+const debounce = (func, delay) => {
     let timeout;
-    return function executeTimeout(...args) {
+
+    const executeTimeout = (...args) => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => {
+        const setTime = () => {
             func.apply(this, args);
-        }, delay);
+        }
+        timeout = setTimeout(setTime, delay);
     };
+
+    return executeTimeout
 };
 
+const updateNavBar = () => {
+    const navBarDrop = (previousYPos) => {
+        let currentYPos = window.pageYOffset;
+    
+        if (currentYPos <= 100) {
+            navBar.classList.remove('active');
+        } else if(currentYPos > previousYPos) {
+            navBar.classList.remove('active');
+        } else if(currentYPos < previousYPos) {
+            navBar.classList.add('active');
+        }
+    };
 
-const updateNavBar = debounce(function navBarDrop(previousYPos) {
-    let currentYPos = window.pageYOffset;
-
-    if (currentYPos <= 100) {
-        navBar.classList.remove('active');
-    } else if(currentYPos > previousYPos) {
-        navBar.classList.remove('active');
-    } else if(currentYPos < previousYPos) {
-        navBar.classList.add('active');
-    }
-}, 300);
+    return debounce(navBarDrop(previousYPos), 300)
+}
 
 const allCards = document.querySelectorAll('.cta__card');
 
@@ -55,14 +64,6 @@ allCards.forEach((element) => {
     })
 });
 
-const spinCards = function spinCards() {
-    cardsFrontFace.forEach( function forEachCard(card) {
-        if (screenBotPosition > heroContainerBot) {
-            card.classList.add('is-spinning');
-        } else { card.classList.remove('is-spinning'); }
-    })
-};
-
 // !NOTE currently the hero element position is before cta element
 const heroContainer = document.getElementById('hero');
 let heroContainerBot;
@@ -72,33 +73,39 @@ const cardsFrontFace = document.querySelectorAll('.cta__face-front');
 
 let screenBotPosition;
 
-// flag optimizes runtime when scrolling post-executed DOM animations
 let flag = false;
 
-const animateNarrative = debounce(function animationEvent(
-    element,
-    attribute='',
-    topOfElement,
-    scrollYPos
-) {
-    if (flag) { return; }
+const animationEvent = (element, attribute='', topOfElement, scrollY) => {
+    if (flag) {return;}
     // if top of an element crosses a particular y coordinate
-    if (topOfElement > scrollYPos ) {
+    if (topOfElement > scrollY) {
         element.classList.add(attribute);
         flag = true;
     }
-}, 500);
+};
+
+const spinCards = () => {
+    const forEachCard = (card) => {
+        if (screenBotPosition > heroContainerBot) {
+            card.classList.add('is-spinning');
+        } else { card.classList.remove('is-spinning'); }
+    };
+
+    return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
+};
+
+const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
+    animationEvent(ctaNarrative, 'active', screenBotPosition, heroContainerBot)
+
+    return debounce(animationEvent, 300)
+};
 
 
-const documentScroll = function documentScroll() {
+const documentScroll = () => {
     updateNavBar(previousYPos);
+    // optimizes runtime when scrolling post-executed DOM animations
     if (!flag) {
-        animateNarrative(
-            ctaNarrative,
-            'active',
-            screenBotPosition,
-            heroContainerBot
-        );
+        animateNarrative();
         spinCards();
     }
     previousYPos = window.pageYOffset;
