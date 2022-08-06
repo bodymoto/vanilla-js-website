@@ -67,7 +67,7 @@ a:active {
     color: var(--color-white);
     font-size: .8em;
     font-weight: 600;
-    margin: 0 16px;
+    margin: 16px;
     padding: 20px 40px;
 }
 
@@ -144,30 +144,32 @@ a:active {
 /* HERO SECTION */
 .hero__container {
     background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
-    background-size:cover;
+    background-size: cover;
     display: flex;
-    min-height: calc(100vh - 100px);
     justify-content: center;
+    min-height: calc(100vh - 100px);
     position: relative;
-    width: 100%;
+    overflow: hidden;
 }
 
-.hero__container-after {
-    background: rgba(234, 240, 240, .3);
+.hero__container-overlay {
+    background: url(/DEV.svg) no-repeat center;
+    background-size: cover;
     box-shadow: inset 120px 120px 300px rgba(0, 0, 0, .8), inset -120px -120px 300px rgba(0, 0, 0, .8);
-    left: 0;
     mix-blend-mode: overlay;
-    position: absolute;
+    left: 0;
     top: 0;
+    position: absolute;
 }
 
 .hero__container--grid {
-    display: flex;
-    flex-direction: column;
-    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 100%;
+    min-height: calc(100vh - 120px);
+    margin: 10px;
     z-index: 1;
-    perspective: 1000px;
 }
 
 .hero__container--grid h1 {
@@ -175,19 +177,41 @@ a:active {
 }
 
 .hero__title-frontend {
-    background: url(/{\ FRONT\ END;\ }\ white-cropped.svg) no-repeat;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    background: url(/fe.svg) no-repeat;
     background-size: contain;
+    margin: 0 2%;
     width: 100%;
-    height: 300px;
-    margin-top: 100px;
-    /* transform: rotateX(15deg); */
+    height: 100%;
 }
 
-.developer {
-    background: url(/development\(s\)\ white.svg) no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 200px;
+.js-icon {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background: url(/javascript.svg) no-repeat center;
+    opacity: .6;
+}
+
+.html-icon {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background: url(/html5.svg) no-repeat center;
+    opacity: .6;
+}
+
+.css-icon {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: url(/css3.svg) no-repeat center;
+    opacity: .6;
+}
+
+.git-icon {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background: url(/git.svg) no-repeat center;
+    opacity: .8;
 }
 
 
