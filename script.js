@@ -64,6 +64,16 @@ allCards.forEach((element) => {
     })
 });
 
+const spinCards = () => {
+    const forEachCard = (card) => {
+        if (screenBotPosition > heroContainerBot) {
+            card.classList.add('is-spinning');
+        } else { card.classList.remove('is-spinning'); }
+    };
+
+    return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
+};
+
 // !NOTE currently the hero element position is before cta element
 const heroContainer = document.getElementById('hero');
 let heroContainerBot;
@@ -82,16 +92,6 @@ const animationEvent = (element, attribute='', topOfElement, scrollY) => {
         element.classList.add(attribute);
         flag = true;
     }
-};
-
-const spinCards = () => {
-    const forEachCard = (card) => {
-        if (screenBotPosition > heroContainerBot) {
-            card.classList.add('is-spinning');
-        } else { card.classList.remove('is-spinning'); }
-    };
-
-    return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
 };
 
 const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
