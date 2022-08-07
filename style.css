@@ -219,6 +219,33 @@ a:active {
     padding: 10px;
 }
 
+@media screen and (min-width: 660px) {
+    .hero__container-grid {
+        grid-template-columns: 1fr repeat(2, 150px) 1fr;
+        grid-template-rows: 200px 200px repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hero__container-grid {
+        grid-template-columns: 1fr repeat(2, 225px) 1fr;
+        grid-template-rows: 300px 300px repeat(2, 1fr);
+    }
+
+    .hero__mission {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /* CALL TO ACTION */
 .cta__container {
     background: radial-gradient(
