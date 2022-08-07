@@ -173,42 +173,16 @@ a:active {
 }
 
 .hero__title {
+    user-select: none;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    background: url(/img/hero/frontend-banner.svg) no-repeat;
+    background: url(/img/hero/frontend-vertical-banner.svg) no-repeat;
     background-size: contain;
     margin: 0 2%;
 }
 
-.js--icon {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    background: url(/img/hero/javascript.svg) no-repeat bottom;
-    opacity: .6;
-}
-
-.html--icon {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    background: url(/img/hero/html5.svg) no-repeat bottom;
-    opacity: .6;
-}
-
-.css--icon {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background: url(/img/hero/css3.svg) no-repeat top;
-    opacity: .6;
-}
-
-.git--icon {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    background: url(/img/hero/git.svg) no-repeat top;
-    opacity: .8;
-}
-
 .hero__mission {
+    user-select: none;
     display: flex;
     align-items: flex-end;
     color: var(--color-white);
@@ -225,21 +199,96 @@ a:active {
     background-color: rgba(7, 81, 33, 0.3);
 }
 
-@media screen and (min-width: 660px) {
-    .hero__container-grid {
-        grid-template-columns: 1fr repeat(2, 150px) 1fr;
-        grid-template-rows: 200px 200px repeat(2, 1fr);
-    }
+.hero__skill-icons {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.js--icon {
+    height: 48px;
+    width: 48px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background: url(/img/hero/javascript.svg);
+    opacity: 1;
+}
+
+.html--icon {
+    height: 48px;
+    width: 48px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background: url(/img/hero/html5.svg);
+    opacity: 1;
+}
+
+.css--icon {
+    height: 48px;
+    width: 48px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: url(/img/hero/css3.svg);
+    opacity: 1;
+}
+
+.git--icon {
+    height: 48px;
+    width: 48px;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background: url(/img/hero/git.svg);
+    opacity: 1;
 }
 
 @media screen and (min-width: 1000px) {
     .hero__container-grid {
-        grid-template-columns: 1fr repeat(2, 225px) 1fr;
-        grid-template-rows: 300px 300px repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .hero__title {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        background: url(/img/hero/frontend-horizontal-banner.svg) no-repeat center;
+        background-size: contain;
+        margin: 30px 0;
     }
 
     .hero__mission {
-        font-size: 1.2em;
+        grid-column: 2 / 4;
+        grid-row: 4 / 5;
+        font-size: 1.5em;
+    }
+
+    .hero__skill-icons {
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+        justify-content: center;
+    }
+    
+    .js--icon {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .html--icon {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .css--icon {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .git--icon {
+        height: 60px;
+        width: 60px;
     }
 }
 
@@ -467,4 +516,74 @@ a:active {
         width: 350px;
         height: 225px;
     }
+}
+
+/* CODE */
+
+.code__container {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    border: 1px solid black;
+    overflow: hidden;
+    /* background: url(/img/mountain-640x.jpg) no-repeat center;
+    background-size: cover; */
+}
+
+.code__review {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#code {
+    width: 100%;
+}
+
+.code__block {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.block { 
+    height: 100%;
+    width: 100%;
+    background: rgb(128, 128, 178);
+    border: 1px solid rgb(105, 95, 43);
+    opacity: 1;
+}
+
+.block.bye {
+    animation: bye .5s linear forwards;
+}
+
+@keyframes bye {
+    to { filter: opacity(0); }
+}
+
+#code__block-btn {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-30px) translateY(-20px);
+    z-index: 1;
+}
+
+#code__block-btn button {
+    width: 60px;
+    height: 40px;
+}
+
+.block-btn {
+    background: #fff;
+}
+
+.block-btn.bye {
+    animation: bye .5s linear forwards;
 }
