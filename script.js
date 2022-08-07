@@ -1,8 +1,8 @@
 /* Style Guide
 https://airbnb.io/javascript/ */
 
-const navBar = document.getElementById('navigation');
-const navBtn = document.querySelector('.nav__btn');
+const navBar = document.getElementById('nav-banner');
+const navBtn = document.querySelector('.menu-btn');
 let previousYPos;
 
 const iconSwap = (element, starturl='', endurl='') => {

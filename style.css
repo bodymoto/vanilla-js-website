@@ -79,13 +79,13 @@ a:active {
     transition: .5s ease;
 }
 
-/* HEADER/NAV SECTION */
-.header__area {
+/* NAV */
+.header__frame {
     /* height to maintain DOM during navBar anime */
     height: 100px;
 }
 
-.header__container {
+.header__content-container {
     align-items: center;
     display: flex;
     height: 100px;
@@ -93,7 +93,7 @@ a:active {
     padding: 30px 40px;
 }
 
-.header__container.active {
+.header__content-container.active {
     animation: navDropDown .5s ease;
     background: var(--color-translucent-white);
     position: fixed;
@@ -107,20 +107,20 @@ a:active {
     to { transform: translateY(0); }
 }
 
-.header__logo {
+.header__helloevan-logo {
     /* img dimensions within innerHTML */
     cursor: pointer;
     user-select: none;
 }
 
-.header__content-right {
+.header__header__menu-content {
     align-items: center;
     cursor: pointer;
     display: flex;
     justify-content: center;
 }
 
-.nav__btn {
+.menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,15 +133,11 @@ a:active {
     transition: transform .5s ease;
 }
 
-.nav__btn:hover {
+.menu-btn:hover {
     cursor: pointer;
 }
 
-
-
-
-
-/* HERO SECTION */
+/* HERO */
 .hero__container {
     background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
     background-size: cover;
@@ -153,7 +149,7 @@ a:active {
 }
 
 .hero__container-overlay {
-    background: url(/DEV.svg) no-repeat center;
+    background: url(/img/hero/dev-banner.svg) no-repeat center;
     background-size: cover;
     box-shadow: inset 120px 120px 300px rgba(0, 0, 0, .8), inset -120px -120px 300px rgba(0, 0, 0, .8);
     mix-blend-mode: overlay;
@@ -162,7 +158,7 @@ a:active {
     position: absolute;
 }
 
-.hero__container--grid {
+.hero__container-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -172,50 +168,58 @@ a:active {
     z-index: 1;
 }
 
-.hero__container--grid h1 {
+.hero__container-grid h1 {
     display: none;
 }
 
-.hero__title-frontend {
+.hero__title {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    background: url(/fe.svg) no-repeat;
+    background: url(/img/hero/frontend-banner.svg) no-repeat;
     background-size: contain;
     margin: 0 2%;
-    width: 100%;
-    height: 100%;
 }
 
-.js-icon {
+.js--icon {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background: url(/javascript.svg) no-repeat center;
+    background: url(/img/hero/javascript.svg) no-repeat bottom;
     opacity: .6;
 }
 
-.html-icon {
+.html--icon {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    background: url(/html5.svg) no-repeat center;
+    background: url(/img/hero/html5.svg) no-repeat bottom;
     opacity: .6;
 }
 
-.css-icon {
+.css--icon {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background: url(/css3.svg) no-repeat center;
+    background: url(/img/hero/css3.svg) no-repeat top;
     opacity: .6;
 }
 
-.git-icon {
+.git--icon {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background: url(/git.svg) no-repeat center;
+    background: url(/img/hero/git.svg) no-repeat top;
     opacity: .8;
 }
 
+.hero__mission {
+    display: flex;
+    align-items: flex-end;
+    color: var(--color-white);
+    grid-column: 2 / 4;
+    grid-row: 3 / 3;
+    font-size: 1em;
+    text-align: right;
+    padding: 10px;
+}
 
-/* CALL TO ACTION SECTION */
+/* CALL TO ACTION */
 .cta__container {
     background: radial-gradient(
         circle,
