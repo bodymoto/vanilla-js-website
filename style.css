@@ -219,6 +219,12 @@ a:active {
     padding: 10px;
 }
 
+.hero__mission p {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(7, 81, 33, 0.3);
+}
+
 @media screen and (min-width: 660px) {
     .hero__container-grid {
         grid-template-columns: 1fr repeat(2, 150px) 1fr;
@@ -236,15 +242,6 @@ a:active {
         font-size: 1.2em;
     }
 }
-
-
-
-
-
-
-
-
-
 
 /* CALL TO ACTION */
 .cta__container {

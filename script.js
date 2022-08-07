@@ -23,7 +23,7 @@ navBtn.addEventListener('click', navIcon);
 
 /* https://www.freecodecamp.org/news/javascript-debounce-example/
 https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086 */
-const debounce = (func, delay) => {
+const debounce = (func, delay = 300) => {
     let timeout;
 
     const executeTimeout = (...args) => {
@@ -37,21 +37,19 @@ const debounce = (func, delay) => {
     return executeTimeout
 };
 
-const updateNavBar = () => {
-    const navBarDrop = (previousYPos) => {
-        let currentYPos = window.pageYOffset;
-    
-        if (currentYPos <= 100) {
-            navBar.classList.remove('active');
-        } else if(currentYPos > previousYPos) {
-            navBar.classList.remove('active');
-        } else if(currentYPos < previousYPos) {
-            navBar.classList.add('active');
-        }
-    };
+const navBarDrop = (previousYPos) => {
+    let currentYPos = window.pageYOffset;
 
-    return debounce(navBarDrop(previousYPos), 300)
-}
+    if (currentYPos <= 100) {
+        navBar.classList.remove('active');
+    } else if(currentYPos > previousYPos) {
+        navBar.classList.remove('active');
+    } else if(currentYPos < previousYPos) {
+        navBar.classList.add('active');
+    }
+};
+
+const updateNavBar = debounce((previousYPos)=> { navBarDrop(previousYPos) });
 
 const allCards = document.querySelectorAll('.cta__card');
 
