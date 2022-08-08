@@ -49,7 +49,7 @@ const navBarDrop = (previousYPos) => {
     }
 };
 
-const updateNavBar = debounce((previousYPos)=> { navBarDrop(previousYPos) });
+const debouncedNavBarDrop = debounce(navBarDrop, 300);
 
 const allCards = document.querySelectorAll('.cta__card');
 
@@ -100,7 +100,7 @@ const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
 
 
 const documentScroll = () => {
-    updateNavBar(previousYPos);
+    debouncedNavBarDrop(previousYPos);
     // optimizes runtime when scrolling post-executed DOM animations
     if (!flag) {
         animateNarrative();

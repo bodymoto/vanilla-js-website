@@ -176,7 +176,7 @@ a:active {
     user-select: none;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    background: url(/img/hero/frontend-vertical-banner.svg) no-repeat;
+    background: url(/img/hero/frontend-mobile-banner.svg) no-repeat;
     background-size: contain;
     margin: 0 2%;
 }
@@ -195,8 +195,6 @@ a:active {
 
 .hero__mission p {
     padding: 10px;
-    border-radius: 20px;
-    background-color: rgba(7, 81, 33, 0.3);
 }
 
 .hero__skill-icons {
@@ -265,14 +263,19 @@ a:active {
         grid-row: 1 / 2;
         background: url(/img/hero/frontend-horizontal-banner.svg) no-repeat center;
         background-size: contain;
-        margin: 30px 0;
+        margin: 50px 0;
+        opacity: .8;
     }
 
     .hero__mission {
         grid-column: 2 / 4;
         grid-row: 4 / 5;
-        font-size: 1.5em;
-        margin: 0 15%;
+        font-size: 1.2em;
+        margin: 0 20px;
+    }
+
+    .hero__mission p {
+        padding: 10px;
     }
 
     .hero__skill-icons {
