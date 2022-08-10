@@ -27,8 +27,7 @@ main {
     background-size: contain;
     bottom: 0;
     right: 0;
-    margin-right: 20%;
-    margin-bottom: 10%;
+    margin: 0 20% 10% 0;
     opacity: .3;
 }
 
@@ -182,8 +181,7 @@ main {
     font-size: .9em;
     font-weight: 400;
     color: rgb(105, 105, 105);
-    margin: 0 20px;
-    margin-bottom: 10px;
+    margin: 0 20px 10px;
 }
 
 .card-list li {

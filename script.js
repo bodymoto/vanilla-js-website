@@ -52,6 +52,7 @@ const navBarDrop = (previousYPos) => {
 const debouncedNavBarDrop = debounce(navBarDrop, 300);
 
 const allCards = document.querySelectorAll('.cta__card');
+const cardsFrontFace = document.querySelectorAll('.cta__face-front');
 
 allCards.forEach((element) => {
     element.addEventListener('mouseover', () => {
@@ -62,53 +63,133 @@ allCards.forEach((element) => {
     })
 });
 
-const spinCards = () => {
-    const forEachCard = (card) => {
-        if (screenBotPosition > heroContainerBot) {
-            card.classList.add('is-spinning');
-        } else { card.classList.remove('is-spinning'); }
-    };
 
-    return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
-};
+const ctaArticleIndex = document.querySelectorAll('.content-index');
+const ctaArticleTitle = document.querySelectorAll('.content-title');
+const ctaArticleBody = document.querySelectorAll('.content-body');
 
-// !NOTE currently the hero element position is before cta element
-const heroContainer = document.getElementById('hero');
-let heroContainerBot;
 
-const ctaNarrative = document.querySelector('.cta__narrative');
-const cardsFrontFace = document.querySelectorAll('.cta__face-front');
-
-let screenBotPosition;
-
-let flag = false;
-
-const animationEvent = (element, attribute='', topOfElement, scrollY) => {
-    if (flag) {return;}
-    // if top of an element crosses a particular y coordinate
-    if (topOfElement > scrollY) {
+const animateElement = (element, attribute='', pageYPosition, elementTopPosition) => {
+    // if page Y coordinate exceeds an element top Y coordinate
+    if (pageYPosition > elementTopPosition) {
         element.classList.add(attribute);
-        flag = true;
-    }
+    } else element.classList.remove(attribute);
 };
 
-const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
-    animationEvent(ctaNarrative, 'active', screenBotPosition, heroContainerBot)
-
-    return debounce(animationEvent, 300)
+const animatedArticleIndex0 = () => {
+    let pageYPosition = (previousYPos - 1300) + ctaArticleIndex[0].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleIndex[0].getBoundingClientRect().top;
+    return animateElement(ctaArticleIndex[0], 'slide-effect', pageYPosition, elementTopPosition)
 };
+
+const animatedArticleTitle0 = () => {
+    let pageYPosition = (previousYPos - 1500) + ctaArticleTitle[0].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleTitle[0].getBoundingClientRect().top;
+    return animateElement(ctaArticleTitle[0], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleBody0 = () => {
+    let pageYPosition = (previousYPos - 1500) + ctaArticleBody[0].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleBody[0].getBoundingClientRect().top;
+    return animateElement(ctaArticleBody[0], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleIndex1 = () => {
+    let pageYPosition = (previousYPos - 1800) + ctaArticleIndex[1].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleIndex[1].getBoundingClientRect().top;
+    return animateElement(ctaArticleIndex[1], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleTitle1 = () => {
+    let pageYPosition = (previousYPos - 2100) + ctaArticleTitle[1].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleTitle[1].getBoundingClientRect().top;
+    return animateElement(ctaArticleTitle[1], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleBody1 = () => {
+    let pageYPosition = (previousYPos - 2100) + ctaArticleBody[1].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleBody[1].getBoundingClientRect().top;
+    return animateElement(ctaArticleBody[1], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleIndex2 = () => {
+    let pageYPosition = (previousYPos - 2400) + ctaArticleIndex[2].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleIndex[2].getBoundingClientRect().top;
+    return animateElement(ctaArticleIndex[2], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleTitle2 = () => {
+    let pageYPosition = (previousYPos - 2700) + ctaArticleTitle[2].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleTitle[2].getBoundingClientRect().top;
+    return animateElement(ctaArticleTitle[2], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleBody2 = () => {
+    let pageYPosition = (previousYPos - 2700) + ctaArticleBody[2].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleBody[2].getBoundingClientRect().top;
+    return animateElement(ctaArticleBody[2], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleIndex3 = () => {
+    let pageYPosition = (previousYPos - 2900) + ctaArticleIndex[3].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleIndex[3].getBoundingClientRect().top;
+    return animateElement(ctaArticleIndex[3], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleTitle3 = () => {
+    let pageYPosition = (previousYPos - 3200) + ctaArticleTitle[3].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleTitle[3].getBoundingClientRect().top;
+    return animateElement(ctaArticleTitle[3], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+const animatedArticleBody3 = () => {
+    let pageYPosition = (previousYPos - 3200) + ctaArticleBody[3].getBoundingClientRect().top;
+    let elementTopPosition = ctaArticleBody[3].getBoundingClientRect().top;
+    return animateElement(ctaArticleBody[3], 'slide-effect', pageYPosition, elementTopPosition)
+};
+
+// const spinCards = () => {
+//     const forEachCard = (card) => {
+//         if (screenBotPosition > heroContainerBot) {
+//             card.classList.add('is-spinning');
+//         } else { card.classList.remove('is-spinning'); }
+//     };
+
+//     return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
+// };
+
+// const ctaNarrative = document.querySelector('.cta__narrative');
+
+// const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
+//     animateElement(ctaNarrative, 'active', screenBotPosition, heroContainerBot)
+
+//     return debounce(animationEvent, 300)
+// };
 
 
 const documentScroll = () => {
     debouncedNavBarDrop(previousYPos);
-    // optimizes runtime when scrolling post-executed DOM animations
-    if (!flag) {
-        animateNarrative();
-        spinCards();
-    }
+
+    animatedArticleIndex0(previousYPos);
+    animatedArticleTitle0(previousYPos);
+    animatedArticleBody0(previousYPos);
+
+    animatedArticleIndex1(previousYPos);
+    animatedArticleTitle1(previousYPos);
+    animatedArticleBody1(previousYPos);
+
+    animatedArticleIndex2(previousYPos);
+    animatedArticleTitle2(previousYPos);
+    animatedArticleBody2(previousYPos);
+
+    animatedArticleIndex3(previousYPos);
+    animatedArticleTitle3(previousYPos);
+    animatedArticleBody3(previousYPos);
+
+
+    // spinCards();
     previousYPos = window.pageYOffset;
-    heroContainerBot = heroContainer.getBoundingClientRect().bottom;
-    screenBotPosition = (previousYPos - 200) + heroContainerBot;
+    // console.log('windowY= ', window.pageYOffset)
 }
 
 document.addEventListener('scroll', documentScroll);
