@@ -14,6 +14,10 @@
     scrollbar-color: auto var(--color-translucent-white)
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -150,7 +154,7 @@ a:active {
 .hero__container-overlay {
     background: url(/img/hero/dev-banner.svg) no-repeat center;
     background-size: contain;
-    box-shadow: inset 120px 120px 300px rgba(0, 0, 0, .8), inset -120px -120px 300px rgba(0, 0, 0, .8);
+    box-shadow: inset 120px 120px 300px rgba(234, 244, 178, 1), inset -120px -120px 300px rgba(0, 0, 0, .8);
     mix-blend-mode: overlay;
     left: 0;
     top: 0;
@@ -252,13 +256,13 @@ a:active {
         background-size: cover;
     }
 
-    .hero__container-grid {
+    .hero__grid-frame {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
 
     .hero__title {
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
         grid-row: 1 / 2;
         background: url(/img/hero/frontend-horizontal-banner.svg) no-repeat center;
         background-size: contain;
@@ -267,14 +271,14 @@ a:active {
     }
 
     .hero__mission {
-        grid-column: 2 / 4;
+        grid-column: 2 / 3;
         grid-row: 4 / 5;
         font-size: 1.2em;
         margin: 0 20px;
     }
 
     .hero__skill-icons {
-        grid-column: 2 / 4;
+        grid-column: 2 / 3;
         grid-row: 5 / 6;
         justify-content: center;
     }
@@ -310,8 +314,61 @@ a:active {
     max-width: 1380px;
 }
 
+
+
+/* TOP IMAGE */
+.showcase__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    margin: 80px 0;
+}
+
+.showcase__container-items {
+    /* display: grid;
+    grid-template-columns: minmax(200px, 800px);
+    grid-template-rows: minmax(200px, 500px); */
+    background: rgb(234, 244, 178);
+    border: 1px solid var(--color-black);
+    border-radius: 16px;
+}
+
+.showcase__scene {
+    perspective: 300px;
+    user-select: none;
+}
+
+.showcase__scene-code {
+    position: relative;
+    top: -32px;
+    left: -8px;
+    width: 100%;
+    transform: rotateY(10deg);
+    border: 1px solid var(--color-black);
+    border-radius: 1em;
+    box-shadow: -15px 30px 20px rgba(25, 24, 24, 0.7);
+}
+
+.showcase__scene-ui {
+    position: fixed;
+    top: 16px;
+    left: 32px;
+    width: 100%;
+    transform: rotateY(10deg);
+    border: 1px solid var(--color-black);
+    border-radius: 1em;
+    box-shadow: -30px 5px 40px -20px rgb(0, 0, 0);
+}
+
+/* TOP IMAGE END */
+
+
+
 .homepage__cta-container {
     margin: 150px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .cta__content-row {
@@ -325,7 +382,7 @@ a:active {
 }
 
 .content-intro {
-    font-size: 2em;
+    font-size: 1.8em;
     opacity: .6;
 }
 
@@ -382,249 +439,55 @@ a:active {
     transform: translateY(0);
 }
 
-.link-anchor {
+.content-anchor-wrap {
+    border-bottom: 1px solid var(--color-red);
+    padding: 0 0 10px 0;
+    width: 200px;
+    transition: all 1s ease;
+}
+
+.content-anchor-wrap:hover {
+    width: 160px;
+}
+
+.content-anchor {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
+.content-image {
+    margin: 60px 0 0 0;
+    opacity: .8;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.content-image img {
+    border-radius: 40px;
+    transition: transform 1s ease;
+}
+
+.content-image img:hover {
+    transform: scale(1.2);
+}
 
 
 
-/* CALL TO ACTION */
-.cta__container {
-    background: radial-gradient(
-        circle,
-        var(--color-white) 0%,
-        var(--color-white) 50%,
-        var(--color-offwhite) 100% );
-    padding: 32px;
-    display: flex;
-    justify-content: center;
-}
-
-.cta__grid {
-    background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
-    background-size: cover;
-    box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
-    display: grid;
-    grid-template-areas: 'cards text';
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1440px;
-}
-
-.cta__narrative-scene {
-    display: flex;
-    flex-direction: column;
-    grid-area: text;
-    justify-content: center;
-    padding: 0 16px;
-    text-align: center;
-}
-
-.cta__narrative {
-    filter: opacity(0);
-}
-
-.cta__narrative.active { animation: setScene 1.5s ease forwards; }
-
-@keyframes setScene {
-    from { filter: blur(50px) opacity(0); }
-    to { filter: blur(0) opacity(1); }
-}
-
-.cta__narrative-title {
-    font-size: 2em;
-    padding-bottom: 16px;
-    text-transform: uppercase;
-}
-
-.cta__narrative-body {
-    line-height: 24px;
-}
-
-.cta__narrative-body-quote {
-    font-style: italic;
-    padding-top: 5px;
-}
-
-.cta__narrative-button {
-    display: flex;
-    font-size: 1.2em;
-    justify-content: center;
-    margin: 32px;
-}
-
-.cta__card-scene {
-    display: grid;
-    gap: 2px;
-    grid-area: cards;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 500px;
-    height: 350px;
-    margin: 80px auto;
-    padding-left: 16px;
-}
-
-.cta__card {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    user-select: none;
-}
-
-.cta__card.is-flipped { transform: rotateY(-180deg); }
 
 
-.cta__card-face {
-    backface-visibility: hidden;
-    position: absolute;
-}
-
-.cta__face-front {
-    background: var(--color-offwhite);
-    border: 1px solid var(--color-black);
-    opacity: .5;
-}
-
-.cta__face-front.is-spinning {
-    animation: rotateZ 2s ease;
-    animation-delay: 1s;
-}
-@keyframes rotateZ {
-    from { transform: rotateZ(0); }
-    to { transform: rotateZ(180deg); }
-}
-
-/* PICTURE GRID */
-/* TOP ROW */
-.cta__face-back-c1r1 {
-    background: url(/img/cta/c1-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c2r1 {
-    background: url(/img/cta/c2-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c3r1 {
-    background: url(/img/cta/c3-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c4r1 {
-    background: url(/img/cta/c4-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-
-/* MID ROW */
-.cta__face-back-c1r2 {
-    background: url(/img/cta/c1-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c2r2 {
-    background: url(/img/cta/c2-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c3r2 {
-    background: url(/img/cta/c3-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c4r2 {
-    background: url(/img/cta/c4-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-
-/* BOT ROW */
-.cta__face-back-c1r3 {
-    background: url(/img/cta/c1-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c2r3 {
-    background: url(/img/cta/c2-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c3r3 {
-    background: url(/img/cta/c3-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.cta__face-back-c4r3 {
-    background: url(/img/cta/c4-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-
-@media screen and (max-width: 400px) {
-    .cta__narrative-scene {
-        padding: 0;
-    }
-    
-    .cta__narrative-body-quote {
-        padding-top: 10px;
-    }
-    
-    .cta__narrative-button {
-        display: flex;
-        font-size: 3em;
-        justify-content: center;
-    }
-
-    .btn-primary {
-        font-size: 1em;
-        padding: 10px 40px;
-    }
-    
-    .btn-secondary {
-        font-size: 1em;
-        padding: 10px 40px;
-    }
-}
 
 
-@media screen and (max-width: 720px) {
-    .cta__grid {
-        display: grid;
-        grid-template-areas: 'text';
-        grid-template-columns: 1fr;
-    }
-    
-    .cta__card-scene {
-        display: none;
-    }
-    
-    .cta__narrative-scene {
-        margin: 10%;
-    }
-}
 
-@media screen and (max-width: 920px) {
-    .cta__narrative-title {
-        font-size: 1.5em;
-        padding-bottom: 8px;
-    }
-    
-    .cta__narrative-body {
-        font-size: .9em;
-        line-height: 16px;
-    }
-    
-    .cta__narrative-button {
-        font-size: 1em;
-    }
 
-    .cta__card-scene {
-        width: 350px;
-        height: 225px;
-    }
-}
+
+
 
 /* CODE */
-
 .code__container {
     position: relative;
     width: 100%;
-    height: 78vh;
-    border: 1px solid black;
+    height: 80vh;
     overflow: hidden;
-    /* background: url(/img/mountain-640x.jpg) no-repeat center;
-    background-size: cover; */
 }
 
 .code__review {
@@ -641,7 +504,8 @@ a:active {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -651,8 +515,8 @@ a:active {
 .block { 
     height: 100%;
     width: 100%;
-    background: rgb(128, 128, 178);
-    border: 1px solid rgb(105, 95, 43);
+    background: rgba(234, 244, 178, 1);
+    border: 1px solid rgb(0, 0, 0);
     opacity: 1;
 }
 
@@ -665,22 +529,259 @@ a:active {
 }
 
 #code__block-btn {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-30px) translateY(-20px);
+    grid-column: 4 / 8;
+    grid-row: 9 / 13;
     z-index: 1;
 }
 
-#code__block-btn button {
-    width: 60px;
-    height: 40px;
+.code-btn {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(234, 244, 178, 1);
+    font-size: .9em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
-.block-btn {
-    background: #fff;
+.code-btn.bye {
+    animation: bye 1s linear forwards;
 }
 
-.block-btn.bye {
-    animation: bye .5s linear forwards;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CALL TO CONNECT */
+.connect__container {
+    background: radial-gradient(circle,
+        var(--color-white) 0%,
+        var(--color-white) 50%,
+        var(--color-offwhite) 100% );
+    padding: 32px;
+    /* display: flex;
+    justify-content: center; */
 }
+
+.connect__grid {
+    background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
+    /* display: grid;
+    grid-template-areas: 'cards text';
+    grid-template-columns: repeat(2, 1fr); */
+    /* max-width: 1440px; */
+    padding: 50% 0;
+}
+
+.connect__narrative-scene {
+    /* display: flex;
+    flex-direction: column; */
+    /* grid-area: text; */
+    /* justify-content: center; */
+    /* padding: 0 16px; */
+    text-align: center;
+}
+
+/* .connect__narrative {
+    filter: opacity(0);
+}
+
+.connect__narrative.active { animation: setScene 1.5s ease forwards; } */
+
+@keyframes setScene {
+    from { filter: blur(50px) opacity(0); }
+    to { filter: blur(0) opacity(1); }
+}
+
+.connect__narrative-title {
+    font-size: 3em;
+    opacity: .6;
+    text-transform: uppercase;
+}
+
+.connect__narrative-body {
+    margin: 15px 5px 25px;
+    opacity: .4;
+}
+
+.connect__narrative-body-quote {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    padding: 20px;
+}
+
+.connect__narrative-button {
+    /* display: flex;
+    justify-content: center; */
+    margin: 16px;
+}
+
+.connect__card-scene {
+    display: none;
+    /* display: grid; */
+    gap: 2px;
+    grid-area: cards;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 500px;
+    height: 350px;
+    margin: 80px auto;
+    padding-left: 16px;
+}
+
+.connect__card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    user-select: none;
+}
+
+.connect__card.is-flipped { transform: rotateY(-180deg); }
+
+
+.connect__card-face {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.connect__face-front {
+    background: var(--color-offwhite);
+    border: 1px solid var(--color-black);
+    opacity: .5;
+}
+
+.connect__face-front.is-spinning {
+    animation: rotateZ 2s ease;
+    animation-delay: 1s;
+}
+@keyframes rotateZ {
+    from { transform: rotateZ(0); }
+    to { transform: rotateZ(180deg); }
+}
+
+/* PICTURE GRID */
+/* TOP ROW */
+.connect__face-back-c1r1 {
+    background: url(/img/cta/c1-r1_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c2r1 {
+    background: url(/img/cta/c2-r1_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c3r1 {
+    background: url(/img/cta/c3-r1_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c4r1 {
+    background: url(/img/cta/c4-r1_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+
+/* MID ROW */
+.connect__face-back-c1r2 {
+    background: url(/img/cta/c1-r2_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c2r2 {
+    background: url(/img/cta/c2-r2_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c3r2 {
+    background: url(/img/cta/c3-r2_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c4r2 {
+    background: url(/img/cta/c4-r2_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+
+/* BOT ROW */
+.connect__face-back-c1r3 {
+    background: url(/img/cta/c1-r3_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c2r3 {
+    background: url(/img/cta/c2-r3_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c3r3 {
+    background: url(/img/cta/c3-r3_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+.connect__face-back-c4r3 {
+    background: url(/img/cta/c4-r3_maroon-bells-hiking-split.png) no-repeat;
+    background-size: cover;
+}
+/* 
+@media screen and (max-width: 400px) {
+    .connect__narrative-scene {
+        padding: 0;
+    }
+    
+    .connect__narrative-body-quote {
+        padding-top: 10px;
+    }
+    
+    .connect__narrative-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        font-size: .6em;
+        padding: 15px 40px;
+    }
+} */
+
+
+/* @media screen and (max-width: 720px) {
+    .connect__grid {
+        display: grid;
+        grid-template-areas: 'text';
+        grid-template-columns: 1fr;
+    }
+    
+    .connect__card-scene {
+        display: none;
+    }
+    
+    .connect__narrative-scene {
+        margin: 10%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .connect__narrative-title {
+        font-size: 1.5em;
+        padding-bottom: 8px;
+    }
+    
+    .connect__narrative-body {
+        font-size: .9em;
+        line-height: 16px;
+    }
+    
+    .connect__narrative-button {
+        font-size: 1em;
+    }
+
+    .connect__card-scene {
+        width: 350px;
+        height: 225px;
+    }
+} */
