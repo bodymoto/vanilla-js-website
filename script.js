@@ -3,13 +3,22 @@ https://airbnb.io/javascript/ */
 
 const navBar = document.getElementById('nav-banner');
 const navBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const menuItems = document.querySelector('.menu-items');
+const body = document.body
 let previousYPos;
 
 const iconSwap = (element, starturl='', endurl='') => {
     if (element.src.endsWith(starturl)) {
         element.src = endurl;
+        menu.classList.add('expand');
+        menuItems.classList.add('visible');
+        body.classList.add('no-scroll');
     } else if (element.src.endsWith(endurl)) {
         element.src = starturl;
+        menu.classList.remove('expand');
+        menuItems.classList.remove('visible');
+        body.classList.remove('no-scroll');
     }
 };
 
@@ -19,10 +28,6 @@ const navIcon = () => {
         '/img/nav/menu-close.svg')
         // RETURN NAVBAR BEHAVIOR FUNCTION
 };
-
-const activeNavMenu = () => {
-
-}
 
 navBtn.addEventListener('click', navIcon);
 
