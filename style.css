@@ -140,6 +140,10 @@ a:active {
     cursor: pointer;
 }
 
+/* POPOUT MENU */
+
+
+
 /* HERO */
 .hero__container {
     background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
@@ -535,6 +539,8 @@ a:active {
 }
 
 .code-btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
     width: 100%;
     height: 100%;
     background-color: rgba(234, 244, 178, 1);
@@ -596,11 +602,11 @@ a:active {
     text-align: center;
 }
 
-/* .connect__narrative {
+.connect__narrative {
     filter: opacity(0);
 }
 
-.connect__narrative.active { animation: setScene 1.5s ease forwards; } */
+.connect__narrative.active { animation: setScene 1.5s ease forwards; }
 
 @keyframes setScene {
     from { filter: blur(50px) opacity(0); }

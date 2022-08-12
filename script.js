@@ -13,10 +13,15 @@ const iconSwap = (element, starturl='', endurl='') => {
     }
 };
 
-const navIcon = (element, starturl='', endurl='') => {
+const navIcon = () => {
     return iconSwap(navBtn.firstChild.nextElementSibling,
         '/img/nav/menu-ready.svg',
         '/img/nav/menu-close.svg')
+        // RETURN NAVBAR BEHAVIOR FUNCTION
+};
+
+const activeNavMenu = () => {
+
 }
 
 navBtn.addEventListener('click', navIcon);
@@ -49,7 +54,40 @@ const navBarDrop = (previousYPos) => {
     }
 };
 
-const debouncedNavBarDrop = debounce(navBarDrop, 300);
+const debouncedNavBarDrop = debounce(navBarDrop);
+
+const ctaArticleIndex = document.querySelectorAll('.content-index');
+const ctaArticleTitle = document.querySelectorAll('.content-title');
+const ctaArticleBody = document.querySelectorAll('.content-body');
+
+const animateElement = (element, attribute='', pageYPosition, elementTopPosition) => {
+    // if page Y coordinate exceeds an element top Y coordinate
+    if (pageYPosition > elementTopPosition) {
+        element.classList.add(attribute);
+    } else element.classList.remove(attribute);
+};
+
+const elementTopPageYOffset = (element) => {
+    return elementTopPosition = element.getBoundingClientRect().top;
+};
+
+const triggerPointCoordinates = (previousYPos, desiredPageY = null, elementTopPosition) => {
+    return (
+        pageYPosition = (previousYPos - desiredPageY) + elementTopPosition,
+        elementTopPosition
+    );
+};
+
+// set offSet to the first elements page position to trigger animation event and increment based upon the position of the remaining elements in the array
+const animateElementCoordinates = (previousYPos, offSet, offSetIncrement, attribute='', elementArray) => {
+    let desiredPageY = offSet
+    elementArray.forEach((element) => {
+        elementTopPageYOffset(element);
+        triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
+        desiredPageY += offSetIncrement;
+        return animateElement(element, attribute, pageYPosition, elementTopPosition)
+    })
+};
 
 const allCards = document.querySelectorAll('.connect__card');
 const cardsFrontFace = document.querySelectorAll('.connect__face-front');
@@ -63,46 +101,23 @@ allCards.forEach((element) => {
     })
 });
 
-const ctaArticleIndex = document.querySelectorAll('.content-index');
-const ctaArticleTitle = document.querySelectorAll('.content-title');
-const ctaArticleBody = document.querySelectorAll('.content-body');
-
-const animateElement = (element, attribute='', pageYPosition, elementTopPosition) => {
-    // if page Y coordinate exceeds an element top Y coordinate
-    if (pageYPosition > elementTopPosition) {
-        element.classList.add(attribute);
-    } else element.classList.remove(attribute);
+const forEachCard = (element, desiredPageY, attribute='') => {
+    elementTopPageYOffset(element);
+    triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
+    return animateElement(element, attribute, pageYPosition, elementTopPosition);
 };
 
-// set offSet for the first elements page position to trigger animation event and increment it based on position of other elements
-const animateElementCoordinates = (previousYPos, offSet, offSetIncrement, newClass, elementArray) => {
-    let count = offSet
-    elementArray.forEach((element) => {
-        let elementTopPosition = element.getBoundingClientRect().top;
-        let pageYPosition = (previousYPos - count) + elementTopPosition;
-        count += offSetIncrement;
-        return animateElement(element, newClass, pageYPosition, elementTopPosition)
-    })
-}
+const spinCards = (elementArray, desiredPageY, attribute='') => {
+    return elementArray.forEach( (element) => {forEachCard(element, desiredPageY, attribute)} )
+};
 
-// const spinCards = () => {
-//     const forEachCard = (card) => {
-//         if (screenBotPosition > heroContainerBot) {
-//             card.classList.add('is-spinning');
-//         } else { card.classList.remove('is-spinning'); }
-//     };
+const connectNarrative = document.querySelector('.connect__narrative');
 
-//     return cardsFrontFace.forEach( (card) => {forEachCard(card)} )
-// };
-
-// const ctaNarrative = document.querySelector('.cta__narrative');
-
-// const animateNarrative = (element, attribute='', topOfElement, scrollY) => {
-//     animateElement(ctaNarrative, 'active', screenBotPosition, heroContainerBot)
-
-//     return debounce(animationEvent, 300)
-// };
-
+const animateNarrative = (element, desiredPageY, attribute='') => {
+    elementTopPageYOffset(element);
+    triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
+    return animateElement(element, attribute, pageYPosition, elementTopPosition);
+};
 
 const documentScroll = () => {
     debouncedNavBarDrop(previousYPos);
@@ -111,14 +126,13 @@ const documentScroll = () => {
     animateElementCoordinates(previousYPos, 1650, 900, 'slide-effect', ctaArticleTitle);
     animateElementCoordinates(previousYPos, 1650, 900, 'slide-effect', ctaArticleBody);
 
-    // spinCards();
+    animateNarrative(connectNarrative, 6200, 'active');
+    spinCards(cardsFrontFace, 6400, 'is-spinning');
     previousYPos = window.pageYOffset;
     // console.log('windowY= ', window.pageYOffset)
-}
+};
 
 document.addEventListener('scroll', documentScroll);
-
-
 
 // NEW IN PROGRESS
 
