@@ -61,9 +61,60 @@ const navBarDrop = (previousYPos) => {
 
 const debouncedNavBarDrop = debounce(navBarDrop);
 
-const ctaArticleIndex = document.querySelectorAll('.content-index');
-const ctaArticleTitle = document.querySelectorAll('.content-title');
-const ctaArticleBody = document.querySelectorAll('.content-body');
+const ctaIndexFrames = document.querySelectorAll('.cta__content-index-frame');
+const ctaTitleFrames = document.querySelectorAll('.cta__content-title-frame');
+const ctaBodyFrames = document.querySelectorAll('.cta__content-body-frame');
+
+const ctaIndexFrameElements = document.querySelectorAll('.content-index');
+const ctaTitleFrameElements = document.querySelectorAll('.content-title');
+const ctaBodyFrameElements = document.querySelectorAll('.content-body');
+
+let ctaIndexFramesCoordinatesY = [];
+let ctaTitleFramesCoordinatesY = [];
+let ctaBodyFramesCoordinatesY = [];
+
+const storeElementCoordinates = (emptyArray, nodeList) => {
+    let count = 0
+    nodeList.forEach((index) => {
+        emptyArray[count] = index.getBoundingClientRect().bottom;
+        count++;
+    })
+    return emptyArray
+};
+
+const getElementLocations = () => {
+    return ( 
+        storeElementCoordinates(ctaIndexFramesCoordinatesY, ctaIndexFrames),
+        storeElementCoordinates(ctaTitleFramesCoordinatesY, ctaTitleFrames),
+        storeElementCoordinates(ctaBodyFramesCoordinatesY, ctaBodyFrames)
+    )
+};
+
+const animateElements = (elementFramesCoordinatesY, nodeList) => {
+    let count = 0;
+    elementFramesCoordinatesY.forEach((coordinate) => {
+        if ( (coordinate - window.innerHeight) <= 0) {
+            nodeList[count].classList.add('slide-effect');
+            count++;
+        } else {
+            nodeList[count].classList.remove('slide-effect');
+            count++;
+        }
+    })
+};
+
+const animateElementsOnScroll = () => {
+    getElementLocations();
+    return (
+        animateElements(ctaIndexFramesCoordinatesY, ctaIndexFrameElements),
+        animateElements(ctaTitleFramesCoordinatesY, ctaTitleFrameElements),
+        animateElements(ctaBodyFramesCoordinatesY, ctaBodyFrameElements)
+    )
+};
+
+// REFACTOR START
+const allCards = document.querySelectorAll('.connect__card');
+const cardsFrontFace = document.querySelectorAll('.connect__face-front');
 
 const animateElement = (element, attribute='', pageYPosition, elementTopPosition) => {
     // if page Y coordinate exceeds an element top Y coordinate
@@ -82,20 +133,6 @@ const triggerPointCoordinates = (previousYPos, desiredPageY = null, elementTopPo
         elementTopPosition
     );
 };
-
-// set offSet to the first elements page position to trigger animation event and increment based upon the position of the remaining elements in the array
-const animateElementCoordinates = (previousYPos, offSet, offSetIncrement, attribute='', elementArray) => {
-    let desiredPageY = offSet
-    elementArray.forEach((element) => {
-        elementTopPageYOffset(element);
-        triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
-        desiredPageY += offSetIncrement;
-        return animateElement(element, attribute, pageYPosition, elementTopPosition)
-    })
-};
-
-const allCards = document.querySelectorAll('.connect__card');
-const cardsFrontFace = document.querySelectorAll('.connect__face-front');
 
 allCards.forEach((element) => {
     element.addEventListener('mouseover', () => {
@@ -124,12 +161,12 @@ const animateNarrative = (element, desiredPageY, attribute='') => {
     return animateElement(element, attribute, pageYPosition, elementTopPosition);
 };
 
+// REFACTOR END
+
 const documentScroll = () => {
     debouncedNavBarDrop(previousYPos);
 
-    animateElementCoordinates(previousYPos, 1500, 900, 'slide-effect', ctaArticleIndex);
-    animateElementCoordinates(previousYPos, 1650, 900, 'slide-effect', ctaArticleTitle);
-    animateElementCoordinates(previousYPos, 1650, 900, 'slide-effect', ctaArticleBody);
+    animateElementsOnScroll();
 
     animateNarrative(connectNarrative, 6200, 'active');
     spinCards(cardsFrontFace, 6400, 'is-spinning');

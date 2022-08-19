@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    scrollbar-color: auto var(--color-translucent-white)
+    scrollbar-color: auto var(--color-translucent-white);
 }
 
 button:hover {
@@ -237,6 +237,7 @@ body.no-scroll {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     text-align: right;
+    font-style: italic;
     padding: 20px;
     text-shadow: 0 0 10px black;
 }
@@ -426,12 +427,12 @@ body.no-scroll {
     margin: 40px 0;
 }
 
-.content-intro {
+.intro-title {
     font-size: 1.8em;
     opacity: .6;
 }
 
-.content-intro-body {
+.intro-body {
     font-size: 1.2em;
     line-height: 20px;
     margin: 10px 0 25px;
@@ -452,6 +453,7 @@ body.no-scroll {
     transform: translateY(120px);
 }
 
+.cta__intro-title-frame,
 .cta__content-title-frame {
     overflow: hidden;
 }
@@ -467,6 +469,7 @@ body.no-scroll {
     font-weight: 100;
 }
 
+.cta__intro-body-frame,
 .cta__content-body-frame {
     overflow: hidden;
 }
