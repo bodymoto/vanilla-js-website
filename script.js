@@ -63,7 +63,6 @@ const debouncedNavBarDrop = debounce(navBarDrop);
 
 const ctaIndexFrames = document.querySelectorAll('.cta__content-index-frame');
 const ctaTitleFrames = document.querySelectorAll('.cta__content-title-frame');
-const ctaBodyFrames = document.querySelectorAll('.cta__content-body-frame');
 
 const ctaIndexFrameElements = document.querySelectorAll('.content-index');
 const ctaTitleFrameElements = document.querySelectorAll('.content-title');
@@ -71,7 +70,6 @@ const ctaBodyFrameElements = document.querySelectorAll('.content-body');
 
 let ctaIndexFramesCoordinatesY = [];
 let ctaTitleFramesCoordinatesY = [];
-let ctaBodyFramesCoordinatesY = [];
 
 const storeElementCoordinates = (emptyArray, nodeList) => {
     let count = 0
@@ -82,11 +80,10 @@ const storeElementCoordinates = (emptyArray, nodeList) => {
     return emptyArray
 };
 
-const getElementLocations = () => {
+const getCtaElementLocations = () => {
     return ( 
         storeElementCoordinates(ctaIndexFramesCoordinatesY, ctaIndexFrames),
-        storeElementCoordinates(ctaTitleFramesCoordinatesY, ctaTitleFrames),
-        storeElementCoordinates(ctaBodyFramesCoordinatesY, ctaBodyFrames)
+        storeElementCoordinates(ctaTitleFramesCoordinatesY, ctaTitleFrames)
     )
 };
 
@@ -103,12 +100,13 @@ const animateElements = (elementFramesCoordinatesY, nodeList) => {
     })
 };
 
-const animateElementsOnScroll = () => {
-    getElementLocations();
+const animateCtaElementsOnScroll = () => {
+    getCtaElementLocations();
     return (
         animateElements(ctaIndexFramesCoordinatesY, ctaIndexFrameElements),
         animateElements(ctaTitleFramesCoordinatesY, ctaTitleFrameElements),
-        animateElements(ctaBodyFramesCoordinatesY, ctaBodyFrameElements)
+        // title and body elements share trigger for frame coordinates
+        animateElements(ctaTitleFramesCoordinatesY, ctaBodyFrameElements)
     )
 };
 
@@ -163,10 +161,26 @@ const animateNarrative = (element, desiredPageY, attribute='') => {
 
 // REFACTOR END
 
-const documentScroll = () => {
-    debouncedNavBarDrop(previousYPos);
+const checkCondition = (child, debounceFn) => {
+    // checks if users view has entered container with event conditions
+    if ( (document.body.children[child].getBoundingClientRect().top - window.innerHeight) > 0) {
+        return;
+    } else {
+        return debounceFn();
+    }
+}
 
-    animateElementsOnScroll();
+const debouncedCheckCondition = (conditionFn) => {
+    debounce(conditionFn);
+};
+const debouncedCtaEvents = debounce(animateCtaElementsOnScroll);
+
+const documentScroll = () => {
+    // check a condition inside a throttle here and if changed, go to custom event..
+    // custom event runs a throttle to check for another condition before firing..
+    debouncedNavBarDrop(previousYPos);
+    
+    debouncedCheckCondition(checkCondition(2, debouncedCtaEvents))
 
     animateNarrative(connectNarrative, 6200, 'active');
     spinCards(cardsFrontFace, 6400, 'is-spinning');
