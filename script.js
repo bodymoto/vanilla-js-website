@@ -163,7 +163,8 @@ const animateNarrative = (element, desiredPageY, attribute='') => {
 
 const checkCondition = (child, debounceFn) => {
     // checks if users view has entered container with event conditions
-    if ( (document.body.children[child].getBoundingClientRect().top - window.innerHeight) > 0) {
+    const targetChild = document.body.children[child].getBoundingClientRect().top;
+    if ( (targetChild - window.innerHeight) > 0) {
         return;
     } else {
         return debounceFn();
