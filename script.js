@@ -161,27 +161,48 @@ const animateNarrative = (element, desiredPageY, attribute='') => {
 
 // REFACTOR END
 
-const checkCondition = (child, debounceFn) => {
+// https://codeburst.io/throttling-and-debouncing-in-javascript-b01cad5c8edf
+const throttle = (func, limit) => {
+    let lastFunc
+    let lastRan
+    return function() {
+        const context = this
+        const args = arguments
+        if (!lastRan) {
+            func.apply(context, args)
+            lastRan = Date.now()
+        } else {
+            clearTimeout(lastFunc)
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args)
+                    lastRan = Date.now()
+                }
+            }, limit - (Date.now() - lastRan))
+        }
+    }
+}
+
+const checkCondition = (child, throttleFn) => {
     // checks if users view has entered container with event conditions
     const targetChild = document.body.children[child].getBoundingClientRect().top;
     if ( (targetChild - window.innerHeight) > 0) {
         return;
     } else {
-        return debounceFn();
+        return throttleFn();
     }
 }
 
-const debouncedCheckCondition = (conditionFn) => {
-    debounce(conditionFn);
+const throttledCheckCondition = (conditionFn) => {
+    throttle(conditionFn, 300);
 };
-const debouncedCtaEvents = debounce(animateCtaElementsOnScroll);
-
+const throttledCtaEvents = throttle(animateCtaElementsOnScroll, 300);
+  
 const documentScroll = () => {
-    // check a condition inside a throttle here and if changed, go to custom event..
-    // custom event runs a throttle to check for another condition before firing..
+
     debouncedNavBarDrop(previousYPos);
     
-    debouncedCheckCondition(checkCondition(2, debouncedCtaEvents))
+    throttledCheckCondition(checkCondition(2, throttledCtaEvents))
 
     animateNarrative(connectNarrative, 6200, 'active');
     spinCards(cardsFrontFace, 6400, 'is-spinning');

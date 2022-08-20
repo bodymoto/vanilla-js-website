@@ -168,8 +168,11 @@ body.no-scroll {
 .menu-items {
     display: none;
     text-transform: uppercase;
-    font-size: 2em;
-    margin-top: 200px;
+    font-weight: 700;
+    font-size: 2.8em;
+    height: 97%;
+    margin: 12px;
+    background: var(--color-offwhite);
 }
 
 .menu-items.visible {
@@ -179,14 +182,12 @@ body.no-scroll {
 }
 
 .menu-items li {
-    padding: 20px 0 10px 40px;
+    padding: 10px 0 10px 40px;
 }
 
-.menu-items li:hover {
-    transition: all 1s ease;
-    transform: translateX(40px) scale(1.2);
+.menu-items a:hover {
+    color: var(--color-white);
 }
-
 
 
 
@@ -279,7 +280,7 @@ body.no-scroll {
 .hero__container-overlay {
     background: url(/img/hero/dev-banner.svg) no-repeat center;
     background-size: contain;
-    box-shadow: inset 120px 120px 300px rgba(234, 244, 178, 1), inset -120px -120px 300px rgba(0, 0, 0, .8);
+    box-shadow: inset 120px 120px 300px rgba(234, 244, 178, .8), inset -120px -120px 300px rgba(0, 0, 0, .8);
     mix-blend-mode: overlay;
     left: 0;
     top: 0;
@@ -309,24 +310,11 @@ body.no-scroll {
     margin: 0 2%;
 }
 
-.hero__mission {
-    user-select: none;
-    display: flex;
-    align-items: flex-end;
-    color: var(--color-white);
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
-    text-align: right;
-    font-style: italic;
-    padding: 20px;
-    text-shadow: 0 0 10px black;
-}
-
 .hero__skill-icons {
     grid-column: 2 / 4;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
     padding: 0 10px;
@@ -337,7 +325,7 @@ body.no-scroll {
     width: 48px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background: url(/img/hero/javascript.svg);
+    background: url(/img/hero/javascript.svg) no-repeat;
     opacity: 1;
 }
 
@@ -346,7 +334,7 @@ body.no-scroll {
     width: 48px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    background: url(/img/hero/html5.svg);
+    background: url(/img/hero/html5.svg) no-repeat;
     opacity: 1;
 }
 
@@ -355,7 +343,7 @@ body.no-scroll {
     width: 48px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background: url(/img/hero/css3.svg);
+    background: url(/img/hero/css3.svg) no-repeat;
     opacity: 1;
 }
 
@@ -364,7 +352,7 @@ body.no-scroll {
     width: 48px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background: url(/img/hero/git.svg);
+    background: url(/img/hero/git.svg) no-repeat;
     opacity: 1;
 }
 
@@ -373,7 +361,7 @@ body.no-scroll {
     width: 48px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background: url(/img/hero/python.svg);
+    background: url(/img/hero/python.svg) no-repeat;
     opacity: 1;
 }
 
@@ -396,16 +384,10 @@ body.no-scroll {
         opacity: .8;
     }
 
-    .hero__mission {
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
-        font-size: 1.2em;
-        margin: 0 20px;
-    }
-
     .hero__skill-icons {
         grid-column: 2 / 3;
         grid-row: 5 / 6;
+        align-items: flex-start;
         justify-content: center;
     }
     
