@@ -1,5 +1,7 @@
 :root {
     --color-red: rgb(208, 2, 27);
+    --color-beach: rgb(234, 244, 178);
+    --color-dark-red: rgb(117, 0, 14);
     --color-offwhite: rgb(245, 245, 245);
     --color-white: rgb(255, 255, 255);
     --color-black: rgb(0, 0, 0);
@@ -22,14 +24,20 @@ button:hover {
 a {
     cursor: pointer;
     text-decoration: none;
+    transition: all .5s ease;
+}
+
+a:hover {
+    color: var(--color-dark-red);
+    font-weight: 100;
 }
 
 a:link,
 a:visited,
-a:hover,
 a:focus,
 a:active {
     color: var(--color-red);
+    font-weight: 700;
 }
 
 /* OOCSS */
@@ -155,7 +163,7 @@ body.no-scroll {
 }
 
 .menu {
-    background: #fff;
+    background: var(--color-white);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -177,7 +185,7 @@ body.no-scroll {
     font-weight: 700;
     font-size: 2.8em;
     height: 97%;
-    margin: 12px;
+    margin: 16px 10%;
     background: var(--color-offwhite);
 }
 
@@ -356,7 +364,7 @@ body.no-scroll {
 }
 
 .showcase__container-items {
-    background: rgb(234, 244, 178);
+    background: var(--color-beach);
     border: 1px solid var(--color-black);
     border-radius: 16px;
 }
@@ -558,15 +566,6 @@ body.no-scroll {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* CODE */
 .code__container {
     position: relative;
@@ -600,7 +599,7 @@ body.no-scroll {
 .block { 
     height: 100%;
     width: 100%;
-    background: rgba(234, 244, 178, 1);
+    background: var(--color-beach);
     border: 1px solid rgb(0, 0, 0);
     opacity: 1;
 }
@@ -624,7 +623,7 @@ body.no-scroll {
     padding: 5px;
     width: 100%;
     height: 100%;
-    background-color: rgba(234, 244, 178, 1);
+    background-color: var(--color-beach);
     font-size: .9em;
     text-transform: uppercase;
     cursor: pointer;
@@ -652,7 +651,7 @@ body.no-scroll {
     background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
     background-size: cover;
     box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
-    padding: 50% 0;
+    padding: 60% 0;
 }
 
 .connect__narrative-scene {
@@ -841,7 +840,7 @@ body.no-scroll {
         grid-template-areas: 'cards text';
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: none;
-        padding: 15% 0;
+        padding: 20% 0;
     }
 
     .connect__narrative-scene {
@@ -851,10 +850,15 @@ body.no-scroll {
         justify-content: center;
         margin: 0 16px;
     }
+
+    .connect__narrative-body {
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .connect__container {
+        box-shadow: inset 800px 800px 300px rgba(255, 255, 255, .7), inset -800px -800px 300px rgba(255, 255, 255, .7);
         max-width: 1440px;
     }
 
@@ -862,58 +866,76 @@ body.no-scroll {
         width: 700px;
         height: 500px;
     }
+
+    .connect__narrative-title {
+        font-size: 3.2em;
+    }
+    
+    .connect__narrative-body {
+        font-size: 1.4em;
+    }
 }
 
 /* FOOTER */
 .footer__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    background: var(--color-black);
-    height: 300px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 220px 1fr;
+    background: var(--color-beach);
+    height: 600px;
 }
 
-.footer__logo {
+.footer__scene {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    transform: translateX(20px);
-}
-
-.footer__pages {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    flex-direction: column;
+    margin: 70px auto 0;
     grid-column: 2 / 3;
-    padding: 10px;
 }
 
-.footer__pages li {
-    font-size: 1.7em;
-    font-weight: 700;
+.footer-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 100;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: .6;
+}
+
+.footer-cta {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    transition: transform .5s ease;
+    padding-top: 20px;
+}
+
+.footer-cta:hover {
+    transform: scale(1.1);
+}
+
+.footer__body {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+    opacity: .5;
+}
+
+.footer__body a {
+    font-size: 1.2em;
     letter-spacing: 3px;
-    color: var(--color-white);
-    padding: 5px;
-    transition: .5s ease;
-}
-
-.footer__pages li:hover {
-    margin: 0 -20px;
-    border-bottom: 2px solid white;
-}
-
-.footer__pages a {
-    color: var(--color-white);
 }
 
 .footer__icons {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     grid-column: 2 / 3;
-    margin: 10px;
 }
 
 .footer__icons img {
@@ -922,33 +944,5 @@ body.no-scroll {
 }
 
 .footer__icons img:hover {
-    transform: translateY(-10px);
-}
-
-@media screen and (min-width: 1100px) {
-    .footer__container {
-        grid-template-columns: 1fr 180px 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .footer__logo {
-        grid-column: 1 / 2;
-    }
-
-    .footer__pages {
-        grid-column: 2 / 3;
-        align-items: center;
-    }
-    
-    .footer__pages li {
-        font-size: 1.7em;
-        font-weight: 700;
-        color: var(--color-white);
-        padding: 5px;
-    }
-    
-    .footer__icons {
-        grid-column: 3 / 4;
-        align-items: center;
-    }
+    transform: translateY(-5px);
 }
