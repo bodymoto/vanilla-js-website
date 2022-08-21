@@ -47,6 +47,28 @@ const debounce = (func, delay = 300) => {
     return executeTimeout
 };
 
+// https://codeburst.io/throttling-and-debouncing-in-javascript-b01cad5c8edf
+const throttle = (func, limit) => {
+    let lastFunc
+    let lastRan
+    return function() {
+        const context = this
+        const args = arguments
+        if (!lastRan) {
+            func.apply(context, args)
+            lastRan = Date.now()
+        } else {
+            clearTimeout(lastFunc)
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args)
+                    lastRan = Date.now()
+                }
+            }, limit - (Date.now() - lastRan))
+        }
+    }
+}
+
 const navBarDrop = (previousYPos) => {
     let currentYPos = window.pageYOffset;
 
@@ -70,8 +92,10 @@ const ctaBodyFrameElements = document.querySelectorAll('.content-body');
 
 let ctaIndexFramesCoordinatesY = [];
 let ctaTitleFramesCoordinatesY = [];
+const connectNarrative = document.querySelector('.connect__narrative');
+const connectContainerCoordinates = document.querySelector('.connect__container-wrap');
 
-const storeElementCoordinates = (emptyArray, nodeList) => {
+const storeNodeListCoordinates = (emptyArray, nodeList) => {
     let count = 0
     nodeList.forEach((index) => {
         emptyArray[count] = index.getBoundingClientRect().bottom;
@@ -80,57 +104,59 @@ const storeElementCoordinates = (emptyArray, nodeList) => {
     return emptyArray
 };
 
-const getCtaElementLocations = () => {
-    return ( 
-        storeElementCoordinates(ctaIndexFramesCoordinatesY, ctaIndexFrames),
-        storeElementCoordinates(ctaTitleFramesCoordinatesY, ctaTitleFrames)
-    )
-};
-
-const animateElements = (elementFramesCoordinatesY, nodeList) => {
+const animateNodeListElements = (listOfCoordinates, nodeList, attribute='') => {
     let count = 0;
-    elementFramesCoordinatesY.forEach((coordinate) => {
+    listOfCoordinates.forEach((coordinate) => {
         if ( (coordinate - window.innerHeight) <= 0) {
-            nodeList[count].classList.add('slide-effect');
+            nodeList[count].classList.add(attribute);
             count++;
         } else {
-            nodeList[count].classList.remove('slide-effect');
+            nodeList[count].classList.remove(attribute);
             count++;
         }
     })
 };
 
-const animateCtaElementsOnScroll = () => {
-    getCtaElementLocations();
-    return (
-        animateElements(ctaIndexFramesCoordinatesY, ctaIndexFrameElements),
-        animateElements(ctaTitleFramesCoordinatesY, ctaTitleFrameElements),
-        // title and body elements share trigger for frame coordinates
-        animateElements(ctaTitleFramesCoordinatesY, ctaBodyFrameElements)
+const allCards = document.querySelectorAll('.connect__card');
+const cardsFrontFace = document.querySelectorAll('.connect__face-front');
+let cardsCoordinatesY = [];
+
+const animateElement = (elementCoordinates, element, attribute='') => {
+    if ((elementCoordinates - window.innerHeight) <= 0) {
+        element.classList.add(attribute);
+    } else { 
+        element.classList.remove(attribute);
+    }
+}
+
+const checkCondition = (child, throttleFn) => {
+    // checks if users view has entered container with event conditions
+    const targetChild = document.body.children[1].children[child].getBoundingClientRect().top;
+    if ( (targetChild - window.innerHeight) > 0) {
+        return;
+    } else {
+        return throttleFn();
+    }
+}
+
+const getCtaFrameLocations = () => {
+    return ( 
+        storeNodeListCoordinates(ctaIndexFramesCoordinatesY, ctaIndexFrames),
+        storeNodeListCoordinates(ctaTitleFramesCoordinatesY, ctaTitleFrames)
     )
 };
 
-// REFACTOR START
-const allCards = document.querySelectorAll('.connect__card');
-const cardsFrontFace = document.querySelectorAll('.connect__face-front');
-
-const animateElement = (element, attribute='', pageYPosition, elementTopPosition) => {
-    // if page Y coordinate exceeds an element top Y coordinate
-    if (pageYPosition > elementTopPosition) {
-        element.classList.add(attribute);
-    } else element.classList.remove(attribute);
-};
-
-const elementTopPageYOffset = (element) => {
-    return elementTopPosition = element.getBoundingClientRect().top;
-};
-
-const triggerPointCoordinates = (previousYPos, desiredPageY = null, elementTopPosition) => {
+const animateCtaElementsOnScroll = () => {
+    getCtaFrameLocations();
     return (
-        pageYPosition = (previousYPos - desiredPageY) + elementTopPosition,
-        elementTopPosition
-    );
+        animateNodeListElements(ctaIndexFramesCoordinatesY, ctaIndexFrameElements, 'slide-effect'),
+        animateNodeListElements(ctaTitleFramesCoordinatesY, ctaTitleFrameElements, 'slide-effect'),
+        // title and body elements share trigger for frame coordinates
+        animateNodeListElements(ctaTitleFramesCoordinatesY, ctaBodyFrameElements, 'slide-effect')
+    )
 };
+
+const throttledCtaEvents = throttle(animateCtaElementsOnScroll, 300);
 
 allCards.forEach((element) => {
     element.addEventListener('mouseover', () => {
@@ -141,76 +167,37 @@ allCards.forEach((element) => {
     })
 });
 
-const forEachCard = (element, desiredPageY, attribute='') => {
-    elementTopPageYOffset(element);
-    triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
-    return animateElement(element, attribute, pageYPosition, elementTopPosition);
-};
-
-const spinCards = (elementArray, desiredPageY, attribute='') => {
-    return elementArray.forEach( (element) => {forEachCard(element, desiredPageY, attribute)} )
-};
-
-const connectNarrative = document.querySelector('.connect__narrative');
-
-const animateNarrative = (element, desiredPageY, attribute='') => {
-    elementTopPageYOffset(element);
-    triggerPointCoordinates(previousYPos, desiredPageY, elementTopPosition);
-    return animateElement(element, attribute, pageYPosition, elementTopPosition);
-};
-
-// REFACTOR END
-
-// https://codeburst.io/throttling-and-debouncing-in-javascript-b01cad5c8edf
-const throttle = (func, limit) => {
-    let lastFunc
-    let lastRan
-    return function() {
-        const context = this
-        const args = arguments
-        if (!lastRan) {
-            func.apply(context, args)
-            lastRan = Date.now()
-        } else {
-            clearTimeout(lastFunc)
-            lastFunc = setTimeout(function() {
-                if ((Date.now() - lastRan) >= limit) {
-                    func.apply(context, args)
-                    lastRan = Date.now()
-                }
-            }, limit - (Date.now() - lastRan))
-        }
-    }
+const animateConnectElementOnScroll = () => {
+    const connectNarrativeCoordinatesY = connectNarrative.getBoundingClientRect().bottom;
+    storeNodeListCoordinates(cardsCoordinatesY, allCards);
+    return (
+        animateElement(connectNarrativeCoordinatesY, connectNarrative, 'active'),
+        animateNodeListElements(cardsCoordinatesY, cardsFrontFace, 'is-spinning')
+    )
 }
 
-const checkCondition = (child, throttleFn) => {
-    // checks if users view has entered container with event conditions
-    const targetChild = document.body.children[child].getBoundingClientRect().top;
-    if ( (targetChild - window.innerHeight) > 0) {
-        return;
-    } else {
-        return throttleFn();
-    }
-}
+const throttledConnectEvents = throttle(animateConnectElementOnScroll, 300);
 
 const throttledCheckCondition = (conditionFn) => {
     throttle(conditionFn, 300);
 };
-const throttledCtaEvents = throttle(animateCtaElementsOnScroll, 300);
-  
+
 const documentScroll = () => {
 
     debouncedNavBarDrop(previousYPos);
     
-    throttledCheckCondition(checkCondition(2, throttledCtaEvents))
+    throttledCheckCondition(checkCondition(1, throttledCtaEvents))
+    throttledCheckCondition(checkCondition(3, throttledConnectEvents))
 
-    animateNarrative(connectNarrative, 6200, 'active');
-    spinCards(cardsFrontFace, 6400, 'is-spinning');
     previousYPos = window.pageYOffset;
     // console.log('windowY= ', window.pageYOffset)
 };
 
 document.addEventListener('scroll', documentScroll);
+
+
+
+
 
 // NEW IN PROGRESS
 

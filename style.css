@@ -341,13 +341,6 @@ body.no-scroll {
     }
 }
 
-/* CTA ARTICLES */
-.helloevan-frame {
-    max-width: 1380px;
-}
-
-
-
 /* 3-D DOUBLE WEBSITE IMAGE */
 .showcase__container {
     display: flex;
@@ -674,11 +667,11 @@ body.no-scroll {
     text-align: center;
 }
 
-/* .connect__narrative {
+.connect__narrative {
     filter: opacity(0);
-} */
+}
 
-/* .connect__narrative.active { animation: setScene 1.5s ease forwards; } */
+.connect__narrative.active { animation: setScene 1.5s ease forwards; }
 
 @keyframes setScene {
     from { filter: blur(50px) opacity(0); }
