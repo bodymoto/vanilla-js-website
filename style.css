@@ -205,7 +205,7 @@ body.no-scroll {
 
 /* HERO */
 .hero__container {
-    background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816.jpeg) no-repeat center;
+    background: url(/img/hero/joshua-commanding-the-sun-to-stand-still-upon-gibeon_by-john-martin_1816-min.jpeg) no-repeat center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -648,7 +648,7 @@ body.no-scroll {
 }
 
 .friendly__container {
-    background: url(/img/friendly/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
+    background: url(/img/friendly/golden-gate-by-amelia-cui-min.jpg) no-repeat center;
     background-size: cover;
     box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
     padding: 60% 0;
@@ -765,55 +765,55 @@ body.no-scroll {
     /* PICTURE GRID */
     /* TOP ROW */
     .friendly__face-back-c1r1 {
-        background: url(/img/friendly/c1-r1_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c1-r1_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c2r1 {
-        background: url(/img/friendly/c2-r1_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c2-r1_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c3r1 {
-        background: url(/img/friendly/c3-r1_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c3-r1_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c4r1 {
-        background: url(/img/friendly/c4-r1_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c4-r1_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     
     /* MID ROW */
     .friendly__face-back-c1r2 {
-        background: url(/img/friendly/c1-r2_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c1-r2_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c2r2 {
-        background: url(/img/friendly/c2-r2_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c2-r2_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c3r2 {
-        background: url(/img/friendly/c3-r2_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c3-r2_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c4r2 {
-        background: url(/img/friendly/c4-r2_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c4-r2_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     
     /* BOT ROW */
     .friendly__face-back-c1r3 {
-        background: url(/img/friendly/c1-r3_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c1-r3_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c2r3 {
-        background: url(/img/friendly/c2-r3_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c2-r3_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c3r3 {
-        background: url(/img/friendly/c3-r3_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c3-r3_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
     .friendly__face-back-c4r3 {
-        background: url(/img/friendly/c4-r3_maroon-bells-hiking-split.png) no-repeat;
+        background: url(/img/friendly/c4-r3_maroon-bells-hiking-split-min.png) no-repeat;
         background-size: cover;
     }
 }
