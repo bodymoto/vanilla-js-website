@@ -1,7 +1,7 @@
 :root {
     --color-red: rgb(208, 2, 27);
     --color-beach: rgb(234, 244, 178);
-    --color-dark-red: rgb(117, 0, 14);
+    --color-dark-red: rgb(78, 0, 9);
     --color-offwhite: rgb(245, 245, 245);
     --color-white: rgb(255, 255, 255);
     --color-black: rgb(0, 0, 0);
@@ -926,9 +926,15 @@ body.no-scroll {
     opacity: .5;
 }
 
-.footer__body a {
+.footer__resume-anchor {
     font-size: 1.2em;
     letter-spacing: 3px;
+    transition: all .5s ease;
+}
+
+.footer__resume-anchor:hover {
+    font-size: 1.3em;
+    color: var(--color-dark-red);
 }
 
 .footer__icons {

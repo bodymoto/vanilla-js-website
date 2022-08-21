@@ -26,7 +26,6 @@ const navIcon = () => {
     return iconSwap(navBtn.firstChild.nextElementSibling,
         '/img/nav/menu-ready.svg',
         '/img/nav/menu-close.svg')
-        // RETURN NAVBAR BEHAVIOR FUNCTION
 };
 
 navBtn.addEventListener('click', navIcon);
