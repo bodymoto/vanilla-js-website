@@ -137,7 +137,7 @@ a:active {
     justify-content: center;
 }
 
-.menu-btn {
+.nav__menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +151,7 @@ a:active {
     z-index: 3;
 }
 
-.menu-btn:hover {
+.nav__menu-btn:hover {
     cursor: pointer;
 }
 
@@ -162,7 +162,7 @@ body.no-scroll {
     width: 100%;
 }
 
-.menu {
+.nav__menu {
     background: var(--color-white);
     position: fixed;
     top: 0;
@@ -174,12 +174,12 @@ body.no-scroll {
     z-index: 2;
 }
 
-.menu.expand {
+.nav__menu.expand {
     display: block;
     transform: translateY(0);
 }
 
-.menu-items {
+.nav__menu-items {
     display: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -189,17 +189,17 @@ body.no-scroll {
     background: var(--color-offwhite);
 }
 
-.menu-items.visible {
+.nav__menu-items.visible {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.menu-items li {
+.menu-item {
     padding: 10px 0 10px 40px;
 }
 
-.menu-items a:hover {
+.menu-item a:hover {
     color: var(--color-white);
 }
 
@@ -257,7 +257,7 @@ body.no-scroll {
     padding: 0 10px;
 }
 
-.js--icon {
+.hero__js-icon {
     height: 48px;
     width: 48px;
     grid-column: 2 / 3;
@@ -266,7 +266,7 @@ body.no-scroll {
     opacity: 1;
 }
 
-.html--icon {
+.hero__html-icon {
     height: 48px;
     width: 48px;
     grid-column: 3 / 4;
@@ -275,7 +275,7 @@ body.no-scroll {
     opacity: 1;
 }
 
-.css--icon {
+.hero__css-icon {
     height: 48px;
     width: 48px;
     grid-column: 2 / 3;
@@ -284,7 +284,7 @@ body.no-scroll {
     opacity: 1;
 }
 
-.git--icon {
+.hero__git-icon {
     height: 48px;
     width: 48px;
     grid-column: 3 / 4;
@@ -293,7 +293,7 @@ body.no-scroll {
     opacity: 1;
 }
 
-.python--icon {
+.hero__python-icon {
     height: 48px;
     width: 48px;
     grid-column: 3 / 4;
@@ -354,8 +354,8 @@ body.no-scroll {
     }
 }
 
-/* 3-D DOUBLE WEBSITE IMAGE */
-.showcase__container {
+/* CTA SHOWCASE IMAGES */
+.cta__showcase-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,18 +363,18 @@ body.no-scroll {
     margin: 80px 0;
 }
 
-.showcase__container-items {
+.cta__showcase-images {
     background: var(--color-beach);
     border: 1px solid var(--color-black);
     border-radius: 16px;
 }
 
-.showcase__scene {
+.cta__image-scene {
     perspective: 300px;
     user-select: none;
 }
 
-.showcase__scene-code {
+.image-behind {
     position: relative;
     top: -32px;
     left: -8px;
@@ -385,7 +385,7 @@ body.no-scroll {
     box-shadow: -15px 30px 20px rgba(25, 24, 24, 0.7);
 }
 
-.showcase__scene-ui {
+.image-infront {
     position: fixed;
     top: 16px;
     left: 32px;
@@ -413,12 +413,12 @@ body.no-scroll {
     margin: 40px 0;
 }
 
-.intro-title {
+.cta__intro-title {
     font-size: 1.8em;
     opacity: .6;
 }
 
-.intro-body {
+.cta__intro-body {
     font-size: 1.2em;
     line-height: 20px;
     margin: 10px 0 25px;
@@ -473,18 +473,18 @@ body.no-scroll {
     transform: translateY(0);
 }
 
-.cta-anchor-wrap {
+.cta__anchor-wrap {
     border-bottom: 1px solid var(--color-red);
     padding: 0 0 10px 0;
     width: 200px;
     transition: all 1s ease;
 }
 
-.cta-anchor-wrap:hover {
+.cta__anchor-wrap:hover {
     width: 160px;
 }
 
-.cta-anchor {
+.cta__anchor {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -506,7 +506,7 @@ body.no-scroll {
 }
 
 @media screen and (min-width: 1000px) {
-    .showcase__container-items {
+    .cta__showcase-images {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -528,7 +528,7 @@ body.no-scroll {
         padding-bottom: 100px;
     }
 
-    .intro-body {
+    .cta__intro-body {
         font-size: 1.5em;
         line-height: 30px;
     }
@@ -546,16 +546,16 @@ body.no-scroll {
         line-height: 25px;
     }
 
-    .cta-anchor-wrap {
+    .cta__anchor-wrap {
         margin-top: 20px;
         width: 300px;
     }
     
-    .cta-anchor-wrap:hover {
+    .cta__anchor-wrap:hover {
         width: 250px;
     }
     
-    .cta-anchor {
+    .cta__anchor {
         font-size: 1.3em;
         font-weight: 700;
         letter-spacing: 2px;
@@ -639,7 +639,7 @@ body.no-scroll {
 
 
 /* CALL TO CONNECT */
-.connect__container-wrap {
+.friendly__container-wrap {
     background: radial-gradient(circle,
         var(--color-white) 0%,
         var(--color-white) 50%,
@@ -647,64 +647,64 @@ body.no-scroll {
     padding: 32px;
 }
 
-.connect__container {
-    background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
+.friendly__container {
+    background: url(/img/friendly/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
     background-size: cover;
     box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
     padding: 60% 0;
 }
 
-.connect__narrative-scene {
+.friendly__narrative-scene {
     text-align: center;
 }
 
-.connect__narrative {
+.friendly__narrative {
     filter: opacity(0);
 }
 
-.connect__narrative.active { animation: setScene 1.5s ease forwards; }
+.friendly__narrative.active { animation: setScene 1.5s ease forwards; }
 
 @keyframes setScene {
     from { filter: blur(50px) opacity(0); }
     to { filter: blur(0) opacity(1); }
 }
 
-.connect__narrative-title {
+.friendly__narrative-title {
     font-size: 3em;
     opacity: .6;
     text-transform: uppercase;
 }
 
-.connect__narrative-body {
+.friendly__narrative-body {
     margin: 15px 5px 25px;
     opacity: .4;
 }
 
-.connect__narrative-body-quote {
+.friendly__narrative-body-quote {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     padding: 20px;
 }
 
-.connect__narrative-button {
+.friendly__narrative-button {
     margin: 16px;
 }
 
-.connect__card-scene {
+.friendly__card-scene {
     display: none;
 }
 
 @media screen and (min-width: 700px) {
-    .connect__narrative-title {
+    .friendly__narrative-title {
         font-size: 2.5em;
     }
 
-    .connect__container-wrap {
+    .friendly__container-wrap {
         display: flex;
         justify-content: center;
     }
     
-    .connect__container {
+    .friendly__container {
         display: grid;
         grid-template-areas: 'cards' 
         'text';
@@ -712,7 +712,7 @@ body.no-scroll {
         padding: 15% 0;
     }
     
-    .connect__narrative-scene {
+    .friendly__narrative-scene {
         display: flex;
         flex-direction: column;
         grid-area: text;
@@ -720,7 +720,7 @@ body.no-scroll {
         margin: 0 60px;
     }
 
-    .connect__card-scene {
+    .friendly__card-scene {
         display: grid;
         gap: 2px;
         grid-area: cards;
@@ -732,28 +732,28 @@ body.no-scroll {
         padding-left: 16px;
     }
     
-    .connect__card {
+    .friendly__card {
         position: relative;
         transform-style: preserve-3d;
         transition: transform 1s;
         user-select: none;
     }
     
-    .connect__card.is-flipped { transform: rotateY(-180deg); }
+    .friendly__card.is-flipped { transform: rotateY(-180deg); }
     
     
-    .connect__card-face {
+    .friendly__card-face {
         backface-visibility: hidden;
         position: absolute;
     }
     
-    .connect__face-front {
+    .friendly__face-front {
         background: var(--color-offwhite);
         border: 1px solid var(--color-black);
         opacity: .5;
     }
     
-    .connect__face-front.is-spinning {
+    .friendly__face-front.is-spinning {
         animation: rotateZ 2s ease;
         animation-delay: 1s;
     }
@@ -764,68 +764,68 @@ body.no-scroll {
     
     /* PICTURE GRID */
     /* TOP ROW */
-    .connect__face-back-c1r1 {
-        background: url(/img/cta/c1-r1_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c1r1 {
+        background: url(/img/friendly/c1-r1_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c2r1 {
-        background: url(/img/cta/c2-r1_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c2r1 {
+        background: url(/img/friendly/c2-r1_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c3r1 {
-        background: url(/img/cta/c3-r1_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c3r1 {
+        background: url(/img/friendly/c3-r1_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c4r1 {
-        background: url(/img/cta/c4-r1_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c4r1 {
+        background: url(/img/friendly/c4-r1_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
     
     /* MID ROW */
-    .connect__face-back-c1r2 {
-        background: url(/img/cta/c1-r2_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c1r2 {
+        background: url(/img/friendly/c1-r2_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c2r2 {
-        background: url(/img/cta/c2-r2_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c2r2 {
+        background: url(/img/friendly/c2-r2_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c3r2 {
-        background: url(/img/cta/c3-r2_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c3r2 {
+        background: url(/img/friendly/c3-r2_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c4r2 {
-        background: url(/img/cta/c4-r2_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c4r2 {
+        background: url(/img/friendly/c4-r2_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
     
     /* BOT ROW */
-    .connect__face-back-c1r3 {
-        background: url(/img/cta/c1-r3_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c1r3 {
+        background: url(/img/friendly/c1-r3_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c2r3 {
-        background: url(/img/cta/c2-r3_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c2r3 {
+        background: url(/img/friendly/c2-r3_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c3r3 {
-        background: url(/img/cta/c3-r3_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c3r3 {
+        background: url(/img/friendly/c3-r3_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
-    .connect__face-back-c4r3 {
-        background: url(/img/cta/c4-r3_maroon-bells-hiking-split.png) no-repeat;
+    .friendly__face-back-c4r3 {
+        background: url(/img/friendly/c4-r3_maroon-bells-hiking-split.png) no-repeat;
         background-size: cover;
     }
 }
 
 @media screen and (min-width: 800px) {
-    .connect__card-scene {
+    .friendly__card-scene {
         width: 500px;
         height: 350px;
         margin: 60px auto;
     }
 
-    .connect__narrative-scene {
+    .friendly__narrative-scene {
         display: flex;
         flex-direction: column;
         grid-area: text;
@@ -835,7 +835,7 @@ body.no-scroll {
 }
 
 @media screen and (min-width: 1100px) {
-    .connect__container {
+    .friendly__container {
         display: grid;
         grid-template-areas: 'cards text';
         grid-template-columns: repeat(2, 1fr);
@@ -843,7 +843,7 @@ body.no-scroll {
         padding: 20% 0;
     }
 
-    .connect__narrative-scene {
+    .friendly__narrative-scene {
         display: flex;
         flex-direction: column;
         grid-area: text;
@@ -851,27 +851,27 @@ body.no-scroll {
         margin: 0 16px;
     }
 
-    .connect__narrative-body {
+    .friendly__narrative-body {
         font-size: 1.2em;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .connect__container {
+    .friendly__container {
         box-shadow: inset 800px 800px 300px rgba(255, 255, 255, .7), inset -800px -800px 300px rgba(255, 255, 255, .7);
         max-width: 1440px;
     }
 
-    .connect__card-scene {
+    .friendly__card-scene {
         width: 700px;
         height: 500px;
     }
 
-    .connect__narrative-title {
+    .friendly__narrative-title {
         font-size: 3.2em;
     }
     
-    .connect__narrative-body {
+    .friendly__narrative-body {
         font-size: 1.4em;
     }
 }
@@ -885,14 +885,14 @@ body.no-scroll {
     height: 600px;
 }
 
-.footer__scene {
+.footer__cta-wrap {
     display: flex;
     flex-direction: column;
     margin: 70px auto 0;
     grid-column: 2 / 3;
 }
 
-.footer-title {
+.footer__cta {
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
@@ -901,7 +901,7 @@ body.no-scroll {
     opacity: .6;
 }
 
-.footer-cta {
+.footer__contact-anchor {
     text-align: center;
     font-size: 1.5em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -910,11 +910,11 @@ body.no-scroll {
     padding-top: 20px;
 }
 
-.footer-cta:hover {
+.footer__contact-anchor:hover {
     transform: scale(1.1);
 }
 
-.footer__body {
+.footer__description {
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
@@ -937,18 +937,18 @@ body.no-scroll {
     color: var(--color-dark-red);
 }
 
-.footer__icons {
+.footer__media-icons {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     grid-column: 2 / 3;
 }
 
-.footer__icons img {
+.media-icon {
     margin: 10px;
     transition: transform .5s ease;
 }
 
-.footer__icons img:hover {
+.media-icon:hover {
     transform: translateY(-5px);
 }

@@ -2,9 +2,9 @@
 https://airbnb.io/javascript/ */
 
 const navBar = document.getElementById('nav-banner');
-const navBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuItems = document.querySelector('.menu-items');
+const navBtn = document.querySelector('.nav__menu-btn');
+const menu = document.querySelector('.nav__menu');
+const menuItems = document.querySelector('.nav__menu-items');
 const body = document.body
 let previousYPos;
 
@@ -91,8 +91,8 @@ const ctaBodyFrameElements = document.querySelectorAll('.content-body');
 
 let ctaIndexFramesCoordinatesY = [];
 let ctaTitleFramesCoordinatesY = [];
-const connectNarrative = document.querySelector('.connect__narrative');
-const connectContainerCoordinates = document.querySelector('.connect__container-wrap');
+const connectNarrative = document.querySelector('.friendly__narrative');
+const connectContainerCoordinates = document.querySelector('.friendly__container-wrap');
 
 const storeNodeListCoordinates = (emptyArray, nodeList) => {
     let count = 0
@@ -116,8 +116,8 @@ const animateNodeListElements = (listOfCoordinates, nodeList, attribute='') => {
     })
 };
 
-const allCards = document.querySelectorAll('.connect__card');
-const cardsFrontFace = document.querySelectorAll('.connect__face-front');
+const allCards = document.querySelectorAll('.friendly__card');
+const cardsFrontFace = document.querySelectorAll('.friendly__face-front');
 let cardsCoordinatesY = [];
 
 const animateElement = (elementCoordinates, element, attribute='') => {

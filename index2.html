@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Evan, Front End Developer</title>
+    <title>Hello Evan, Front-End Developer</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
@@ -12,7 +12,7 @@
     <header class="header__frame">
       <div id="nav-banner" class="header__content-container">
         <div class="header__menu-content">
-          <button class="menu-btn">
+          <button class="nav__menu-btn">
             <img
               src="/img/nav/menu-ready.svg"
               alt="Navigation Menu Icon"
@@ -21,14 +21,14 @@
             />
           </button>
         </div>
-        <div class="menu">
-          <div class="menu-items">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">Resume</a></li>
-              <li><a href="#">Github</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Contact</a></li>
+        <div class="nav__menu">
+          <div class="nav__menu-items">
+            <ul class="menu-items">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="#">Resume</a></li>
+              <li class="menu-item"><a href="https://github.com/boshimoto/">Github</a></li>
+              <li class="menu-item"><a href="https://linkedin.com/in/evanlanese">Linkedin</a></li>
+              <li class="menu-item"><a href="#">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -36,7 +36,7 @@
           <img
             class="header__helloevan-logo"
             src="/img/nav/helloevandev-logo.png"
-            alt="helloevan.dev Logo"
+            alt="Helloevan.dev Logo"
             width="118px"
             height="60px"
           />
@@ -44,56 +44,56 @@
       </div>
     </header>
     <main>
-      <section id="hero" class="hero__container">
+      <section class="hero__container">
         <div class="hero__grid-frame">
           <div class="hero__title element-wh">
-            <h1>Front End Developer, Looking for employment.</h1>
+            <h1>Junior Front-End Developer, Looking for employment.</h1>
           </div>
           <div class="hero__skill-icons">
-            <div class="js--icon"></div>
-            <div class="html--icon"></div>
-            <div class="css--icon"></div>
-            <div class="git--icon"></div>
-            <div class="python--icon"></div>
+            <div class="hero__js-icon"></div>
+            <div class="hero__html-icon"></div>
+            <div class="hero__css-icon"></div>
+            <div class="hero__git-icon"></div>
+            <div class="hero__python-icon"></div>
           </div>
         </div>
         <span class="hero__container-overlay element-wh"><span>
       </section>
       <section class="homepage__cta-container">
-        <div class="cta__content-container helloevan-frame">
-          <section class="cta__content-row">
+        <div class="cta__content-container">
+          <article class="cta__content-row">
             <div class="cta__content-wrap">
               <div class="cta__intro-title-frame">
-                <div class="intro-title">
+                <div class="cta__intro-title">
                   <h2>Nothing worth having comes easy. Do what you love. Start somewhere.</h2>
                 </div>
               </div>
-              <div class="showcase__container">
-                <section class="showcase__container-items">
-                  <div class="showcase__scene">
+              <div class="cta__showcase-container">
+                <section class="cta__showcase-images">
+                  <div class="cta__image-scene">
                     <img
-                      class="showcase__scene-code"
-                      src="/he-v1-html.png"
-                      alt="Example picture of a websites running code"
+                      class="image-behind"
+                      src="/img/cta/showcase/he-v1-html.png"
+                      alt="Example of html code."
                     />
                     <img
-                      class="showcase__scene-ui"
-                      src="/he-v1-ui.png"
-                      alt="Example picture of a website"
+                      class="image-infront"
+                      src="/img/cta/showcase/he-v1-ui.png"
+                      alt="Example of a website UI."
                     />
                   </div>
                 </section>
               </div>
               <div class="cta__intro-body-frame">
-                <div class="intro-body">
+                <div class="cta__intro-body">
                   Helloevan.dev is an original work untouched by the guiding hand of any bootcamp or tutorial. The engineering of this codebase is a result of <b>meticulous research</b>, curiosity and patience. <br /> Checkout the <a href="#" target="_blank">Resume</a>, <a href="#" target="_blank">Github</a> and <a href="#" target="_blank">Linkedin</a> pages to dive deeper or <b>meet the dev</b> by taking a moment to extend a friendly, "Hello."
                 </div>
               </div>
-              <div class="cta-anchor-wrap">
-                <a class="cta-anchor" href="#" target="_blank">Say hello</a>
+              <div class="cta__anchor-wrap">
+                <a class="cta__anchor" href="#" target="_blank">Say hello</a>
               </div>
             </div>
-          </section>
+          </article>
           <article class="cta__content-row">
             <div class="cta__content-wrap">
               <div class="cta__content-index-frame">
@@ -113,11 +113,11 @@
                 down to syntax. <br/> Helloevan.dev takes a <b>vanilla-only</b> approach to showcase the importance of learning what is <b>fundamental</b>.
                 </div>
               </div>
-              <div class="cta-anchor-wrap">
-                <a class="cta-anchor" href="#" target="_blank">View Resume</a>
+              <div class="cta__anchor-wrap">
+                <a class="cta__anchor" href="#" target="_blank">View Resume</a>
               </div>
               <div class="cta-image">
-                <img class="element-wh" src="/pile-of-assorted_by-suzy-hazelwood_1280x815.jpg" alt="">
+                <img class="element-wh" src="/img/cta/pile-of-assorted_by-suzy-hazelwood_1280x815.jpg" alt="Pile of assorted books by Suzy Hazelwood">
               </div>
             </div>
           </article>
@@ -144,7 +144,7 @@
                 </div>
               </div>
               <div class="cta-image">
-                <img class="element-wh" src="/happy-man_by-andrea-piacquadio_1280x853.jpg" alt="">
+                <img class="element-wh" src="/img/cta/happy-man_by-andrea-piacquadio_1280x853.jpg" alt="Smiling man holding up a mobile phone by Andrea Piacquadio">
               </div>
             </div>
           </article>
@@ -165,11 +165,11 @@
                  Helloevan.dev has over <b>170 verified commits</b> to-date. The site is live-hosted on Github and secured using TLS.
                 </div>
               </div>
-              <div class="cta-anchor-wrap">
-                <a class="cta-anchor" href="https://github.com/boshimoto/" target="_blank">View Github</a>
+              <div class="cta__anchor-wrap">
+                <a class="cta__anchor" href="https://github.com/boshimoto/" target="_blank">View Github</a>
               </div>
               <div class="cta-image">
-                <img class="element-wh" src="/group-hand-cheer_by-dio-hasbi-saniskoro_1920x1280.jpg" alt="">
+                <img class="element-wh" src="/img/cta/group-hand-cheer_by-dio-hasbi-saniskoro_1920x1280.jpg" alt="Huddled group hand cheer by Diohasbi Saniskoro">
               </div>
             </div>
           </article>
@@ -192,7 +192,7 @@
                 </div>
               </div>
               <div class="cta-image">
-                <img class="element-wh" src="/handara-gate_by-oleksandr-pidvalnyi_1280x853.jpg" alt="">
+                <img class="element-wh" src="/img/cta/handara-gate_by-oleksandr-pidvalnyi_1280x853.jpg" alt="Ancient Handara Gate by Oleksandr Pidvalnyi">
               </div>
             </div>
           </article>
@@ -206,83 +206,83 @@
           <div id="code__block-btn"><button class="code-btn r-corners--sm"> See under the hood</button></div>
         </div>
       </section>
-      <section class="connect__container-wrap">
-        <div class="connect__container r-corners--m">
-          <div class="connect__narrative-scene">
-            <div class="connect__narrative">
+      <section class="friendly__container-wrap">
+        <div class="friendly__container r-corners--m">
+          <div class="friendly__narrative-scene">
+            <div class="friendly__narrative">
               <div>
-                <h2 class="connect__narrative-title">Navigate difficult terrain.</h2>
+                <h2 class="friendly__narrative-title">Navigate difficult terrain.</h2>
               </div>
-              <div class="connect__narrative-body">
+              <div class="friendly__narrative-body">
                 <p>
                   Join forces with a lifelong learner. Hike across documentation and unearth new trends with an experienced tech.
                 </p>
-                <p class="connect__narrative-body-quote">"Of all the paths you take in life, make sure a few of them are dirt."</p>
+                <p class="friendly__narrative-body-quote">"Of all the paths you take in life, make sure a few of them are dirt."</p>
               </div>
             </div>
-            <div class="connect__narrative-button">
+            <div class="friendly__narrative-button">
               <button class="btn-primary r-corners--m">Extend a friendly message</button>
             </div>
           </div>
-          <div class="connect__card-scene">
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c1r1 element-wh r-corners--sm transformY180">
+          <div class="friendly__card-scene">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c1r1 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c2r1 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c2r1 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c3r1 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c3r1 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c4r1 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c4r1 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c1r2 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c1r2 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c2r2 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c2r2 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c3r2 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c3r2 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c4r2 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c4r2 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c1r3 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c1r3 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c2r3 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c2r3 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c3r3 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c3r3 element-wh r-corners--sm transformY180">
               </div>
             </div>
-            <div class="connect__card">
-              <div class="connect__card-face connect__face-front element-wh r-corners--sm"></div>
-              <div class="connect__card-face connect__face-back-c4r3 element-wh r-corners--sm transformY180">
+            <div class="friendly__card">
+              <div class="friendly__card-face friendly__face-front element-wh r-corners--sm"></div>
+              <div class="friendly__card-face friendly__face-back-c4r3 element-wh r-corners--sm transformY180">
               </div>
             </div>
           </div>
@@ -291,11 +291,11 @@
     </main>
     <footer>
       <div class="footer__container">
-        <div class="footer__scene">
-          <h3 class="footer-title">Tomorrow doesn't exist.</h3>
-          <a class="footer-cta" href="#" target="_blank">Take Action Today!</a>
+        <div class="footer__cta-wrap">
+          <h3 class="footer__cta">Tomorrow doesn't exist.</h3>
+          <a class="footer__contact-anchor" href="#" target="_blank">Take Action Today!</a>
         </div>
-        <div class="footer__body">
+        <div class="footer__description">
           <p>helloevan.dev</p>
           <p>Front-End Engineer</p>
           <p>Mobile-1st, Vanilla-only</p>
@@ -303,12 +303,12 @@
           <p>Git, Gimp, Vscode, iterm2</p>
           <a class="footer__resume-anchor" href="#" target="_blank">Resume</a>
         </div>
-        <div class="footer__icons">
-          <a href="#" target="_blank">
-            <img height="40px" width="40px" src="/img/footer/GitHub-Mark.png" alt="">
+        <div class="footer__media-icons">
+          <a class="media-icon" href="https://github.com/boshimoto/" target="_blank">
+            <img height="40px" width="40px" src="/img/footer/github-mark.png" alt="Github logo">
           </a>
-          <a href="#" target="_blank">
-            <img height="40px" width="40px" src="/img/footer/LI-In-Bug.png" alt="">
+          <a class="media-icon" href="https://linkedin.com/in/evanlanese" target="_blank">
+            <img height="40px" width="40px" src="/img/footer/in.png" alt="Linkedin logo">
           </a>
         </div>
       </div>
