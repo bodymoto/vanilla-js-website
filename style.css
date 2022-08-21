@@ -146,6 +146,7 @@ a:active {
 body.no-scroll {
     position: absolute;
     overflow: hidden;
+    width: 100%;
 }
 
 .menu {
@@ -188,83 +189,6 @@ body.no-scroll {
 .menu-items a:hover {
     color: var(--color-white);
 }
-
-
-
-
-
-
-
-/* HERO CODE WALL */
-.code__container {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-}
-
-.code__review {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#code {
-    width: 100%;
-}
-
-.code__block {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    gap: 1px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.block { 
-    height: 100%;
-    width: 100%;
-    background: rgba(234, 244, 178, 1);
-    border: 1px solid rgb(0, 0, 0);
-    opacity: 1;
-}
-
-.block.bye {
-    animation: bye .5s linear forwards;
-}
-
-@keyframes bye {
-    to { filter: opacity(0); }
-}
-
-#code__block-btn {
-    grid-column: 4 / 8;
-    grid-row: 9 / 13;
-    z-index: 1;
-}
-
-.code-btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 5px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(234, 244, 178, 1);
-    font-size: .9em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid black;
-}
-
-.code-btn.bye {
-    animation: bye 1s linear forwards;
-}
-
-
-
 
 /* HERO */
 .hero__container {
@@ -424,7 +348,7 @@ body.no-scroll {
 
 
 
-/* TOP IMAGE */
+/* 3-D DOUBLE WEBSITE IMAGE */
 .showcase__container {
     display: flex;
     align-items: center;
@@ -434,9 +358,6 @@ body.no-scroll {
 }
 
 .showcase__container-items {
-    /* display: grid;
-    grid-template-columns: minmax(200px, 800px);
-    grid-template-rows: minmax(200px, 500px); */
     background: rgb(234, 244, 178);
     border: 1px solid var(--color-black);
     border-radius: 16px;
@@ -469,10 +390,7 @@ body.no-scroll {
     box-shadow: -30px 5px 40px -20px rgb(0, 0, 0);
 }
 
-/* TOP IMAGE END */
-
-
-
+/* CTA ARTICLES */
 .homepage__cta-container {
     margin: 150px 20px;
     display: flex;
@@ -512,7 +430,7 @@ body.no-scroll {
     color: rgb(139, 139, 139);
     opacity: .2;
     transition: transform 1.5s ease;
-    transform: translateY(120px);
+    transform: translateY(140px);
 }
 
 .cta__intro-title-frame,
@@ -549,39 +467,98 @@ body.no-scroll {
     transform: translateY(0);
 }
 
-.content-anchor-wrap {
+.cta-anchor-wrap {
     border-bottom: 1px solid var(--color-red);
     padding: 0 0 10px 0;
     width: 200px;
     transition: all 1s ease;
 }
 
-.content-anchor-wrap:hover {
+.cta-anchor-wrap:hover {
     width: 160px;
 }
 
-.content-anchor {
+.cta-anchor {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-.content-image {
+.cta-image {
     margin: 60px 0 0 0;
     opacity: .8;
     overflow: hidden;
     border-radius: 40px;
 }
 
-.content-image img {
+.cta-image img {
     border-radius: 40px;
     transition: transform 1s ease;
 }
 
-.content-image img:hover {
+.cta-image img:hover {
     transform: scale(1.2);
 }
 
+@media screen and (min-width: 1000px) {
+    .showcase__container-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
 
+    .cta__content-row {
+        padding: 60px 0;
+    }
+
+    .cta__content-wrap {
+        max-width: 800px;
+    }
+
+    .intro-title {
+        font-size: 2.5em;
+        letter-spacing: -4px;
+        padding-bottom: 100px;
+    }
+
+    .intro-body {
+        font-size: 1.5em;
+        line-height: 30px;
+    }
+
+    .content-index {
+        font-size: 9em;
+    }
+
+    .content-title {
+        font-size: 1.7em;
+    }
+
+    .content-body {
+        font-size: 1.3em;
+        line-height: 25px;
+    }
+
+    .cta-anchor-wrap {
+        margin-top: 20px;
+        width: 300px;
+    }
+    
+    .cta-anchor-wrap:hover {
+        width: 250px;
+    }
+    
+    .cta-anchor {
+        font-size: 1.3em;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .cta-image {
+        margin: 40px 0 0 0;
+    }
+}
 
 
 
@@ -678,41 +655,30 @@ body.no-scroll {
 
 
 /* CALL TO CONNECT */
-.connect__container {
+.connect__container-wrap {
     background: radial-gradient(circle,
         var(--color-white) 0%,
         var(--color-white) 50%,
         var(--color-offwhite) 100% );
     padding: 32px;
-    /* display: flex;
-    justify-content: center; */
 }
 
-.connect__grid {
+.connect__container {
     background: url(/img/cta/golden-gate-by-amelia-cui_1920x1224.jpg) no-repeat center;
     background-size: cover;
     box-shadow: inset 500px 500px 300px rgba(255, 255, 255, .7), inset -500px -500px 300px rgba(255, 255, 255, .7);
-    /* display: grid;
-    grid-template-areas: 'cards text';
-    grid-template-columns: repeat(2, 1fr); */
-    /* max-width: 1440px; */
     padding: 50% 0;
 }
 
 .connect__narrative-scene {
-    /* display: flex;
-    flex-direction: column; */
-    /* grid-area: text; */
-    /* justify-content: center; */
-    /* padding: 0 16px; */
     text-align: center;
 }
 
-.connect__narrative {
+/* .connect__narrative {
     filter: opacity(0);
-}
+} */
 
-.connect__narrative.active { animation: setScene 1.5s ease forwards; }
+/* .connect__narrative.active { animation: setScene 1.5s ease forwards; } */
 
 @keyframes setScene {
     from { filter: blur(50px) opacity(0); }
@@ -737,163 +703,178 @@ body.no-scroll {
 }
 
 .connect__narrative-button {
-    /* display: flex;
-    justify-content: center; */
     margin: 16px;
 }
 
 .connect__card-scene {
     display: none;
-    /* display: grid; */
-    gap: 2px;
-    grid-area: cards;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 500px;
-    height: 350px;
-    margin: 80px auto;
-    padding-left: 16px;
 }
 
-.connect__card {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    user-select: none;
-}
-
-.connect__card.is-flipped { transform: rotateY(-180deg); }
-
-
-.connect__card-face {
-    backface-visibility: hidden;
-    position: absolute;
-}
-
-.connect__face-front {
-    background: var(--color-offwhite);
-    border: 1px solid var(--color-black);
-    opacity: .5;
-}
-
-.connect__face-front.is-spinning {
-    animation: rotateZ 2s ease;
-    animation-delay: 1s;
-}
-@keyframes rotateZ {
-    from { transform: rotateZ(0); }
-    to { transform: rotateZ(180deg); }
-}
-
-/* PICTURE GRID */
-/* TOP ROW */
-.connect__face-back-c1r1 {
-    background: url(/img/cta/c1-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c2r1 {
-    background: url(/img/cta/c2-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c3r1 {
-    background: url(/img/cta/c3-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c4r1 {
-    background: url(/img/cta/c4-r1_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-
-/* MID ROW */
-.connect__face-back-c1r2 {
-    background: url(/img/cta/c1-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c2r2 {
-    background: url(/img/cta/c2-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c3r2 {
-    background: url(/img/cta/c3-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c4r2 {
-    background: url(/img/cta/c4-r2_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-
-/* BOT ROW */
-.connect__face-back-c1r3 {
-    background: url(/img/cta/c1-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c2r3 {
-    background: url(/img/cta/c2-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c3r3 {
-    background: url(/img/cta/c3-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-.connect__face-back-c4r3 {
-    background: url(/img/cta/c4-r3_maroon-bells-hiking-split.png) no-repeat;
-    background-size: cover;
-}
-/* 
-@media screen and (max-width: 400px) {
-    .connect__narrative-scene {
-        padding: 0;
+@media screen and (min-width: 700px) {
+    .connect__narrative-title {
+        font-size: 2.5em;
     }
-    
-    .connect__narrative-body-quote {
-        padding-top: 10px;
-    }
-    
-    .connect__narrative-button {
+
+    .connect__container-wrap {
         display: flex;
         justify-content: center;
     }
-
-    .btn-primary {
-        font-size: .6em;
-        padding: 15px 40px;
-    }
-} */
-
-
-/* @media screen and (max-width: 720px) {
-    .connect__grid {
-        display: grid;
-        grid-template-areas: 'text';
-        grid-template-columns: 1fr;
-    }
     
-    .connect__card-scene {
-        display: none;
+    .connect__container {
+        display: grid;
+        grid-template-areas: 'cards' 
+        'text';
+        grid-template-rows: repeat(2, 1fr);
+        padding: 15% 0;
     }
     
     .connect__narrative-scene {
-        margin: 10%;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .connect__narrative-title {
-        font-size: 1.5em;
-        padding-bottom: 8px;
-    }
-    
-    .connect__narrative-body {
-        font-size: .9em;
-        line-height: 16px;
-    }
-    
-    .connect__narrative-button {
-        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        grid-area: text;
+        justify-content: center;
+        margin: 0 60px;
     }
 
     .connect__card-scene {
-        width: 350px;
-        height: 225px;
+        display: grid;
+        gap: 2px;
+        grid-area: cards;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 400px;
+        height: 280px;
+        margin: 80px auto;
+        padding-left: 16px;
     }
-} */
+    
+    .connect__card {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        user-select: none;
+    }
+    
+    .connect__card.is-flipped { transform: rotateY(-180deg); }
+    
+    
+    .connect__card-face {
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    
+    .connect__face-front {
+        background: var(--color-offwhite);
+        border: 1px solid var(--color-black);
+        opacity: .5;
+    }
+    
+    .connect__face-front.is-spinning {
+        animation: rotateZ 2s ease;
+        animation-delay: 1s;
+    }
+    @keyframes rotateZ {
+        from { transform: rotateZ(0); }
+        to { transform: rotateZ(180deg); }
+    }
+    
+    /* PICTURE GRID */
+    /* TOP ROW */
+    .connect__face-back-c1r1 {
+        background: url(/img/cta/c1-r1_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c2r1 {
+        background: url(/img/cta/c2-r1_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c3r1 {
+        background: url(/img/cta/c3-r1_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c4r1 {
+        background: url(/img/cta/c4-r1_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    
+    /* MID ROW */
+    .connect__face-back-c1r2 {
+        background: url(/img/cta/c1-r2_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c2r2 {
+        background: url(/img/cta/c2-r2_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c3r2 {
+        background: url(/img/cta/c3-r2_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c4r2 {
+        background: url(/img/cta/c4-r2_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    
+    /* BOT ROW */
+    .connect__face-back-c1r3 {
+        background: url(/img/cta/c1-r3_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c2r3 {
+        background: url(/img/cta/c2-r3_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c3r3 {
+        background: url(/img/cta/c3-r3_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+    .connect__face-back-c4r3 {
+        background: url(/img/cta/c4-r3_maroon-bells-hiking-split.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .connect__card-scene {
+        width: 500px;
+        height: 350px;
+        margin: 60px auto;
+    }
+
+    .connect__narrative-scene {
+        display: flex;
+        flex-direction: column;
+        grid-area: text;
+        justify-content: center;
+        margin: 0 60px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .connect__container {
+        display: grid;
+        grid-template-areas: 'cards text';
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        padding: 15% 0;
+    }
+
+    .connect__narrative-scene {
+        display: flex;
+        flex-direction: column;
+        grid-area: text;
+        justify-content: center;
+        margin: 0 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .connect__container {
+        max-width: 1440px;
+    }
+
+    .connect__card-scene {
+        width: 700px;
+        height: 500px;
+    }
+}
