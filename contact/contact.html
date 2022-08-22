@@ -62,63 +62,57 @@
       </div>
       <div class="form__container">
         <form id="form" method="post" action="https://formspree.io/f/xyyojlrj">
-          <ul>
-            <li>
-              <div class="label-container">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  name="user_name"
-                  id="name"
-                  required
-                  minlength="4"
-                  maxlength="30"
-                />
+
+              <div class="form__grid">
+                  <div class="label-container">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      name="user_name"
+                      id="name"
+                      required
+                      minlength="4"
+                      maxlength="30"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <label for="company">Company</label>
+                    <input
+                      type="text"
+                      name="user_company"
+                      id="company"
+                      minlength="4"
+                      maxlength="30"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="user_email"
+                      id="email"
+                      required
+                      minlength="7"
+                      maxlength="30"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <label for="msg">Message</label>
+                    <textarea
+                      name="user_message"
+                      id="msg"
+                      cols="30"
+                      rows="14"
+                      required
+                      minlength="50"
+                      maxlength="1000"
+                    ></textarea>
+                  </div>
+                  <div class="button-container">
+                    <button class="button" type="submit">Send your message</button>
+                  </div>
               </div>
-            </li>
-            <li>
-              <div class="label-container">
-                <label for="company">Company</label>
-                <input
-                  type="text"
-                  name="user_company"
-                  id="company"
-                  minlength="4"
-                  maxlength="30"
-                />
-              </div>
-            </li>
-            <li>
-              <div class="label-container">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="user_email"
-                  id="email"
-                  required
-                  minlength="7"
-                  maxlength="30"
-                />
-              </div>
-            </li>
-            <li>
-              <div class="label-container">
-                <label for="msg">Message</label>
-                <textarea
-                  name="user_message"
-                  id="msg"
-                  cols="30"
-                  rows="10"
-                  required
-                  minlength="50"
-                  maxlength="1000"
-                ></textarea>
-              </div>
-            </li>
-            <li>
-              <div class="button-container">
-                <button class="button" type="submit">Send your message</button>
-              </div>
+
             </li>
           </ul>
         </form>
