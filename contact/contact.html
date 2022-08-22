@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/contact/contact.css" />
+    <script defer src="contact.js"></script>
+    <title>Hello Evan, Communication Form</title>
+  </head>
+  <body>
+    <header class="header__frame">
+      <div id="nav-banner" class="header__content-container">
+        <div class="header__menu-content">
+          <button class="nav__menu-btn">
+            <img
+              src="/img/nav/menu-ready.svg"
+              alt="Navigation Menu Icon"
+              width="26"
+              height="26"
+            />
+          </button>
+        </div>
+        <div class="nav__menu">
+          <div class="nav__menu-items">
+            <ul class="menu-items">
+              <li class="menu-item"><a href="index.html">Home</a></li>
+              <li class="menu-item"><a href="#">Resume</a></li>
+              <li class="menu-item">
+                <a href="https://github.com/boshimoto/">Github</a>
+              </li>
+              <li class="menu-item">
+                <a href="https://linkedin.com/in/evanlanese">Linkedin</a>
+              </li>
+              <li class="menu-item"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="index.html">
+          <img
+            class="header__helloevan-logo"
+            src="/img/nav/helloevandev-logo.png"
+            alt="Helloevan.dev Logo"
+            width="118"
+            height="60"
+          />
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="contact__container">
+        <div class="contact__title">
+          <h1>How this<br />works.</h1>
+        </div>
+        <div class="contact__body">
+          <p>
+            When submitting a form entry below a notification will be sent to
+            Evan's personal email address. Any notification that isn't captured
+            as spam may receive follow-up within 48 hours.
+          </p>
+        </div>
+      </div>
+      <div class="form__container">
+        <form id="form" method="post" action="https://formspree.io/f/xyyojlrj">
+          <ul>
+            <li>
+              <div class="label-container">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="user_name"
+                  id="name"
+                  required
+                  minlength="4"
+                  maxlength="30"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="label-container">
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  name="user_company"
+                  id="company"
+                  minlength="4"
+                  maxlength="30"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="label-container">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="user_email"
+                  id="email"
+                  required
+                  minlength="7"
+                  maxlength="30"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="label-container">
+                <label for="msg">Message</label>
+                <textarea
+                  name="user_message"
+                  id="msg"
+                  cols="30"
+                  rows="10"
+                  required
+                  minlength="50"
+                  maxlength="1000"
+                ></textarea>
+              </div>
+            </li>
+            <li>
+              <div class="button-container">
+                <button class="button" type="submit">Send your message</button>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__description">
+          <p>helloevan.dev</p>
+          <p>Front-End Engineer</p>
+          <p>Mobile-1st, Vanilla-only</p>
+          <p>Javascript, Css, Html, Python</p>
+          <p>Git, Gimp, Vscode, iterm2</p>
+          <a class="footer__resume-anchor" href="#" target="_blank">Resume</a>
+          <div class="footer__media-icons">
+            <a
+              class="media-icon"
+              href="https://github.com/boshimoto/"
+              target="_blank"
+            >
+              <img
+                height="40"
+                width="40"
+                src="/img/footer/github-mark.png"
+                alt="Github logo"
+              />
+            </a>
+            <a
+              class="media-icon"
+              href="https://linkedin.com/in/evanlanese"
+              target="_blank"
+            >
+              <img
+                height="40"
+                width="40"
+                src="/img/footer/in.png"
+                alt="Linkedin logo"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

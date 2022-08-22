@@ -1,0 +1,286 @@
+:root {
+    --color-red: rgb(208, 2, 27);
+    --color-beach: rgb(234, 244, 178);
+    --color-dark-red: rgb(78, 0, 9);
+    --color-offwhite: rgb(245, 245, 245);
+    --color-white: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    scrollbar-color: var(--color-translucent-white);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+a:hover {
+    color: var(--color-dark-red);
+    font-weight: 100;
+}
+
+a:link,
+a:visited,
+a:focus,
+a:active {
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+body {
+    background: var(--color-offwhite);
+}
+
+/* NAV */
+.header__frame {
+    /* height to maintain DOM during navBar anime */
+    height: 100px;
+}
+
+.header__content-container {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.header__content-container.active {
+    animation: navDropDown .5s ease;
+    background: var(--color-translucent-white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+@keyframes navDropDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.header__helloevan-logo {
+    /* img dimensions within innerHTML */
+    cursor: pointer;
+    user-select: none;
+    transition: transform 1s ease;
+}
+
+.header__helloevan-logo:hover {
+    transform: scale(.9);
+}
+
+.header__menu-content {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: 50%;
+    border: none;
+    height: 54px;
+    user-select: none;
+    width: 54px;
+    transition: transform .5s ease;
+    z-index: 3;
+}
+
+.nav__menu-btn:hover {
+    cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+body.no-scroll {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+.nav__menu {
+    background: var(--color-white);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 1s ease;
+    transform: translateY(-100%);
+    z-index: 2;
+}
+
+.nav__menu.expand {
+    display: block;
+    transform: translateY(0);
+}
+
+.nav__menu-items {
+    display: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.8em;
+    height: 97%;
+    margin: 16px 10%;
+    background: var(--color-offwhite);
+}
+
+.nav__menu-items.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    padding: 10px 0 10px 40px;
+}
+
+.menu-item a:hover {
+    color: var(--color-white);
+}
+
+/* MAIN */
+.contact__container {
+    margin: 35% 5%;
+    height: 60vh;
+    text-align: center;
+}
+
+.contact__title {
+    font-size: 1.6em;
+    line-height: 32px;
+    margin: 40px;
+    opacity: .7;
+}
+
+.contact__body {
+    font-size: 1em;
+    font-style: italic;
+    padding: 5px;
+    line-height: 26px;
+    opacity: .3;
+}
+
+.form__container {
+    margin: 20px;
+    padding-bottom: 20vh;
+}
+
+.label-container {
+    margin: 20px 0;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    opacity: .6;
+    font-weight: 700;
+}
+
+input {
+    height: 40px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    font-size: 1.2em;
+    color: var(--color-white);
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--color-red);
+    transition: all .5s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--color-red);
+    background: var(--color-white);
+    border: 1px solid var(--color-red);
+}
+
+@media screen and (min-width: 700px) {
+    .contact__container {
+        margin: 30% 15%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+/* FOOTER */
+.footer__container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 220px 1fr;
+    background: var(--color-beach);
+    height: 300px;
+}
+
+.footer__description {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+}
+
+.footer__description p {
+    opacity: .5;
+}
+
+.footer__resume-anchor {
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    transition: all .5s ease;
+}
+
+.footer__resume-anchor:hover {
+    font-size: 1.3em;
+    color: var(--color-dark-red);
+}
+
+.footer__media-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-column: 2 / 3;
+}
+
+.media-icon {
+    margin: 10px;
+    transition: transform .5s ease;
+}
+
+.media-icon:hover {
+    transform: translateY(-5px);
+}
