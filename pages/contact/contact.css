@@ -282,7 +282,7 @@ textarea:focus {
     height: 100%;
 }
 
-.wave-one {
+.celest {
     position: absolute;
     background: var(--color-beach);
     top: 0;
@@ -291,36 +291,47 @@ textarea:focus {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    animation: cursor 20s infinite alternate;
+    opacity: .5;
+    transform: scale(1);
+    animation: celest 20s infinite alternate ease;
 }
 
-.wave-one:before {
+@keyframes celest {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+.wave-two {
     content: "";
     position: absolute;
-    top: -21px;
-    left: -22px;
+    top: 0;
+    left: 0;
     margin: 20px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 16px dotted var(--color-beach);
-    animation: cursor 5s infinite alternate;
+    animation: waves 2s infinite alternate;
 }
 
-.wave-one:after {
+.wave-three {
     content: "";
     position: absolute;
-    top: -21px;
-    left: -22px;
+    top: 0;
+    left: 0;
     margin: 20px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 20px dotted var(--color-beach);
-    animation: cursor 2s infinite alternate;
+    animation: waves 4s infinite alternate;
 }
 
-.wave-two {
+.wave-four {
     position: absolute;
     top: 0;
     left: 0;
@@ -329,36 +340,36 @@ textarea:focus {
     height: 100%;
     border-radius: 50%;
     border: 18px dotted var(--color-beach);
-    animation: cursor 6s infinite alternate;
+    animation: waves 5s infinite alternate;
 }
 
-.wave-two:before {
+.wave-five {
     content: "";
     position: absolute;
-    top: -21px;
-    left: -22px;
+    top: 0;
+    left: 0;
     margin: 20px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 14px dotted var(--color-beach);
-    animation: cursor 8s infinite alternate;
+    animation: waves 6s infinite alternate;
 }
 
-.wave-two:after {
+.wave-six {
     content: "";
     position: absolute;
-    top: -21px;
-    left: -22px;
+    top: 0;
+    left: 0;
     margin: 20px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 18px dotted var(--color-beach);
-    animation: cursor 4s infinite alternate;
+    animation: waves 8s infinite alternate;
 }
 
-@keyframes cursor {
+@keyframes waves {
     from {
         transform: scale(0);
     }
@@ -466,6 +477,6 @@ textarea:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: .2;
+        opacity: .5;
     }
 }
