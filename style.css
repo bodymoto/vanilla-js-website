@@ -171,6 +171,7 @@ body.no-scroll {
     right: 0;
     transition: transform 1s ease;
     transform: translateY(-100%);
+    padding: 5%;
     z-index: 2;
 }
 
@@ -183,9 +184,8 @@ body.no-scroll {
     display: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 2.8em;
-    height: 97%;
-    margin: 16px 10%;
+    font-size: 2em;
+    height: 100%;
     background: var(--color-offwhite);
 }
 
@@ -201,6 +201,12 @@ body.no-scroll {
 
 .menu-item a:hover {
     color: var(--color-white);
+}
+
+@media screen and (min-width: 700px) {
+    .nav__menu-items {
+        font-size: 2em;
+    }
 }
 
 /* HERO */
@@ -302,7 +308,7 @@ body.no-scroll {
     opacity: 1;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
     .hero__container-overlay {
         background-size: cover;
     }
