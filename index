@@ -7,6 +7,20 @@
     <title>Hello Evan, Front-End Developer</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="/scripts/script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FSZT61G8QC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-FSZT61G8QC");
+    </script>
   </head>
   <body>
     <header class="header__frame">
