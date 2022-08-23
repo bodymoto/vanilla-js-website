@@ -155,7 +155,7 @@ a:active {
     cursor: pointer;
 }
 
-/* POPOUT MENU */
+/* DROPDOWN MENU */
 body.no-scroll {
     position: absolute;
     overflow: hidden;
