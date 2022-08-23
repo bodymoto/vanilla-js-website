@@ -49,7 +49,7 @@ a:hover {
 .resume__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 580px 100px 80px 600px 1fr;
+    grid-template-rows: 300px 680px 100px 80px 600px 1fr;
 }
 
 /* TOP */
@@ -181,7 +181,7 @@ a:hover {
     .resume__container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 180px 460px 80px 80px 550px 1fr;
+        grid-template-rows: 180px 520px 80px 80px 550px 1fr;
     }
 
     .resume__top-wrap {
