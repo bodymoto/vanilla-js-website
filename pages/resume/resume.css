@@ -49,7 +49,7 @@ a:hover {
 .resume__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 550px 100px 80px 550px 1fr;
+    grid-template-rows: 300px 580px 100px 80px 580px 1fr;
 }
 
 /* TOP */
