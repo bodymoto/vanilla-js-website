@@ -195,16 +195,9 @@ const documentScroll = () => {
 document.addEventListener('scroll', documentScroll);
 
 
-
-
-
-// NEW IN PROGRESS
-
-const blockBtnContainer = document.getElementById('code__block-btn');
-const blockBtn = document.querySelector('.code-btn');
-const codeBlock = document.querySelector('.code__block');
-const codeImage = document.getElementById('code');
-const codeContainer = document.querySelector('.code__container');
+const blockBtnContainer = document.getElementById('engine__block-btn');
+const blockBtn = document.querySelector('.engine-btn');
+const blocks = document.querySelector('.engine__block-container');
 
 
 // https://thewebdev.info/2022/02/09/how-to-create-pause-or-delay-in-a-javascript-for-loop/#:~:text=JavaScript%20for%20loop%3F-,To%20create%20pause%20or%20delay%20in%20a%20JavaScript%20for%20loop,with%20a%20for%2Dof%20loop.&text=to%20define%20the%20wait%20function,to%20loop%20through%20an%20array.
@@ -213,7 +206,7 @@ const wait = (ms) => new Promise( (resolve) => {
     setTimeout(resolve, ms)
 });
 
-const loop = async () => {
+const updateBox = async () => {
     const squares = document.querySelectorAll('.block');
 
     for (let square of squares) {
@@ -222,23 +215,14 @@ const loop = async () => {
     }
 };
 
-const updateBox = () => {
-    loop().then(addImage).catch( (error) => { console.error(error); });
-};
-
 for (let i = 0; i < 184; i++) {
     const newBlock = document.createElement('div');
     newBlock.classList.add('block');
-    codeBlock.appendChild(newBlock);
+    blocks.appendChild(newBlock);
 }
 
 const updateBtn = () => {
     blockBtn.classList.add('bye');
-};
-
-const addImage = () => {
-    codeContainer.style.overflowY = "scroll";
-    codeImage.src = '/pexels-pixabay-358238.jpg';
 };
 
 blockBtnContainer.addEventListener('click', updateBox);

@@ -155,7 +155,7 @@ a:active {
     cursor: pointer;
 }
 
-/* DROPDOWN MENU */
+/* POPOUT MENU */
 body.no-scroll {
     position: absolute;
     overflow: hidden;
@@ -566,6 +566,71 @@ body.no-scroll {
     }
 }
 
+/* ENGINE CHECK */
+.engine__container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background: url(/clean-car-engine_by-daniel-cassey-pahati_1280x853.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.engine__block-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.block { 
+    height: 100%;
+    width: 100%;
+    background: var(--color-beach);
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.block.bye {
+    animation: bye .5s linear forwards;
+}
+
+@keyframes bye {
+    to { filter: opacity(0); }
+}
+
+#engine__block-btn {
+    grid-column: 4 / 8;
+    grid-row: 9 / 13;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+#engine__block-btn:hover {
+    transform: skew;
+}
+
+.engine-btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-beach);
+    font-size: .9em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.engine-btn.bye {
+    animation: bye 1s linear forwards;
+}
+
 /* CALL TO CONNECT */
 .friendly__container-wrap {
     background: radial-gradient(circle,
@@ -879,92 +944,4 @@ body.no-scroll {
 
 .media-icon:hover {
     transform: translateY(-5px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CODE */
-.code__container {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-}
-
-.code__review {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#code {
-    width: 100%;
-}
-
-.code__block {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    gap: 1px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.block { 
-    height: 100%;
-    width: 100%;
-    background: var(--color-beach);
-    border: 1px solid rgb(0, 0, 0);
-    opacity: 1;
-}
-
-.block.bye {
-    animation: bye .5s linear forwards;
-}
-
-@keyframes bye {
-    to { filter: opacity(0); }
-}
-
-#code__block-btn {
-    grid-column: 4 / 8;
-    grid-row: 9 / 13;
-    z-index: 1;
-    transition: all .5s ease;
-}
-
-#code__block-btn:hover {
-    transform: skew;
-}
-
-.code-btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 5px;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-beach);
-    font-size: .9em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid black;
-}
-
-.code-btn.bye {
-    animation: bye 1s linear forwards;
 }
