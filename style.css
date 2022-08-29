@@ -386,7 +386,7 @@ body.no-scroll {
 }
 
 .image-infront {
-    position: fixed;
+    position: absolute;
     top: 16px;
     left: 32px;
     width: 100%;
