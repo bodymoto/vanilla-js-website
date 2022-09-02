@@ -167,15 +167,18 @@ const updateBox = async () => {
     }
 };
 
-for (let i = 0; i < 184; i++) {
-    const newBlock = document.createElement('div');
-    newBlock.classList.add('block');
-    blocks.appendChild(newBlock);
+const createBlockGrid = (blockCount = 184) => {
+    for (let i = 0; i < blockCount; i++) {
+        const newBlock = document.createElement('div');
+        newBlock.classList.add('block');
+        blocks.appendChild(newBlock);
+    }
 }
 
 const updateBtn = () => {
     blockBtn.classList.add('bye');
 };
 
+createBlockGrid();
 blockBtnContainer.addEventListener('click', updateBox);
 blockBtn.addEventListener('click', updateBtn);
