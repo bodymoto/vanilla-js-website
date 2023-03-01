@@ -1,4 +1,5 @@
 ## https://www.helloevan.dev/
+<img src="../main/img/tab-icon/hedev-logo-white.png" width=136 height=72>
 
 ## *This repo represents a snapshot of my progression as a developer. It is out-dated. Please visit my latest repo for a more up-to-date representation of my skillset. Thank you.*
 
