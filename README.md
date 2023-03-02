@@ -12,3 +12,5 @@ Some notable work includes:
 3. A unique "square veil" was built using JavaScript async/await further down the page. I've still not seen anything like it on another website. So I'm kind of proud of it lol.
 4. DOM manipulation exists, of course. Gotta love the DOM.
 5. And I hand-created the site's logo using HTML/CSS. I then screenshot it and made my final edits in GIMP.
+
+Again - vanilla JavaScript only! Cheers!
