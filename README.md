@@ -7,7 +7,7 @@ The site was built using a vanilla-only HTML/CSS/JavaScript approach - no librar
 
 Some notable work includes:
 
-1. An interactive navigation bar that drops down as the user scrolls up. Also, a throttle it triggered when scrolling to help minimize the amount of time the events trigger, improving performance.
+1. An interactive navigation bar that drops down as the user scrolls up. Also, a throttle it triggered when scrolling to help minimize the amount of events triggering, improving performance.
 2. Custom animations trigger dynamically as you scroll. The trigger is determined by the position of the element relative to the users position on screen. This means the animations cannot be *broken* by adding new elements to the site.
 3. A unique "square veil" was built using JavaScript async/await further down the page. I've still not seen anything like it on another website. So I'm kind of proud of it lol.
 4. DOM manipulation exists, ofcourse. Gotta love the DOM.
