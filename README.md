@@ -3,7 +3,7 @@
 
 ## *This repo represents a milestone in my progression as a developer. I have since moved on to more challenging work. Please visit my latest repo for a more up-to-date picture. Thank you.*
 
-The site was built using a vanilla-only HTML/CSS/JavaScript approach - to grasp the basics. It is responsive, mobile-friendly, and interactive. It has three pages: ```home``` ```resume``` ```contact```. The contact form uses https://formspree.io/ to execute submissions. It is live hosted on GitHub, protected by TLS.
+The site was built using a vanilla-only HTML/CSS/JavaScript approach - no libraries, frameworks, bundlers etc. It is responsive, mobile-friendly, and interactive. It has three pages: ```home``` ```resume``` ```contact```. The contact form uses https://formspree.io/ to execute submissions. It is live hosted on GitHub, protected by TLS.
 
 Some notable work includes:
 
