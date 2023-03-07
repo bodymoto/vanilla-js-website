@@ -1,8 +1,6 @@
 ## [HelloEvan.dev](https://www.helloevan.dev/)
 <img src="../main/img/tab-icon/hedev-logo-white.png" width=136 height=72>
 
-## *This repo represents a milestone in my progression as a developer. I have since moved on to more challenging work. Please visit my latest repo for a more up-to-date picture. Thank you.*
-
 The site was built using a vanilla-only HTML/CSS/JavaScript approach - no libraries, frameworks, bundlers etc. It is responsive, mobile-friendly, and interactive. It has three pages: ```home``` ```contact``` ```resume```. The contact form uses [Formspree](https://formspree.io/) to execute submissions. It is live hosted on GitHub, protected by TLS.
 
 Some notable work includes:
