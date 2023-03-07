@@ -10,5 +10,3 @@ Some notable work includes:
 3. A unique featured veil disappears when a button is clicked, further down the page. It vanishes by removing each element one-by-one via JavaScript's async/await. I've yet to witness anything like it elsewhere.
 4. DOM manipulation exists, of course. Gotta love the DOM.
 5. And the site's logo was crafted using HTML/CSS in the browser. I made the final edits in GIMP.
-
-Again - vanilla JavaScript only! Cheers!
