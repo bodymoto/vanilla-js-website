@@ -9,4 +9,4 @@ Notable work:
 2. A 300ms throttle fires while scrolling to minimize nav scroll events.
 3. Custom animations triggered while scrolling based on user screen position against html element's position.
 4. A unique featured async/await and DOM manipulation event further down the page that dynamically appends new elements to the page on load and later synchronously removes each element to reveal a picture underneath.
-6. The site's logo was crafted using HTML/CSS in the browser. Final edits in GIMP.
+6. The site logo was hand crafted using HTML/CSS in the browser with final edits completed in GIMP.
