@@ -8,5 +8,5 @@ Some notable work includes:
 1. An interactive navigation bar that drops down as the user scrolls-up. Also, a throttle triggers while scrolling to help minimize the amount of events firing in the browser, improving performance.
 2. Custom animations trigger as you scroll. The animation fires based on the position of the element relative to the user's screen position. This means adding new elements to the site will not break previous events.
 3. A unique featured veil disappears when a button is clicked, further down the page. It vanishes by removing each element one-by-one via JavaScript's async/await. I've yet to witness anything like it elsewhere.
-4. DOM manipulation exists, of course. Gotta love the DOM.
-5. And the site's logo was crafted using HTML/CSS in the browser. I made the final edits in GIMP.
+4. DOM element manipulation.
+5. The site's logo was crafted using HTML/CSS in the browser. Final edits in GIMP.
