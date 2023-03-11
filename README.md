@@ -8,6 +8,5 @@ Notable work:
 1. An interactive drop down navigation bar.
 2. A 300ms throttle fires while scrolling to minimize nav scroll events.
 3. Custom animations triggered while scrolling based on user screen position against html element's position.
-4. A unique featured veil disappears when a button is clicked, further down the page. It vanishes by removing each element one-by-one via JavaScript's async/await. I've yet to witness anything like it elsewhere.
-5. DOM element manipulation.
+4. A unique featured async/await and DOM manipulation event further down the page that dynamically appends new elements to the page on load and later synchronously removes each element to reveal a picture underneath.
 6. The site's logo was crafted using HTML/CSS in the browser. Final edits in GIMP.
