@@ -5,8 +5,9 @@ The site was built using a vanilla-only HTML/CSS/JavaScript approach - no librar
 
 Notable work:
 
-1. An interactive navigation bar that drops down as the user scrolls-up. Also, a throttle triggers while scrolling to help minimize the amount of events firing in the browser, improving performance.
-2. Custom animations trigger as you scroll. The animation fires based on the position of the element relative to the user's screen position. This means adding new elements to the site will not break previous events.
-3. A unique featured veil disappears when a button is clicked, further down the page. It vanishes by removing each element one-by-one via JavaScript's async/await. I've yet to witness anything like it elsewhere.
-4. DOM element manipulation.
-5. The site's logo was crafted using HTML/CSS in the browser. Final edits in GIMP.
+1. An interactive drop down navigation bar.
+2. A 300ms throttle fires while scrolling to minimize nav scroll events.
+3. Custom animations triggered while scrolling based on user screen position against html element's position.
+4. A unique featured veil disappears when a button is clicked, further down the page. It vanishes by removing each element one-by-one via JavaScript's async/await. I've yet to witness anything like it elsewhere.
+5. DOM element manipulation.
+6. The site's logo was crafted using HTML/CSS in the browser. Final edits in GIMP.
