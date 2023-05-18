@@ -1,12 +1,15 @@
 ## [HelloEvan.dev](https://www.helloevan.dev/)
 <img src="../main/img/tab-icon/hedev-logo-white.png" width=136 height=72>
 
-The site was built using a vanilla-only HTML/CSS/JavaScript approach - no libraries, frameworks, bundlers etc. It is responsive, mobile-friendly, and interactive. It has three pages: ```home``` ```contact``` ```resume```. The contact form uses [Formspree](https://formspree.io/) to execute submissions. It is live hosted on GitHub, protected by TLS.
+The site was built using a vanilla-only HTML/CSS/JavaScript approach - no libraries, frameworks, bundlers etc.<br/>
+It is responsive, mobile-friendly, and interactive.<br/>
+The contact form uses [Formspree](https://formspree.io/) to execute submissions.<br/>
+Live hosted on GitHub and protected by TLS.
 
 Notable work:
 
-1. An interactive drop down navigation bar.
-2. A 300ms throttle fires while scrolling to minimize nav scroll events.
-3. Custom animations triggered while scrolling based on user screen position against html element's position.
-4. A unique featured async/await and DOM manipulation event further down the page that dynamically appends new elements to the page on load and later synchronously removes each element to reveal a picture underneath.
-6. The site logo was hand crafted using HTML/CSS in the browser with final edits completed in GIMP.
+1. An interactive drop-down menu.
+2. A custom event throttle while scrolling to maximize performance.
+3. Custom animations, based on screen position.
+4. DOM manipulation featuring Tyrion Lannister, where elements are created and removed for a fun and unique visual effect!
+6. A hand crafted site logo, edited with GIMP.
