@@ -11,4 +11,4 @@ Notable work:
 4. DOM manipulation featuring Tyrion Lannister, where elements are created and removed for a fun and unique visual effect!
 6. A hand crafted site logo, edited with GIMP.
 
-## [HelloEvan.dev](https://www.helloevan.dev/)
+## [www.helloevan.dev](https://www.helloevan.dev/)
