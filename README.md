@@ -7,7 +7,7 @@ A responsive & interactive website built with a vanilla JS, HTML, CSS codebase. 
  · Event throttling to improve on-page performance while listening to events based on screen position. <br />
  · CSS animations that trigger/reset based on screen position. <br />
  · JavaScript DOM manipulation, adding/removing elements. <br />
-Form submission supported by [Formspree](https://formspree.io/)  <br />
+ · Form submission supported by <a href="https://formspree.io/">Formspree</a>  <br />
 
  <br />
 
