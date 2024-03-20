@@ -2,12 +2,12 @@
 <br />
 A responsive & interactive website built with vanilla JS, HTML, CSS. <br />
 <br />
- · CSS grid/flex responsive. <br />
- · Interactive navigation bar while scrolling the page. <br />
- · Event throttling to improve on-page performance while listening to events based on screen position. <br />
- · CSS animations that trigger/reset based on screen position. <br />
- · JavaScript DOM manipulation, adding/removing elements. <br />
- · Contact form submission supported by <a href="https://formspree.io/">Formspree</a>  <br />
+ · Responsive Grid/Flex design <br />
+ · Interactive navigation bar when scrolling. <br />
+ · DOM event throttling, used to improve on-page performance while listening to events that are based on screen position. <br />
+ · Animations that trigger based on screen position. <br />
+ · DOM manipulation, adding/removing of elements. <br />
+ · Contact form, POST by <a href="https://formspree.io/">Formspree</a>  <br />
 
  <br />
 
